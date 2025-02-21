@@ -1,2 +1,8 @@
 google-api-python-client
+google-cloud
 pandas
+numpy
+googleapiclient.discovery
+csv
+datetime
+os
