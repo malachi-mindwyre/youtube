@@ -4,9 +4,12 @@ import pandas as pd
 from googleapiclient.discovery import build
 import re
 import json
+from dotenv import load_dotenv
 
 # Configuration
-API_KEY = "AIzaSyARWIN06r9b64WOSExMea7OoT2Xx6-ce9w"
+load_dotenv()  
+
+API_KEY = os.getenv("API_KEY") 
 
 # Initialize YouTube API client
 youtube = build("youtube", "v3", developerKey=API_KEY)

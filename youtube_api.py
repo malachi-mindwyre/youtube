@@ -4,6 +4,12 @@ import pandas as pd
 from googleapiclient.discovery import build
 from dateutil import parser
 import pytz
+from dotenv import load_dotenv
+
+load_dotenv()  
+
+
+API_KEY = os.getenv("API_KEY") 
 
 # Configuration
 API_KEY = "AIzaSyARWIN06r9b64WOSExMea7OoT2Xx6-ce9w"
