@@ -2,7 +2,6 @@ google-api-python-client
 google-cloud
 pandas
 numpy
-googleapiclient.discovery
-csv
-datetime
-os
+python-dateutil
+pytz
+python-dotenv
