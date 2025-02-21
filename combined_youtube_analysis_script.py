@@ -1,5 +1,3 @@
-### First save this as combined_youtube_analysis.py ###
-
 # Import both scripts
 from youtube_api import main as get_videos  # your first script
 from channel_analysis import main as get_channels  # your second script
