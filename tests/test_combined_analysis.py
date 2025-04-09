@@ -38,3 +38,25 @@ def test_main(mock_channel_build: Any, mock_video_build: Any) -> None:
     # Test error handling
     # Note: This would require mocking the API calls
     # and is typically done in integration tests 
+
+@patch('executables.youtube_api.build')
+@patch('executables.channel_analysis.build')
+@patch('builtins.print')
+def test_script_execution(mock_print: Any, mock_channel_build: Any, mock_video_build: Any) -> None:
+    """Test script execution when run as main program."""
+    # Set up mocks
+    mock_service = get_mock_youtube_service()
+    mock_video_build.return_value = mock_service
+    mock_channel_build.return_value = mock_service
+    
+    # Import and run the script
+    import executables.combined_youtube_analysis_script as script
+    script.main()
+    
+    # Verify that print was called with expected data
+    mock_print.assert_called()
+    
+    # Test error case
+    mock_video_build.side_effect = Exception("API Error")
+    with pytest.raises(RuntimeError):
+        script.main() 

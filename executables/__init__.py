@@ -9,5 +9,5 @@ from executables.channel_analysis import ChannelAnalysisConfig, ChannelAnalyzer
 from executables.google_storage import GoogleStorageConfig, GoogleStorage
 
 __version__ = "1.0.0"
-__author__ = "Your Name"
+__author__ = "Malachi Dunn"
 __license__ = "MIT" 
