@@ -1,98 +1,147 @@
 # YouTube Video & Channel Analysis Toolkit
 
-This project provides a set of Python scripts to search for YouTube videos based on keywords, filter them by engagement metrics, and extract detailed information about the associated channels, including potential contact information.
+A robust Python toolkit for analyzing YouTube videos and channels, built with safety-critical principles in mind. This project follows NASA's Power of Ten rules and clean code principles to ensure reliability and maintainability.
 
 ## Features
 
-*   **Keyword-Based Video Search:** Finds YouTube videos relevant to a specified search term.
-*   **Engagement Filtering:** Filters videos based on configurable criteria like minimum total views, views per hour, likes per hour, and comments per hour.
-*   **Detailed Channel Analysis:** Retrieves comprehensive data for the channels associated with the filtered videos, including:
-    *   Subscriber count, total views, total videos
-    *   Creation date, country
-    *   Channel description
-    *   Keywords
-    *   Custom URL
-*   **Contact Information Extraction:** Attempts to extract email addresses and social media links (Instagram, Twitter, Facebook, TikTok, LinkedIn, Website) from channel descriptions.
-*   **Data Output:** Uses pandas DataFrames to structure the collected video and channel data.
-*   **Google Cloud Storage Integration:** Includes a utility function to upload files to a GCP bucket (optional usage).
-*   **Jupyter Notebook:** Provides a notebook environment for interactive analysis and development based on the video search script.
+*   **Video Analysis**
+    *   Search YouTube videos by keyword
+    *   Filter by engagement metrics (views, likes, comments per hour)
+    *   Detailed video statistics and metadata
+    *   Configurable filtering criteria
+
+*   **Channel Analysis**
+    *   Comprehensive channel statistics
+    *   Subscriber count, total views, video count
+    *   Channel metadata (creation date, country, description)
+    *   Contact information extraction (emails, social media links)
+
+*   **Data Management**
+    *   Pandas DataFrame integration
+    *   Optional Google Cloud Storage support
+    *   Environment-based configuration
+    *   Type-safe data handling
 
 ## Project Structure
 
 ```
 .
-├── .gitignore             # Specifies intentionally untracked files (e.g., .env)
-├── README.md              # This file
+├── .env                    # Environment variables (API keys)
+├── .gitignore             # Git ignore rules
+├── README.md              # This documentation
 ├── requirements.txt       # Python dependencies
 ├── executables/
-│   ├── channel_analysis.py # Script to fetch detailed channel information
-│   ├── combined_youtube_analysis_script.py # Main script to run video search and channel analysis
-│   ├── google_storage.py  # Utility for uploading files to Google Cloud Storage
-│   └── youtube_api.py     # Script to search and filter YouTube videos by keyword
+│   ├── youtube_api.py     # Video search and analysis
+│   ├── channel_analysis.py # Channel information extraction
+│   ├── combined_youtube_analysis_script.py # Main analysis script
+│   └── google_storage.py  # GCP integration (optional)
 └── jupyter/
-    └── youtube_api.ipynb  # Jupyter notebook version for video search and analysis
+    └── youtube_api.ipynb  # Interactive analysis notebook
 ```
+
+## Prerequisites
+
+*   Python 3.9 or higher
+*   YouTube Data API v3 key
+*   (Optional) Google Cloud Storage access
 
 ## Setup
 
-1.  **Prerequisites:**
-    *   Python 3.x
-    *   pip (Python package installer)
-
-2.  **Clone the Repository:**
+1.  **Clone the Repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone git@github.com:malachi-mindwyre/youtube.git
+    cd youtube
     ```
 
-3.  **Create a Virtual Environment (Recommended):**
+2.  **Create and Activate Virtual Environment:**
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
 
-4.  **Install Dependencies:**
+3.  **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-5.  **Set up Environment Variables:**
-    *   Create a file named `.env` in the project's root directory.
-    *   Add your YouTube Data API v3 key to the `.env` file:
+4.  **Configure Environment:**
+    *   Create a `.env` file in the project root
+    *   Add your YouTube API key:
         ```
-        API_KEY=YOUR_YOUTUBE_API_KEY
+        API_KEY=your_api_key_here
         ```
-    *   You can obtain an API key from the [Google Cloud Console](https://console.cloud.google.com/apis/library/youtube.googleapis.com). Make sure to enable the "YouTube Data API v3".
+    *   Get an API key from [Google Cloud Console](https://console.cloud.google.com/apis/library/youtube.googleapis.com)
 
 ## Usage
 
-1.  **Configure Scripts (Optional):**
-    *   Modify `executables/youtube_api.py` or `jupyter/youtube_api.ipynb` to change the `SEARCH_KEYWORD` or adjust the filtering criteria (`MIN_VIEWS`, `MIN_VIEWS_PER_HOUR`, etc.).
+### Basic Analysis
 
-2.  **Run the Main Analysis Script:**
-    Execute the combined script to perform both video searching/filtering and channel analysis:
+1.  **Run the Combined Analysis:**
     ```bash
     python executables/combined_youtube_analysis_script.py
     ```
-    This will print sample DataFrames for the collected video and channel data to the console. You can modify the script to save the DataFrames to files (e.g., CSV) if needed.
+    This will:
+    *   Search for videos matching the default keyword
+    *   Filter videos based on engagement metrics
+    *   Analyze associated channels
+    *   Display results in the console
 
-3.  **Use the Jupyter Notebook:**
-    For interactive analysis of the video search part:
+2.  **Customize Analysis:**
+    Modify the `YouTubeAPIConfig` class in `youtube_api.py` to adjust:
+    *   Search keywords
+    *   Minimum views and engagement thresholds
+    *   Maximum results per search
+
+### Advanced Usage
+
+1.  **Interactive Analysis:**
     ```bash
     jupyter notebook jupyter/youtube_api.ipynb
     ```
 
-4.  **Google Cloud Storage Upload (Manual):**
-    If you need to upload a file (e.g., a CSV export of the results) to GCP:
-    *   Ensure you have authenticated with GCP (e.g., via `gcloud auth application-default login`).
-    *   Use the `upload_to_gcp_bucket` function from `executables/google_storage.py` within another script or interactively.
+2.  **Google Cloud Storage Integration:**
+    ```python
+    from executables.google_storage import upload_to_gcp_bucket
+    
+    # Upload results to GCP
+    upload_to_gcp_bucket(
+        source_file="results.csv",
+        bucket_name="your-bucket",
+        destination_blob_name="youtube-analysis/results.csv"
+    )
+    ```
+
+## Code Quality
+
+This project adheres to strict coding standards:
+
+*   NASA's Power of Ten rules for safety-critical systems
+*   Clean code principles
+*   Comprehensive type hints
+*   Extensive error handling
+*   Input validation and assertions
+*   No global variables
+*   Maximum 2 levels of nesting
+*   Small, focused functions
+*   Proper resource management
 
 ## Dependencies
 
-*   `google-api-python-client`: For interacting with the YouTube Data API.
-*   `google-cloud-storage`: For interacting with Google Cloud Storage.
-*   `pandas`: For data manipulation and analysis (DataFrames).
-*   `numpy`: Numerical Python library (often a dependency of pandas).
-*   `python-dateutil`: For parsing dates/times.
-*   `pytz`: For handling timezones.
-*   `python-dotenv`: For loading environment variables from the `.env` file.
+*   `google-api-python-client`: YouTube Data API interaction
+*   `google-cloud-storage`: GCP integration
+*   `pandas`: Data manipulation
+*   `numpy`: Numerical operations
+*   `python-dateutil`: Date/time handling
+*   `pytz`: Timezone support
+*   `python-dotenv`: Environment variable management
+
+## Contributing
+
+1.  Create a feature branch
+2.  Make your changes
+3.  Ensure all tests pass
+4.  Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
