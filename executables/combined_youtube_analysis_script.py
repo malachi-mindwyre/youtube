@@ -2,8 +2,17 @@
 
 from typing import Tuple
 import pandas as pd
+import os
+from datetime import datetime
 from executables.youtube_api import main as get_videos
 from executables.channel_analysis import main as get_channels
+
+def save_to_csv(df: pd.DataFrame, filename: str) -> None:
+    """Save DataFrame to CSV file with timestamp."""
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"{filename}_{timestamp}.csv"
+    df.to_csv(filename, index=False)
+    print(f"\nData saved to {filename}")
 
 def main() -> Tuple[pd.DataFrame, pd.DataFrame]:
     """Main function to execute combined YouTube video and channel analysis."""
@@ -36,6 +45,10 @@ if __name__ == "__main__":
         
         print("\nChannel Data Sample:")
         print(channels_df[['channel_title', 'subscribers', 'email']].head())
+        
+        # Save data to CSV files
+        save_to_csv(videos_df, "youtube_videos")
+        save_to_csv(channels_df, "youtube_channels")
         
     except Exception as e:
         print(f"Error: {str(e)}")
