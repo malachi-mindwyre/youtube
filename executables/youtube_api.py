@@ -6,18 +6,40 @@ from googleapiclient.discovery import build
 from dateutil import parser
 import pytz
 from dotenv import load_dotenv
+import yaml
 
 class YouTubeAPIConfig:
     """Configuration class for YouTube API settings."""
     def __init__(self) -> None:
         load_dotenv()
         self.api_key: str = os.getenv("API_KEY", "")
-        self.search_keyword: str = "influencer marketing"
-        self.max_results: int = 50
-        self.min_views: int = 1000
-        self.min_views_per_hour: float = 5.0
-        self.min_comments_per_hour: float = 0.1
-        self.min_likes_per_hour: float = 1.0
+        
+        # Load configuration from YAML file
+        config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config.yaml')
+        with open(config_path, 'r') as file:
+            config = yaml.safe_load(file)
+            
+        # Search settings
+        self.search_keyword: str = config['search']['keyword']
+        self.max_results: int = config['search']['max_results']
+        
+        # Filter settings
+        self.min_views: int = config['filters']['min_views']
+        self.min_views_per_hour: float = config['filters']['min_views_per_hour']
+        self.min_comments_per_hour: float = config['filters']['min_comments_per_hour']
+        self.min_likes_per_hour: float = config['filters']['min_likes_per_hour']
+        
+        # Output settings
+        self.save_csv: bool = config['output']['save_csv']
+        self.save_excel: bool = config['output']['save_excel']
+        self.save_json: bool = config['output']['save_json']
+        self.output_directory: str = config['output']['output_directory']
+        
+        # Analysis settings
+        self.include_channel_stats: bool = config['analysis']['include_channel_stats']
+        self.include_video_stats: bool = config['analysis']['include_video_stats']
+        self.include_engagement_metrics: bool = config['analysis']['include_engagement_metrics']
+        self.include_sentiment_analysis: bool = config['analysis']['include_sentiment_analysis']
 
     def validate(self) -> None:
         """Validate configuration values."""
@@ -28,6 +50,10 @@ class YouTubeAPIConfig:
         assert self.min_views_per_hour >= 0, "Minimum views per hour must be non-negative"
         assert self.min_comments_per_hour >= 0, "Minimum comments per hour must be non-negative"
         assert self.min_likes_per_hour >= 0, "Minimum likes per hour must be non-negative"
+        
+        # Create output directory if it doesn't exist
+        if not os.path.exists(self.output_directory):
+            os.makedirs(self.output_directory)
 
 class YouTubeAPI:
     """Class for interacting with YouTube Data API."""
