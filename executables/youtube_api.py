@@ -7,6 +7,22 @@ from dateutil import parser
 import pytz
 from dotenv import load_dotenv
 import yaml
+import re
+
+def has_email(text: str) -> bool:
+    """Check if text contains an email address.
+    
+    Args:
+        text: Text to check for email addresses
+        
+    Returns:
+        bool: True if email found, False otherwise
+    """
+    if not text:
+        return False
+    # Simple email regex pattern
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    return bool(re.search(email_pattern, text))
 
 class YouTubeAPIConfig:
     """Configuration class for YouTube API settings."""
@@ -28,6 +44,7 @@ class YouTubeAPIConfig:
         self.min_views_per_hour: float = config['filters']['min_views_per_hour']
         self.min_comments_per_hour: float = config['filters']['min_comments_per_hour']
         self.min_likes_per_hour: float = config['filters']['min_likes_per_hour']
+        self.max_hours_since_published: float = config['filters']['max_hours_since_published']
         
         # Output settings
         self.save_csv: bool = config['output']['save_csv']
@@ -50,6 +67,7 @@ class YouTubeAPIConfig:
         assert self.min_views_per_hour >= 0, "Minimum views per hour must be non-negative"
         assert self.min_comments_per_hour >= 0, "Minimum comments per hour must be non-negative"
         assert self.min_likes_per_hour >= 0, "Minimum likes per hour must be non-negative"
+        assert self.max_hours_since_published > 0, "Maximum hours since published must be positive"
         
         # Create output directory if it doesn't exist
         if not os.path.exists(self.output_directory):
@@ -123,7 +141,8 @@ class YouTubeAPI:
             views >= self.config.min_views and
             metrics["views_per_hour"] >= self.config.min_views_per_hour and
             metrics["comments_per_hour"] >= self.config.min_comments_per_hour and
-            metrics["likes_per_hour"] >= self.config.min_likes_per_hour
+            metrics["likes_per_hour"] >= self.config.min_likes_per_hour and
+            metrics["hours_since_published"] <= self.config.max_hours_since_published
         )
 
     def process_data(self, search_items: List[Dict[str, Any]], video_details: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -135,6 +154,7 @@ class YouTubeAPI:
         for item, details in zip(search_items, video_details):
             video_id = item["id"]["videoId"]
             snippet = item["snippet"]
+            video_snippet = details["snippet"]
             stats = details["statistics"]
             
             hourly_metrics = self.calculate_hourly_metrics(snippet["publishedAt"], stats)
@@ -145,7 +165,6 @@ class YouTubeAPI:
             processed_data.append({
                 "video_id": video_id,
                 "title": snippet["title"],
-                "description": snippet["description"],
                 "published_at": snippet["publishedAt"],
                 "channel_id": snippet["channelId"],
                 "channel_title": snippet["channelTitle"],

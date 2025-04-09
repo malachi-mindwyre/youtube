@@ -12,6 +12,8 @@ filters:
   min_views_per_hour: 100.0  # Minimum views per hour
   min_comments_per_hour: 0.1  # Minimum comments per hour
   min_likes_per_hour: 1.0  # Minimum likes per hour
+  max_hours_since_published: 8760  # Maximum hours since video was published (1 year = 8760 hours)
+  require_email_found: true  # Only save channels where an email was found in their videos
 
 # Output Settings
 output:

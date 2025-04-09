@@ -1,29 +1,33 @@
-# YouTube Lead Generation System
+# YouTube Channel Analysis Tool
 
-A SaaS platform for automated YouTube lead generation and affiliate marketing. The system identifies potential YouTube creators, extracts their contact information, generates personalized emails based on video content, and manages affiliate link distribution.
+A Python tool for analyzing YouTube channels and videos, with a focus on finding channels with contact information.
 
 ## Features
 
-- YouTube video and channel data scraping
-- Email extraction from video and channel descriptions
-- Personalized email generation based on video content
-- Lead tracking and management
-- Analytics and performance metrics
-- Cloud-based data storage
-- Titan Email integration
+- Search YouTube videos by keyword
+- Analyze channel and video statistics
+- Filter videos by:
+  - Minimum views
+  - Minimum views per hour
+  - Minimum comments per hour
+  - Minimum likes per hour
+  - Maximum hours since published
+  - Email presence in channel description
+- Save results in CSV or Excel format
+- Extract contact information from channel descriptions
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/youtube-leads.git
-cd youtube-leads
+git clone https://github.com/yourusername/youtube.git
+cd youtube
 ```
 
 2. Create and activate a virtual environment:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 3. Install dependencies:
@@ -31,122 +35,64 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file with your credentials:
-```env
-# Google Cloud Configuration
-GOOGLE_CLOUD_PROJECT=your-project-id
-GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
+4. Create a `.env` file with your YouTube API key:
+```
+API_KEY=your_youtube_api_key_here
+```
 
-# YouTube API Configuration
-YOUTUBE_API_KEY=your-youtube-api-key
-YOUTUBE_API_QUOTA_LIMIT=10000
+## Configuration
 
-# Titan Email Configuration
-TITAN_EMAIL_API_KEY=your-titan-api-key
-TITAN_EMAIL_DOMAIN=your-domain.com
+Edit `config.yaml` to customize the analysis:
 
-# Database Configuration
-DB_HOST=your-db-host
-DB_NAME=your-db-name
-DB_USER=your-db-user
-DB_PASSWORD=your-db-password
+```yaml
+# Search Settings
+search:
+  keyword: "influencer marketing"  # The term to search for
+  max_results: 100  # Number of videos to analyze
 
-# Application Settings
-DEBUG=False
-LOG_LEVEL=INFO
+# Filter Settings
+filters:
+  min_views: 1000  # Minimum total views
+  min_views_per_hour: 100.0  # Minimum views per hour
+  min_comments_per_hour: 0.1  # Minimum comments per hour
+  min_likes_per_hour: 1.0  # Minimum likes per hour
+  max_hours_since_published: 8760  # Maximum hours since video was published (1 year)
+  require_email_found: true  # Only save channels with emails
+
+# Output Settings
+output:
+  save_csv: false  # Whether to save results as CSV files
+  save_excel: true  # Whether to save results as Excel file
+  save_json: false  # Whether to save results as JSON file
+  output_directory: "results"  # Directory to save output files
 ```
 
 ## Usage
 
-1. Initialize the database:
-```python
-from youtube_leads.database import DatabaseManager
-
-db = DatabaseManager()
-db.create_tables()
-```
-
-2. Create a lead generation system instance:
-```python
-from youtube_leads.main import LeadGenerationSystem
-
-system = LeadGenerationSystem()
-```
-
-3. Process keywords to find leads:
-```python
-results = system.process_keywords(
-    user_id="user123",
-    keywords=["python programming", "data science"],
-    max_results=50
-)
-print(results)
-```
-
-4. Get analytics:
-```python
-analytics = system.get_analytics(
-    user_id="user123",
-    days=30
-)
-print(analytics)
-```
-
-## Project Structure
-
-```
-youtube-leads/
-├── src/
-│   └── youtube_leads/
-│       ├── __init__.py
-│       ├── config.py
-│       ├── youtube_scraper.py
-│       ├── email_manager.py
-│       ├── database.py
-│       ├── models.py
-│       └── main.py
-├── tests/
-│   └── ...
-├── requirements.txt
-├── README.md
-└── PROJECT_PLAN.md
-```
-
-## Development
-
-1. Install development dependencies:
+Run the analysis:
 ```bash
-pip install -r requirements-dev.txt
+python notebooks/run_analysis.py
 ```
 
-2. Run tests:
-```bash
-pytest
-```
+The tool will:
+1. Search for videos matching your keyword
+2. Filter videos based on your criteria
+3. Extract channel information
+4. Find channels with contact information
+5. Save results to the specified output directory
 
-3. Run type checking:
-```bash
-mypy src/
-```
+## Output
 
-4. Format code:
-```bash
-black src/
-isort src/
-```
+The tool generates two files:
+1. `youtube_videos_[timestamp].csv/xlsx` - Contains video statistics
+2. `youtube_channels_[timestamp].csv/xlsx` - Contains channel information and contact details
 
-## Contributing
+## Requirements
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+- Python 3.8+
+- YouTube Data API v3 key
+- Dependencies listed in `requirements.txt`
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support, email support@yourdomain.com or create an issue in the repository.
+MIT License
