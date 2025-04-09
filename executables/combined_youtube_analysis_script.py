@@ -3,8 +3,22 @@
 from typing import Tuple, List, Dict, Any
 import pandas as pd
 import os
+import yaml
 from datetime import datetime
 from executables.youtube_api import YouTubeAPI, YouTubeAPIConfig
+
+def load_config() -> dict:
+    """Load configuration from config.yaml file.
+    
+    Returns:
+        dict: Configuration dictionary
+    """
+    config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config.yaml')
+    try:
+        with open(config_path, 'r') as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        raise RuntimeError(f"Failed to load configuration: {str(e)}")
 
 def get_channel_details(youtube_api: YouTubeAPI, channel_ids: List[str]) -> List[Dict[str, Any]]:
     """Get detailed information for a list of channels."""
@@ -43,24 +57,48 @@ def process_channel_data(channel_details: List[Dict[str, Any]]) -> pd.DataFrame:
     
     return pd.DataFrame(processed_data)
 
-def save_to_csv(df: pd.DataFrame, filename: str) -> None:
-    """Save DataFrame to CSV file with timestamp."""
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"{filename}_{timestamp}.csv"
-    df.to_csv(filename, index=False)
-    print(f"\nData saved to {filename}")
+def save_data(df: pd.DataFrame, prefix: str, config: dict) -> str:
+    """Save DataFrame to file based on configuration.
+    
+    Args:
+        df: DataFrame to save
+        prefix: Prefix for the filename
+        config: Configuration dictionary
+        
+    Returns:
+        str: Path to the saved file
+    """
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    output_dir = config.get('output', {}).get('output_directory', 'results')
+    
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+    
+    if config.get('output', {}).get('save_excel', False):
+        filename = f"{prefix}_{timestamp}.xlsx"
+        filepath = os.path.join(output_dir, filename)
+        df.to_excel(filepath, index=False)
+    else:
+        filename = f"{prefix}_{timestamp}.csv"
+        filepath = os.path.join(output_dir, filename)
+        df.to_csv(filepath, index=False)
+    
+    return filepath
 
-def main() -> pd.DataFrame:
+def main() -> Tuple[pd.DataFrame, pd.DataFrame]:
     """Main function to execute combined YouTube video and channel analysis."""
     try:
+        # Load configuration
+        yaml_config = load_config()
+        
         # Initialize YouTube API
-        config = YouTubeAPIConfig()
-        youtube_api = YouTubeAPI(config)
+        api_config = YouTubeAPIConfig()
+        youtube_api = YouTubeAPI(api_config)
         
         # Step 1: Get videos and their channel information
         search_items = youtube_api.search_videos_by_keyword(
-            config.search_keyword,
-            config.max_results
+            api_config.search_keyword,
+            api_config.max_results
         )
         video_ids = [item["id"]["videoId"] for item in search_items]
         video_details = youtube_api.get_video_details(video_ids)
@@ -74,14 +112,17 @@ def main() -> pd.DataFrame:
         channel_details = get_channel_details(youtube_api, list(unique_channels))
         channels_df = process_channel_data(channel_details)
         
-        # Save data to CSV files
-        save_to_csv(videos_df, "youtube_videos")
-        save_to_csv(channels_df, "youtube_channels")
+        # Save results based on configuration
+        if yaml_config.get('output', {}).get('save_csv', False) or yaml_config.get('output', {}).get('save_excel', False):
+            videos_file = save_data(videos_df, "youtube_videos", yaml_config)
+            channels_file = save_data(channels_df, "youtube_channels", yaml_config)
+            print(f"Results saved to:\n- {videos_file}\n- {channels_file}")
         
-        return videos_df
+        return videos_df, channels_df
         
     except Exception as e:
-        raise RuntimeError(f"Failed to execute combined analysis: {str(e)}")
+        print(f"Error during analysis: {str(e)}")
+        raise
 
 if __name__ == "__main__":
     try:

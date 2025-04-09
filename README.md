@@ -1,147 +1,152 @@
-# YouTube Analysis Tool
+# YouTube Lead Generation System
 
-A Python application for analyzing YouTube videos and channels, built with safety-critical guidelines in mind.
+A SaaS platform for automated YouTube lead generation and affiliate marketing. The system identifies potential YouTube creators, extracts their contact information, generates personalized emails based on video content, and manages affiliate link distribution.
 
 ## Features
 
-- **Video Analysis**
-  - Search videos by keyword
-  - Analyze engagement metrics (views, likes, comments)
-  - Calculate hourly engagement rates
-  - Filter videos by minimum engagement thresholds
+- YouTube video and channel data scraping
+- Email extraction from video and channel descriptions
+- Personalized email generation based on video content
+- Lead tracking and management
+- Analytics and performance metrics
+- Cloud-based data storage
+- Titan Email integration
 
-- **Channel Analysis**
-  - Get channel statistics
-  - Analyze subscriber growth
-  - Track video performance
-  - Export results in multiple formats
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/youtube-leads.git
+cd youtube-leads
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Create a `.env` file with your credentials:
+```env
+# Google Cloud Configuration
+GOOGLE_CLOUD_PROJECT=your-project-id
+GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
+
+# YouTube API Configuration
+YOUTUBE_API_KEY=your-youtube-api-key
+YOUTUBE_API_QUOTA_LIMIT=10000
+
+# Titan Email Configuration
+TITAN_EMAIL_API_KEY=your-titan-api-key
+TITAN_EMAIL_DOMAIN=your-domain.com
+
+# Database Configuration
+DB_HOST=your-db-host
+DB_NAME=your-db-name
+DB_USER=your-db-user
+DB_PASSWORD=your-db-password
+
+# Application Settings
+DEBUG=False
+LOG_LEVEL=INFO
+```
+
+## Usage
+
+1. Initialize the database:
+```python
+from youtube_leads.database import DatabaseManager
+
+db = DatabaseManager()
+db.create_tables()
+```
+
+2. Create a lead generation system instance:
+```python
+from youtube_leads.main import LeadGenerationSystem
+
+system = LeadGenerationSystem()
+```
+
+3. Process keywords to find leads:
+```python
+results = system.process_keywords(
+    user_id="user123",
+    keywords=["python programming", "data science"],
+    max_results=50
+)
+print(results)
+```
+
+4. Get analytics:
+```python
+analytics = system.get_analytics(
+    user_id="user123",
+    days=30
+)
+print(analytics)
+```
 
 ## Project Structure
 
 ```
-youtube/
-├── config.yaml              # User configuration file
-├── requirements.txt         # Python dependencies
-├── README.md               # This documentation
-├── executables/            # Core application code
-│   ├── youtube_api.py      # YouTube API interaction
-│   └── combined_youtube_analysis_script.py  # Main analysis script
-└── tests/                  # Test files
-    ├── test_combined_analysis.py
-    └── test_youtube_api.py
+youtube-leads/
+├── src/
+│   └── youtube_leads/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── youtube_scraper.py
+│       ├── email_manager.py
+│       ├── database.py
+│       ├── models.py
+│       └── main.py
+├── tests/
+│   └── ...
+├── requirements.txt
+├── README.md
+└── PROJECT_PLAN.md
 ```
 
-## Prerequisites
+## Development
 
-- Python 3.8+
-- YouTube Data API key
-- Required Python packages (see requirements.txt)
+1. Install development dependencies:
+```bash
+pip install -r requirements-dev.txt
+```
 
-## Setup
+2. Run tests:
+```bash
+pytest
+```
 
-1. **Install Dependencies**:
-   ```bash
-   pip3 install -r requirements.txt
-   ```
+3. Run type checking:
+```bash
+mypy src/
+```
 
-2. **Configure Environment**:
-   - Create a `.env` file in the project root
-   - Add your YouTube API key:
-     ```
-     API_KEY=your_youtube_api_key_here
-     ```
-
-3. **Configure Analysis**:
-   Edit `config.yaml` to customize your analysis:
-   ```yaml
-   # Search Settings
-   search:
-     keyword: "your search term"  # What to search for
-     max_results: 50             # Number of videos to analyze
-
-   # Filter Settings
-   filters:
-     min_views: 1000            # Minimum total views
-     min_views_per_hour: 5.0    # Minimum views per hour
-     min_comments_per_hour: 0.1 # Minimum comments per hour
-     min_likes_per_hour: 1.0    # Minimum likes per hour
-
-   # Output Settings
-   output:
-     save_csv: true            # Save as CSV
-     save_excel: false         # Save as Excel
-     save_json: false          # Save as JSON
-     output_directory: "results" # Where to save files
-
-   # Analysis Settings
-   analysis:
-     include_channel_stats: true    # Include channel statistics
-     include_video_stats: true      # Include video statistics
-     include_engagement_metrics: true # Calculate engagement metrics
-     include_sentiment_analysis: false # Analyze comment sentiment
-   ```
-
-## Usage
-
-1. **Run the Analysis**:
-   ```bash
-   PYTHONPATH=$PYTHONPATH:. python3 executables/combined_youtube_analysis_script.py
-   ```
-
-2. **View Results**:
-   - Results are saved in the specified output directory
-   - CSV files are created with timestamps
-   - Console output shows summary statistics
-
-## Code Quality Standards
-
-This project follows strict safety-critical guidelines:
-
-1. **Control Flow Simplicity**
-   - No recursion
-   - Maximum 10 decision points per function
-   - No eval() or exec()
-   - No goto patterns
-
-2. **Resource Management**
-   - No global mutable variables
-   - All resource access uses context managers
-   - Explicit initialization
-
-3. **Function Structure**
-   - Maximum 50 lines per function
-   - Single responsibility principle
-   - Type annotations for all parameters
-   - Comprehensive docstrings
-
-4. **Error Handling**
-   - All exceptions are caught and handled
-   - No silent failures
-   - Meaningful error messages
-
-## Dependencies
-
-Core dependencies (see requirements.txt for versions):
-- google-api-python-client
-- pandas
-- numpy
-- python-dotenv
-- pyarrow
-- PyYAML
+4. Format code:
+```bash
+black src/
+isort src/
+```
 
 ## Contributing
 
 1. Fork the repository
 2. Create a feature branch
-3. Make your changes
-4. Run tests: `pytest`
-5. Submit a pull request
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgments
+## Support
 
-- YouTube Data API
-- Python safety-critical development community
+For support, email support@yourdomain.com or create an issue in the repository.

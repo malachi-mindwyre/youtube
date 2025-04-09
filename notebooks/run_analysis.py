@@ -12,44 +12,40 @@ import pandas as pd
 from datetime import datetime
 
 # Add the project root to Python path
-sys.path.append(os.path.abspath('..'))
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_root)
 
 # Import the analysis script
-from executables.combined_youtube_analysis_script import main
+from executables.combined_youtube_analysis_script import main, load_config
 
 def run_analysis():
     """Run the YouTube analysis and display results."""
     print("🚀 Starting YouTube Analysis...")
     
     try:
+        # Load configuration
+        config = load_config()
+        
         # Run the analysis
-        df = main()
+        videos_df, channels_df = main()
         
         # Display summary
         print("\n✅ Analysis Complete!")
-        print(f"\n📊 Found {len(df)} videos meeting your criteria")
+        print(f"\n📊 Found {len(videos_df)} videos meeting your criteria")
         
         # Show top 5 videos by views per hour
         print("\n📈 Top 5 Videos by Views per Hour:")
-        top_videos = df.nlargest(5, 'views_per_hour')[['title', 'views_per_hour', 'likes_per_hour', 'comments_per_hour']]
+        top_videos = videos_df.nlargest(5, 'views_per_hour')[['title', 'views_per_hour', 'likes_per_hour', 'comments_per_hour']]
         print("\n", top_videos.to_string())
         
         # Show basic statistics
         print("\n📊 Summary Statistics:")
-        stats = df[['views_per_hour', 'likes_per_hour', 'comments_per_hour']].describe()
+        stats = videos_df[['views_per_hour', 'likes_per_hour', 'comments_per_hour']].describe()
         print("\n", stats.to_string())
-        
-        # Check for saved files
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        videos_file = f'youtube_videos_{timestamp}.csv'
-        channels_file = f'youtube_channels_{timestamp}.csv'
-        
-        if os.path.exists(videos_file) and os.path.exists(channels_file):
-            print(f"\n💾 Results saved to:\n- {videos_file}\n- {channels_file}")
         
     except Exception as e:
         print(f"\n❌ Error during analysis: {str(e)}")
         raise
 
 if __name__ == "__main__":
-    run_analysis() 
+    run_analysis()

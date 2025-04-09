@@ -15,8 +15,8 @@ filters:
 
 # Output Settings
 output:
-  save_csv: true  # Whether to save results as CSV files
-  save_excel: false  # Whether to save results as Excel file
+  save_csv: false  # Whether to save results as CSV files
+  save_excel: true  # Whether to save results as Excel file
   save_json: false  # Whether to save results as JSON file
   output_directory: "results"  # Directory to save output files
 

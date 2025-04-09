@@ -30,23 +30,28 @@ env/
 .vscode/
 *.swp
 *.swo
-.cursor/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite3
 
 # Testing
 .coverage
 htmlcov/
 .pytest_cache/
 .tox/
-.nox/
 
-# Output files
-*.csv
-*.xlsx
-*.json
-results/
-
-# Environment variables
-.env
+# Distribution
+*.tar.gz
+*.zip
 
 # OS
 .DS_Store
