@@ -1,13 +1,14 @@
-"""YouTube Channel Analysis Package.
+"""
+YouTube Analysis Tool - Core Modules
 
-This package provides tools for analyzing YouTube channels and videos
-using the YouTube Data API and Google Cloud Storage.
+This package contains the core functionality for analyzing YouTube videos and channels.
 """
 
 from executables.youtube_api import YouTubeAPIConfig, YouTubeAPI
-from executables.channel_analysis import ChannelAnalysisConfig, ChannelAnalyzer
-from executables.google_storage import GoogleStorageConfig, GoogleStorage
+from executables.combined_youtube_analysis_script import main
 
-__version__ = "1.0.0"
-__author__ = "Malachi Dunn"
-__license__ = "MIT" 
+__all__ = [
+    'YouTubeAPIConfig',
+    'YouTubeAPI',
+    'main'
+] 

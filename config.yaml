@@ -4,12 +4,12 @@
 # Search Settings
 search:
   keyword: "influencer marketing"  # The term to search for
-  max_results: 50  # Number of videos to analyze (max 50)
+  max_results: 100  # Number of videos to analyze (max 50)
 
 # Filter Settings
 filters:
   min_views: 1000  # Minimum total views
-  min_views_per_hour: 5.0  # Minimum views per hour
+  min_views_per_hour: 100.0  # Minimum views per hour
   min_comments_per_hour: 0.1  # Minimum comments per hour
   min_likes_per_hour: 1.0  # Minimum likes per hour
 
