@@ -1,165 +1,141 @@
-# YouTube Video & Channel Analysis Toolkit
+# YouTube Analysis Tool
 
-A safety-critical Python application for analyzing YouTube videos and channels, following NASA's Power of Ten safety principles and clean code practices.
-
-## Safety-Critical Guidelines
-
-This project strictly adheres to safety-critical Python guidelines, including:
-
-- No recursion
-- Maximum function complexity: 10 decision points
-- No `eval()`, `exec()`, or `globals()`/`locals()`
-- No `goto` emulation patterns
-- Maximum 1 level of nested loops
-- No `break` or `continue` in nested loops
-- Maximum 1 `return` statement per function
-- No monkey-patching
-- No metaclasses
-- Limited list/dictionary comprehensions
-- Explicit loop bounds
-- Strict resource management
-- Comprehensive validation and assertions
-- Type safety and static analysis
+A Python application for analyzing YouTube videos and channels, built with safety-critical guidelines in mind.
 
 ## Features
 
-*   **Video Analysis**
-    *   Search YouTube videos by keyword
-    *   Filter by engagement metrics (views, likes, comments per hour)
-    *   Detailed video statistics and metadata
-    *   Configurable filtering criteria
+- **Video Analysis**
+  - Search videos by keyword
+  - Analyze engagement metrics (views, likes, comments)
+  - Calculate hourly engagement rates
+  - Filter videos by minimum engagement thresholds
 
-*   **Channel Analysis**
-    *   Comprehensive channel statistics
-    *   Subscriber count, total views, video count
-    *   Channel metadata (creation date, country, description)
-    *   Contact information extraction (emails, social media links)
-
-*   **Data Management**
-    *   Pandas DataFrame integration
-    *   Optional Google Cloud Storage support
-    *   Environment-based configuration
-    *   Type-safe data handling
+- **Channel Analysis**
+  - Get channel statistics
+  - Analyze subscriber growth
+  - Track video performance
+  - Export results in multiple formats
 
 ## Project Structure
 
 ```
-.
-├── .env                    # Environment variables (API keys)
-├── .gitignore             # Git ignore rules
-├── README.md              # This documentation
-├── requirements.txt       # Python dependencies
-├── executables/
-│   ├── youtube_api.py     # Video search and analysis
-│   ├── channel_analysis.py # Channel information extraction
-│   ├── combined_youtube_analysis_script.py # Main analysis script
-│   └── google_storage.py  # GCP integration (optional)
-└── jupyter/
-    └── youtube_api.ipynb  # Interactive analysis notebook
+youtube/
+├── config.yaml              # User configuration file
+├── requirements.txt         # Python dependencies
+├── README.md               # This documentation
+├── executables/            # Core application code
+│   ├── youtube_api.py      # YouTube API interaction
+│   └── combined_youtube_analysis_script.py  # Main analysis script
+└── tests/                  # Test files
+    ├── test_combined_analysis.py
+    └── test_youtube_api.py
 ```
 
 ## Prerequisites
 
-*   Python 3.9 or higher
-*   YouTube Data API v3 key
-*   (Optional) Google Cloud Storage access
+- Python 3.8+
+- YouTube Data API key
+- Required Python packages (see requirements.txt)
 
 ## Setup
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone git@github.com:malachi-mindwyre/youtube.git
-    cd youtube
-    ```
+1. **Install Dependencies**:
+   ```bash
+   pip3 install -r requirements.txt
+   ```
 
-2.  **Create and Activate Virtual Environment:**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
+2. **Configure Environment**:
+   - Create a `.env` file in the project root
+   - Add your YouTube API key:
+     ```
+     API_KEY=your_youtube_api_key_here
+     ```
 
-3.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+3. **Configure Analysis**:
+   Edit `config.yaml` to customize your analysis:
+   ```yaml
+   # Search Settings
+   search:
+     keyword: "your search term"  # What to search for
+     max_results: 50             # Number of videos to analyze
 
-4.  **Configure Environment:**
-    *   Create a `.env` file in the project root
-    *   Add your YouTube API key:
-        ```
-        API_KEY=your_api_key_here
-        ```
-    *   Get an API key from [Google Cloud Console](https://console.cloud.google.com/apis/library/youtube.googleapis.com)
+   # Filter Settings
+   filters:
+     min_views: 1000            # Minimum total views
+     min_views_per_hour: 5.0    # Minimum views per hour
+     min_comments_per_hour: 0.1 # Minimum comments per hour
+     min_likes_per_hour: 1.0    # Minimum likes per hour
+
+   # Output Settings
+   output:
+     save_csv: true            # Save as CSV
+     save_excel: false         # Save as Excel
+     save_json: false          # Save as JSON
+     output_directory: "results" # Where to save files
+
+   # Analysis Settings
+   analysis:
+     include_channel_stats: true    # Include channel statistics
+     include_video_stats: true      # Include video statistics
+     include_engagement_metrics: true # Calculate engagement metrics
+     include_sentiment_analysis: false # Analyze comment sentiment
+   ```
 
 ## Usage
 
-### Basic Analysis
+1. **Run the Analysis**:
+   ```bash
+   PYTHONPATH=$PYTHONPATH:. python3 executables/combined_youtube_analysis_script.py
+   ```
 
-1.  **Run the Combined Analysis:**
-    ```bash
-    python executables/combined_youtube_analysis_script.py
-    ```
-    This will:
-    *   Search for videos matching the default keyword
-    *   Filter videos based on engagement metrics
-    *   Analyze associated channels
-    *   Display results in the console
+2. **View Results**:
+   - Results are saved in the specified output directory
+   - CSV files are created with timestamps
+   - Console output shows summary statistics
 
-2.  **Customize Analysis:**
-    Modify the `YouTubeAPIConfig` class in `youtube_api.py` to adjust:
-    *   Search keywords
-    *   Minimum views and engagement thresholds
-    *   Maximum results per search
+## Code Quality Standards
 
-### Advanced Usage
+This project follows strict safety-critical guidelines:
 
-1.  **Interactive Analysis:**
-    ```bash
-    jupyter notebook jupyter/youtube_api.ipynb
-    ```
+1. **Control Flow Simplicity**
+   - No recursion
+   - Maximum 10 decision points per function
+   - No eval() or exec()
+   - No goto patterns
 
-2.  **Google Cloud Storage Integration:**
-    ```python
-    from executables.google_storage import upload_to_gcp_bucket
-    
-    # Upload results to GCP
-    upload_to_gcp_bucket(
-        source_file="results.csv",
-        bucket_name="your-bucket",
-        destination_blob_name="youtube-analysis/results.csv"
-    )
-    ```
+2. **Resource Management**
+   - No global mutable variables
+   - All resource access uses context managers
+   - Explicit initialization
 
-## Code Quality
+3. **Function Structure**
+   - Maximum 50 lines per function
+   - Single responsibility principle
+   - Type annotations for all parameters
+   - Comprehensive docstrings
 
-This project adheres to strict coding standards:
-
-*   NASA's Power of Ten rules for safety-critical systems
-*   Clean code principles
-*   Comprehensive type hints
-*   Extensive error handling
-*   Input validation and assertions
-*   No global variables
-*   Maximum 2 levels of nesting
-*   Small, focused functions
-*   Proper resource management
+4. **Error Handling**
+   - All exceptions are caught and handled
+   - No silent failures
+   - Meaningful error messages
 
 ## Dependencies
 
-*   `google-api-python-client`: YouTube Data API interaction
-*   `google-cloud-storage`: GCP integration
-*   `pandas`: Data manipulation
-*   `numpy`: Numerical operations
-*   `python-dateutil`: Date/time handling
-*   `pytz`: Timezone support
-*   `python-dotenv`: Environment variable management
+Core dependencies (see requirements.txt for versions):
+- google-api-python-client
+- pandas
+- numpy
+- python-dotenv
+- pyarrow
+- PyYAML
 
 ## Contributing
 
-1.  Create a feature branch
-2.  Make your changes
-3.  Ensure all tests pass
-4.  Submit a pull request
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `pytest`
+5. Submit a pull request
 
 ## License
 
@@ -168,5 +144,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - YouTube Data API
-- Google Cloud Platform
 - Python safety-critical development community
