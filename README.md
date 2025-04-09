@@ -1,98 +1,98 @@
-# YouTube Video & Channel Analysis Toolkit
+# YouTube Channel Analysis Tool
 
-This project provides a set of Python scripts to search for YouTube videos based on keywords, filter them by engagement metrics, and extract detailed information about the associated channels, including potential contact information.
+A Python tool for analyzing YouTube channels and videos, with a focus on finding channels with contact information.
 
 ## Features
 
-*   **Keyword-Based Video Search:** Finds YouTube videos relevant to a specified search term.
-*   **Engagement Filtering:** Filters videos based on configurable criteria like minimum total views, views per hour, likes per hour, and comments per hour.
-*   **Detailed Channel Analysis:** Retrieves comprehensive data for the channels associated with the filtered videos, including:
-    *   Subscriber count, total views, total videos
-    *   Creation date, country
-    *   Channel description
-    *   Keywords
-    *   Custom URL
-*   **Contact Information Extraction:** Attempts to extract email addresses and social media links (Instagram, Twitter, Facebook, TikTok, LinkedIn, Website) from channel descriptions.
-*   **Data Output:** Uses pandas DataFrames to structure the collected video and channel data.
-*   **Google Cloud Storage Integration:** Includes a utility function to upload files to a GCP bucket (optional usage).
-*   **Jupyter Notebook:** Provides a notebook environment for interactive analysis and development based on the video search script.
+- Search YouTube videos by keyword
+- Analyze channel and video statistics
+- Filter videos by:
+  - Minimum views
+  - Minimum views per hour
+  - Minimum comments per hour
+  - Minimum likes per hour
+  - Maximum hours since published
+  - Email presence in channel description
+- Save results in CSV or Excel format
+- Extract contact information from channel descriptions
 
-## Project Structure
+## Installation
 
-```
-.
-├── .gitignore             # Specifies intentionally untracked files (e.g., .env)
-├── README.md              # This file
-├── requirements.txt       # Python dependencies
-├── executables/
-│   ├── channel_analysis.py # Script to fetch detailed channel information
-│   ├── combined_youtube_analysis_script.py # Main script to run video search and channel analysis
-│   ├── google_storage.py  # Utility for uploading files to Google Cloud Storage
-│   └── youtube_api.py     # Script to search and filter YouTube videos by keyword
-└── jupyter/
-    └── youtube_api.ipynb  # Jupyter notebook version for video search and analysis
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/youtube.git
+cd youtube
 ```
 
-## Setup
+2. Create and activate a virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+```
 
-1.  **Prerequisites:**
-    *   Python 3.x
-    *   pip (Python package installer)
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-2.  **Clone the Repository:**
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
+4. Create a `.env` file with your YouTube API key:
+```
+API_KEY=your_youtube_api_key_here
+```
 
-3.  **Create a Virtual Environment (Recommended):**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+## Configuration
 
-4.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+Edit `config.yaml` to customize the analysis:
 
-5.  **Set up Environment Variables:**
-    *   Create a file named `.env` in the project's root directory.
-    *   Add your YouTube Data API v3 key to the `.env` file:
-        ```
-        API_KEY=YOUR_YOUTUBE_API_KEY
-        ```
-    *   You can obtain an API key from the [Google Cloud Console](https://console.cloud.google.com/apis/library/youtube.googleapis.com). Make sure to enable the "YouTube Data API v3".
+```yaml
+# Search Settings
+search:
+  keyword: "influencer marketing"  # The term to search for
+  max_results: 100  # Number of videos to analyze
+
+# Filter Settings
+filters:
+  min_views: 1000  # Minimum total views
+  min_views_per_hour: 100.0  # Minimum views per hour
+  min_comments_per_hour: 0.1  # Minimum comments per hour
+  min_likes_per_hour: 1.0  # Minimum likes per hour
+  max_hours_since_published: 8760  # Maximum hours since video was published (1 year)
+  require_email_found: true  # Only save channels with emails
+
+# Output Settings
+output:
+  save_csv: false  # Whether to save results as CSV files
+  save_excel: true  # Whether to save results as Excel file
+  save_json: false  # Whether to save results as JSON file
+  output_directory: "results"  # Directory to save output files
+```
 
 ## Usage
 
-1.  **Configure Scripts (Optional):**
-    *   Modify `executables/youtube_api.py` or `jupyter/youtube_api.ipynb` to change the `SEARCH_KEYWORD` or adjust the filtering criteria (`MIN_VIEWS`, `MIN_VIEWS_PER_HOUR`, etc.).
+Run the analysis:
+```bash
+python notebooks/run_analysis.py
+```
 
-2.  **Run the Main Analysis Script:**
-    Execute the combined script to perform both video searching/filtering and channel analysis:
-    ```bash
-    python executables/combined_youtube_analysis_script.py
-    ```
-    This will print sample DataFrames for the collected video and channel data to the console. You can modify the script to save the DataFrames to files (e.g., CSV) if needed.
+The tool will:
+1. Search for videos matching your keyword
+2. Filter videos based on your criteria
+3. Extract channel information
+4. Find channels with contact information
+5. Save results to the specified output directory
 
-3.  **Use the Jupyter Notebook:**
-    For interactive analysis of the video search part:
-    ```bash
-    jupyter notebook jupyter/youtube_api.ipynb
-    ```
+## Output
 
-4.  **Google Cloud Storage Upload (Manual):**
-    If you need to upload a file (e.g., a CSV export of the results) to GCP:
-    *   Ensure you have authenticated with GCP (e.g., via `gcloud auth application-default login`).
-    *   Use the `upload_to_gcp_bucket` function from `executables/google_storage.py` within another script or interactively.
+The tool generates two files:
+1. `youtube_videos_[timestamp].csv/xlsx` - Contains video statistics
+2. `youtube_channels_[timestamp].csv/xlsx` - Contains channel information and contact details
 
-## Dependencies
+## Requirements
 
-*   `google-api-python-client`: For interacting with the YouTube Data API.
-*   `google-cloud-storage`: For interacting with Google Cloud Storage.
-*   `pandas`: For data manipulation and analysis (DataFrames).
-*   `numpy`: Numerical Python library (often a dependency of pandas).
-*   `python-dateutil`: For parsing dates/times.
-*   `pytz`: For handling timezones.
-*   `python-dotenv`: For loading environment variables from the `.env` file.
+- Python 3.8+
+- YouTube Data API v3 key
+- Dependencies listed in `requirements.txt`
+
+## License
+
+MIT License

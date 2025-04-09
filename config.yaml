@@ -1,0 +1,30 @@
+# YouTube Analysis Configuration
+# Edit these settings to customize your analysis
+
+# Search Settings
+search:
+  keyword: "influencer marketing"  # The term to search for
+  max_results: 100  # Number of videos to analyze (max 50)
+
+# Filter Settings
+filters:
+  min_views: 1000  # Minimum total views
+  min_views_per_hour: 100.0  # Minimum views per hour
+  min_comments_per_hour: 0.1  # Minimum comments per hour
+  min_likes_per_hour: 1.0  # Minimum likes per hour
+  max_hours_since_published: 8760  # Maximum hours since video was published (1 year = 8760 hours)
+  require_email_found: true  # Only save channels where an email was found in their videos
+
+# Output Settings
+output:
+  save_csv: false  # Whether to save results as CSV files
+  save_excel: true  # Whether to save results as Excel file
+  save_json: false  # Whether to save results as JSON file
+  output_directory: "results"  # Directory to save output files
+
+# Analysis Settings
+analysis:
+  include_channel_stats: true  # Whether to include channel statistics
+  include_video_stats: true  # Whether to include video statistics
+  include_engagement_metrics: true  # Whether to calculate engagement metrics
+  include_sentiment_analysis: false  # Whether to perform sentiment analysis on comments 
