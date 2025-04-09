@@ -24,42 +24,30 @@ wheels/
 venv/
 ENV/
 env/
-.env
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-.DS_Store
+.cursor/
 
 # Testing
 .coverage
 htmlcov/
-.tox/
 .pytest_cache/
-.mypy_cache/
+.tox/
+.nox/
 
-# Logs
-*.log
-logs/
+# Output files
+*.csv
+*.xlsx
+*.json
+results/
 
-# Local development
-*.db
-*.sqlite3
+# Environment variables
+.env
 
-# Jupyter Notebook
-.ipynb_checkpoints
-jupyter/
-
-# Distribution
-*.tar.gz
-*.zip
-
-# Documentation
-docs/_build/
-site/
-
-# System Files
+# OS
 .DS_Store
 Thumbs.db
