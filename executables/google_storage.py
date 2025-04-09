@@ -18,10 +18,23 @@ class GoogleStorage:
         self.storage_client = storage.Client()
 
     def upload_to_bucket(self, source_file: str, config: GoogleStorageConfig) -> None:
-        """Upload a file to Google Cloud Storage bucket."""
+        """Upload a file to Google Cloud Storage bucket.
+        
+        Args:
+            source_file: Path to the file to upload
+            config: GoogleStorageConfig instance containing bucket and blob settings
+            
+        Raises:
+            AssertionError: If source_file is invalid or config is None/invalid
+            RuntimeError: If upload operation fails
+        """
+        # Input validation
         assert isinstance(source_file, str), "Source file path must be a string"
         assert source_file, "Source file path cannot be empty"
+        assert config is not None, "Config cannot be None"
+        assert isinstance(config, GoogleStorageConfig), "Config must be a GoogleStorageConfig instance"
         
+        # Config validation
         config.validate()
         
         try:

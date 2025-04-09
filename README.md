@@ -1,6 +1,25 @@
 # YouTube Video & Channel Analysis Toolkit
 
-A robust Python toolkit for analyzing YouTube videos and channels, built with safety-critical principles in mind. This project follows NASA's Power of Ten rules and clean code principles to ensure reliability and maintainability.
+A safety-critical Python application for analyzing YouTube videos and channels, following NASA's Power of Ten safety principles and clean code practices.
+
+## Safety-Critical Guidelines
+
+This project strictly adheres to safety-critical Python guidelines, including:
+
+- No recursion
+- Maximum function complexity: 10 decision points
+- No `eval()`, `exec()`, or `globals()`/`locals()`
+- No `goto` emulation patterns
+- Maximum 1 level of nested loops
+- No `break` or `continue` in nested loops
+- Maximum 1 `return` statement per function
+- No monkey-patching
+- No metaclasses
+- Limited list/dictionary comprehensions
+- Explicit loop bounds
+- Strict resource management
+- Comprehensive validation and assertions
+- Type safety and static analysis
 
 ## Features
 
@@ -145,3 +164,9 @@ This project adheres to strict coding standards:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- YouTube Data API
+- Google Cloud Platform
+- Python safety-critical development community

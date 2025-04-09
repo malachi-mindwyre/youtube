@@ -1,0 +1,91 @@
+[flake8]
+# Maximum line length
+max-line-length = 88
+
+# Exclude patterns
+exclude = 
+    .git,
+    __pycache__,
+    build,
+    dist,
+    .venv,
+    venv,
+    .eggs,
+    *.egg,
+    .tox,
+    .pytest_cache,
+    .coverage,
+    htmlcov,
+    .mypy_cache
+
+# Select error codes
+select = 
+    E,  # pycodestyle errors
+    W,  # pycodestyle warnings
+    F,  # pyflakes
+    C,  # mccabe complexity
+    N,  # naming conventions
+    I,  # isort
+    B,  # bugbear
+    D   # docstring
+
+# Ignore specific error codes
+ignore = 
+    E203,  # whitespace before ':'
+    E501,  # line too long (handled by black)
+    W503,  # line break before binary operator
+    D105,  # Missing docstring in magic method
+    D107,  # Missing docstring in __init__
+
+# Per-file-ignores
+per-file-ignores =
+    __init__.py:F401
+    tests/*:S101
+
+# Complexity
+max-complexity = 10
+
+# Docstring style
+docstring-convention = google
+
+# Naming conventions
+naming-convention = 
+    function:^[a-z_][a-z0-9_]*$
+    variable:^[a-z_][a-z0-9_]*$
+    class:^[A-Z][a-zA-Z0-9]*$
+    method:^[a-z_][a-z0-9_]*$
+    module:^[a-z_][a-z0-9_]*$
+    const:^[A-Z_][A-Z0-9_]*$
+
+# Import order
+import-order-style = google
+
+# Maximum number of arguments
+max-args = 5
+
+# Maximum number of statements
+max-statements = 50
+
+# Maximum number of local variables
+max-locals = 15
+
+# Maximum number of branches
+max-branches = 10
+
+# Maximum number of returns
+max-returns = 1
+
+# Maximum number of expressions
+max-expressions = 10
+
+# Maximum number of attributes
+max-attributes = 7
+
+# Maximum number of methods
+max-methods = 7
+
+# Maximum number of lines per module
+max-module-lines = 1000
+
+# Maximum number of lines per function
+max-function-lines = 50 

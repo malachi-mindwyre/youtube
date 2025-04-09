@@ -1,7 +1,9 @@
+"""Combined YouTube analysis script."""
+
 from typing import Tuple
 import pandas as pd
-from youtube_api import main as get_videos
-from channel_analysis import main as get_channels
+from executables.youtube_api import main as get_videos
+from executables.channel_analysis import main as get_channels
 
 def main() -> Tuple[pd.DataFrame, pd.DataFrame]:
     """Main function to execute combined YouTube video and channel analysis."""
