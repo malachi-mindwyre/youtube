@@ -17,3 +17,7 @@ mypy==1.8.0
 pytest==8.0.2
 pytest-cov==4.1.0
 pytest-mock==3.12.0
+
+# Jupyter
+jupyter==1.0.0
+ipykernel==6.29.0
