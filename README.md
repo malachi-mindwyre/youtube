@@ -1,38 +1,27 @@
-# YouTube Channel Analysis Tool
+# YouTube Analysis Tool
 
-A Python tool for analyzing YouTube channels and videos, with a focus on finding channels with contact information.
+A powerful Python tool for analyzing YouTube channels and generating personalized outreach content.
 
 ## Features
 
-- Search YouTube videos by keyword
-- Analyze channel and video statistics
-- Filter videos by:
-  - Minimum and maximum views
-  - Minimum and maximum subscribers
-  - Minimum views per hour
-  - Minimum comments per hour
-  - Minimum likes per hour
-  - Maximum hours since published
-  - Email presence in channel description
-  - Transcript availability
-- Save results in CSV and Excel format with multiple sheets
-- Intelligent duplicate handling:
-  - Updates existing channels/videos instead of creating duplicates
-  - Only updates channels when significant changes occur (10% threshold)
-  - Always updates video data with latest statistics
-- Extract contact information from channel descriptions
-- Generate personalized emails for outreach
-- Detailed progress tracking and analysis summary
+- 🔍 Search YouTube videos by keyword
+- 📊 Analyze channel and video statistics
+- 📧 Generate personalized email templates
+- 📝 Process video transcripts
+- 📈 Track engagement metrics
+- 💾 Export data to CSV and Excel formats
+- 🔄 Smart update system for existing data
+- 🎯 Configurable filtering criteria
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/youtube.git
-cd youtube
+git clone https://github.com/your-username/youtube-analysis.git
+cd youtube-analysis
 ```
 
-2. Create and activate a virtual environment:
+2. Create a virtual environment:
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
@@ -43,10 +32,14 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file with your YouTube API key:
-```
-API_KEY=your_youtube_api_key_here
-```
+4. Set up YouTube API credentials:
+   - Create a project in the [Google Cloud Console](https://console.cloud.google.com/)
+   - Enable the YouTube Data API v3
+   - Create credentials (API Key)
+   - Create a `.env` file and add your API key:
+     ```
+     YOUTUBE_API_KEY=your_api_key_here
+     ```
 
 ## Configuration
 
@@ -55,35 +48,28 @@ Edit `config.yaml` to customize the analysis:
 ```yaml
 # Search Settings
 search:
-  keyword: "software engineer day in the life"  # The term to search for
-  max_results: 50  # Number of videos to analyze
+  keyword: "your search term"
+  max_results: 50
 
 # Filter Settings
 filters:
-  min_views: 100  # Minimum total views
-  max_views: 1000000  # Maximum total views
-  min_subscribers: 100  # Minimum subscribers
-  max_subscribers: 100000  # Maximum subscribers
-  min_views_per_hour: 0.05  # Minimum views per hour
-  min_comments_per_hour: 0.001  # Minimum comments per hour
-  min_likes_per_hour: 0.001  # Minimum likes per hour
-  max_hours_since_published: 17520  # Maximum hours since video was published (2 years)
-  require_email_found: true  # Only save channels with emails
-  require_transcript: false  # Whether to require transcripts
+  min_views: 100
+  max_views: 1000000
+  min_subscribers: 100
+  max_subscribers: 100000
+  min_views_per_hour: 0.05
+  min_comments_per_hour: 0.001
+  min_likes_per_hour: 0.001
+  max_hours_since_published: 17520
+  require_email_found: true
+  require_transcript: false
 
 # Output Settings
 output:
-  directory: "results"  # Directory to save output files
-  save_csv: true  # Whether to save results as CSV files
-  save_excel: true  # Whether to save results as Excel file with multiple sheets
-  save_json: false  # Whether to save results as JSON file
-
-# Analysis Settings
-analysis:
-  include_channel_stats: true  # Whether to include channel statistics
-  include_video_stats: true  # Whether to include video statistics
-  include_engagement_metrics: true  # Whether to calculate engagement metrics
-  include_sentiment_analysis: false  # Whether to perform sentiment analysis on comments
+  directory: "results"
+  save_csv: true
+  save_excel: true
+  save_json: false
 ```
 
 ## Usage
@@ -93,56 +79,57 @@ Run the analysis:
 python executables/run_analysis.py
 ```
 
-The tool will:
-1. Search for videos matching your keyword
-2. Process each video and its channel:
-   - Check subscriber count
-   - Verify view count
-   - Calculate engagement metrics
-   - Extract transcripts
-   - Find contact information
-3. Generate personalized emails for qualified channels
-4. Save results to the specified output directory
-5. Display a detailed progress report and analysis summary
+## Output Files
 
-## Output
+The tool generates the following files in the `results` directory:
 
-The tool generates the following files:
+1. `youtube_channels.csv`: Channel statistics and metrics
+2. `youtube_videos.csv`: Detailed video information
+3. `youtube_email_content.csv`: Generated email templates
+4. `youtube_analysis.xlsx`: Excel workbook with all data (multiple sheets)
 
-### CSV Files
-1. `youtube_channels.csv` - Contains channel information and contact details
-2. `youtube_videos.csv` - Contains video statistics and engagement metrics
-3. `youtube_email_content.csv` - Contains generated email templates for outreach
+## Documentation
 
-### Excel File
-`youtube_analysis.xlsx` - Contains all data in separate sheets:
-1. "Channels" sheet - Channel information and contact details
-2. "Videos" sheet - Video statistics and engagement metrics
-3. "Email Content" sheet - Generated email templates for outreach
-
-### Duplicate Handling
-- When running multiple analyses, the tool will:
-  - Update existing channels/videos instead of creating duplicates
-  - Only update channels when significant changes occur (10% threshold)
-  - Always update video data with latest statistics
-  - Update email content if new information is found
+- [Executables Documentation](docs/EXECUTABLES.md): Detailed information about the code structure
+- [Configuration Guide](docs/CONFIGURATION.md): Complete configuration options
+- [API Reference](docs/API.md): YouTube API usage details
 
 ## Progress Tracking
 
-The tool provides detailed progress information:
-- Number of videos processed
-- Channel details and subscriber counts
-- Transcript availability
-- Engagement metrics
-- Email generation status
-- Final analysis summary
+The tool maintains state between runs:
+- Updates existing channel data when significant changes occur
+- Avoids duplicate entries
+- Tracks historical metrics
+- Smart update system for efficient processing
 
 ## Requirements
 
 - Python 3.8+
-- YouTube Data API v3 key
-- Dependencies listed in `requirements.txt`
+- YouTube Data API v3 credentials
+- Required Python packages (see `requirements.txt`)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Security
+
+- Never commit API credentials
+- Store sensitive data in environment variables
+- Use `.env` for local development
+- Follow security best practices
+
+## Support
+
+For support, please:
+1. Check the documentation
+2. Search existing issues
+3. Create a new issue if needed
