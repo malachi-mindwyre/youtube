@@ -36,26 +36,31 @@ def main():
         
         # Save results if we have data
         if len(channels_df) > 0:
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            # Create output directory if it doesn't exist
+            os.makedirs(config.output_directory, exist_ok=True)
             
+            # Save to CSV
             if config.save_csv:
                 channels_df.to_csv(f"{config.output_directory}/youtube_channels.csv", index=False)
                 videos_df.to_csv(f"{config.output_directory}/youtube_videos.csv", index=False)
                 if len(emails_df) > 0:
                     emails_df.to_csv(f"{config.output_directory}/youtube_email_content.csv", index=False)
             
+            # Save to Excel
             if config.save_excel:
-                with pd.ExcelWriter(f"{config.output_directory}/youtube_analysis_{timestamp}.xlsx") as writer:
+                excel_file = f"{config.output_directory}/youtube_analysis.xlsx"
+                with pd.ExcelWriter(excel_file, engine='openpyxl', mode='w') as writer:
                     channels_df.to_excel(writer, sheet_name="Channels", index=False)
                     videos_df.to_excel(writer, sheet_name="Videos", index=False)
                     if len(emails_df) > 0:
-                        emails_df.to_excel(writer, sheet_name="Emails", index=False)
+                        emails_df.to_excel(writer, sheet_name="Email Content", index=False)
             
+            # Save to JSON
             if config.save_json:
-                channels_df.to_json(f"{config.output_directory}/youtube_channels_{timestamp}.json", orient="records")
-                videos_df.to_json(f"{config.output_directory}/youtube_videos_{timestamp}.json", orient="records")
+                channels_df.to_json(f"{config.output_directory}/youtube_channels.json", orient="records")
+                videos_df.to_json(f"{config.output_directory}/youtube_videos.json", orient="records")
                 if len(emails_df) > 0:
-                    emails_df.to_json(f"{config.output_directory}/youtube_emails_{timestamp}.json", orient="records")
+                    emails_df.to_json(f"{config.output_directory}/youtube_emails.json", orient="records")
             
             print(f"\nResults saved to {config.output_directory}/")
         

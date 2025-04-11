@@ -686,64 +686,75 @@ Don't forget to watch my other video on [related topic]: [Video Link]"""
                 
         return pd.DataFrame(merged_data)
 
-    def save_results(self, videos_df: pd.DataFrame, channels_df: pd.DataFrame, 
-                    email_content_df: pd.DataFrame) -> None:
-        """Save results to files."""
+    def save_results(self, channels: List[Dict], videos: List[Dict], email_content: List[Dict]) -> None:
+        """Save results to CSV and/or Excel files.
+        
+        Args:
+            channels: List of channel data dictionaries
+            videos: List of video data dictionaries
+            email_content: List of email content dictionaries
+        """
         # Create output directory if it doesn't exist
         os.makedirs(self.config.output_directory, exist_ok=True)
         
-        # Save videos data
-        if self.config.save_csv:
-            videos_df.to_csv(
-                os.path.join(self.config.output_directory, 'youtube_videos.csv'),
-                index=False
-            )
-        if self.config.save_excel:
-            videos_df.to_excel(
-                os.path.join(self.config.output_directory, 'youtube_videos.xlsx'),
-                index=False
-            )
-        if self.config.save_json:
-            videos_df.to_json(
-                os.path.join(self.config.output_directory, 'youtube_videos.json'),
-                orient='records'
-            )
+        # Define file paths with fixed names
+        channels_file = os.path.join(self.config.output_directory, 'youtube_channels.csv')
+        videos_file = os.path.join(self.config.output_directory, 'youtube_videos.csv')
+        email_file = os.path.join(self.config.output_directory, 'youtube_email_content.csv')
+        excel_file = os.path.join(self.config.output_directory, 'youtube_analysis.xlsx')
         
-        # Save channels data
-        if self.config.save_csv:
-            channels_df.to_csv(
-                os.path.join(self.config.output_directory, 'youtube_channels.csv'),
-                index=False
-            )
-        if self.config.save_excel:
-            channels_df.to_excel(
-                os.path.join(self.config.output_directory, 'youtube_channels.xlsx'),
-                index=False
-            )
-        if self.config.save_json:
-            channels_df.to_json(
-                os.path.join(self.config.output_directory, 'youtube_channels.json'),
-                orient='records'
-            )
+        # Convert data to DataFrames
+        df_channels = pd.DataFrame(channels) if channels else pd.DataFrame()
+        df_videos = pd.DataFrame(videos) if videos else pd.DataFrame()
+        df_email = pd.DataFrame(email_content) if email_content else pd.DataFrame()
         
-        # Save email content data
-        if self.config.save_csv:
-            email_content_df.to_csv(
-                os.path.join(self.config.output_directory, 'youtube_email_content.csv'),
-                index=False
-            )
-        if self.config.save_excel:
-            email_content_df.to_excel(
-                os.path.join(self.config.output_directory, 'youtube_email_content.xlsx'),
-                index=False
-            )
-        if self.config.save_json:
-            email_content_df.to_json(
-                os.path.join(self.config.output_directory, 'youtube_email_content.json'),
-                orient='records'
-            )
+        # Add last_updated timestamp if not present
+        current_time = datetime.now(pytz.UTC).isoformat()
+        for df in [df_channels, df_videos, df_email]:
+            if not df.empty and 'last_updated' not in df.columns:
+                df['last_updated'] = current_time
         
-        print(f"\nResults saved to {self.config.output_directory}/")
+        # Load existing data if files exist
+        if os.path.exists(channels_file):
+            existing_channels = pd.read_csv(channels_file)
+            df_channels = self.merge_dataframes(existing_channels, df_channels, 'channel_id')
+        
+        if os.path.exists(videos_file):
+            existing_videos = pd.read_csv(videos_file)
+            df_videos = self.merge_dataframes(existing_videos, df_videos, 'video_id', update_all=True)
+        
+        if os.path.exists(email_file):
+            existing_email = pd.read_csv(email_file)
+            df_email = self.merge_dataframes(existing_email, df_email, 'channel_id')
+        
+        # Save to CSV if enabled
+        if self.config.save_csv:
+            if not df_channels.empty:
+                df_channels.to_csv(channels_file, index=False)
+                print(f"Channel data saved to {channels_file}")
+            
+            if not df_videos.empty:
+                df_videos.to_csv(videos_file, index=False)
+                print(f"Video data saved to {videos_file}")
+            
+            if not df_email.empty:
+                df_email.to_csv(email_file, index=False)
+                print(f"Email content saved to {email_file}")
+        
+        # Save to Excel if enabled
+        if self.config.save_excel:
+            try:
+                # Create Excel file with all sheets
+                with pd.ExcelWriter(excel_file, engine='openpyxl', mode='w') as writer:
+                    if not df_channels.empty:
+                        df_channels.to_excel(writer, sheet_name='Channels', index=False)
+                    if not df_videos.empty:
+                        df_videos.to_excel(writer, sheet_name='Videos', index=False)
+                    if not df_email.empty:
+                        df_email.to_excel(writer, sheet_name='Email Content', index=False)
+                print(f"All data saved to {excel_file}")
+            except Exception as e:
+                print(f"Error saving Excel file: {e}")
 
     def analyze(self) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         """Run complete YouTube analysis."""
@@ -756,12 +767,12 @@ Don't forget to watch my other video on [related topic]: [Video Link]"""
         videos_df, channels_df, transcripts_df, emails_df = self.process_video_data(video_data)
         
         # Save results
-        if self.config.save_csv:
-            self.save_results(videos_df, channels_df, emails_df)
-        if self.config.save_excel:
-            self.save_results(videos_df, channels_df, emails_df)
-        if self.config.save_json:
-            self.save_results(videos_df, channels_df, emails_df)
+        if videos_df.shape[0] > 0 or channels_df.shape[0] > 0 or emails_df.shape[0] > 0:
+            self.save_results(
+                channels=channels_df.to_dict('records'),
+                videos=videos_df.to_dict('records'),
+                email_content=emails_df.to_dict('records')
+            )
         
         return videos_df, channels_df, emails_df
 

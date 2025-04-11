@@ -22,7 +22,7 @@ filters:
 # Output Settings
 output:
   directory: "results"
-  save_csv: false
+  save_csv: true
   save_excel: true
   save_json: false
 
