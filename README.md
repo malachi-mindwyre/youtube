@@ -41,6 +41,22 @@ pip install -r requirements.txt
      YOUTUBE_API_KEY=your_api_key_here
      ```
 
+## Authentication
+
+1. Create a Google Cloud Project and enable the YouTube Data API v3
+2. Create OAuth 2.0 credentials:
+   - Go to Google Cloud Console > APIs & Services > Credentials
+   - Create OAuth 2.0 Client ID
+   - Set application type as "Desktop app"
+   - Download the credentials JSON file
+3. Rename the downloaded file to `credentials.json` and place it in the project root
+4. On first run, the application will:
+   - Open a browser window for authentication
+   - Save the refresh token in `token.pickle`
+   - Use the saved token for subsequent runs
+
+⚠️ **Security Note**: Never commit your credentials.json or token.pickle files. They are already in .gitignore.
+
 ## Configuration
 
 Edit `config.yaml` to customize the analysis:

@@ -5,6 +5,10 @@ from typing import List, Dict, Tuple, Optional
 import pandas as pd
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+import pickle
 from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import TextFormatter
 import requests
@@ -19,11 +23,14 @@ from dateutil import parser
 import traceback
 import json
 
-from executables.utils import has_email, extract_email, calculate_hours_since_published
-from executables.data_processing import merge_dataframes, should_update_channel
+from executables.utils import has_email, extract_email, calculate_hours_since_published, should_update_channel
+from executables.data_processing import merge_dataframes
 from executables.email_generation import generate_email_content
 from executables.transcript_processing import get_video_transcript, extract_key_moments
-from executables.config import YouTubeAPIConfig
+from executables.config import YouTubeAPIConfig, Config
+
+# If modifying these scopes, delete the file token.pickle.
+SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
 
 def has_email(text: str) -> bool:
     """Check if text contains an email address.
@@ -43,29 +50,42 @@ def has_email(text: str) -> bool:
 class YouTubeAPI:
     """YouTube API wrapper for video and channel analysis."""
     
-    def __init__(self, config: Dict):
-        """Initialize YouTube API with configuration.
+    def __init__(self, config: Config):
+        """Initialize YouTube API client with configuration."""
+        self.config = config
+        self.service = self._get_authenticated_service()
+        self.logger = logging.getLogger(__name__)
         
-        Args:
-            config: Configuration dictionary
-        """
-        self.config = YouTubeAPIConfig.from_dict(config)
+    def _get_authenticated_service(self):
+        """Get authenticated YouTube API service."""
+        creds = None
+        # The file token.pickle stores the user's access and refresh tokens
+        if os.path.exists('token.pickle'):
+            with open('token.pickle', 'rb') as token:
+                creds = pickle.load(token)
         
-        # Get API key from environment variable
-        api_key = os.getenv('YOUTUBE_API_KEY')
-        if not api_key:
-            raise ValueError("YOUTUBE_API_KEY not found in environment variables")
+        # If there are no (valid) credentials available, let the user log in.
+        if not creds or not creds.valid:
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
+            else:
+                if not os.path.exists('credentials.json'):
+                    raise FileNotFoundError(
+                        "credentials.json not found. Please create this file with your OAuth 2.0 credentials."
+                    )
+                flow = InstalledAppFlow.from_client_secrets_file(
+                    'credentials.json', SCOPES)
+                creds = flow.run_local_server(port=0)
+            # Save the credentials for the next run
+            with open('token.pickle', 'wb') as token:
+                pickle.dump(creds, token)
         
-        try:
-            self.youtube = build('youtube', 'v3', developerKey=api_key)
-        except Exception as e:
-            logging.error(f"Error initializing YouTube API: {e}")
-            raise
+        return build('youtube', 'v3', credentials=creds)
         
     def search_videos(self, query: str, max_results: int = 50) -> List[Dict]:
         """Search for videos matching query."""
         try:
-            request = self.youtube.search().list(
+            request = self.service.search().list(
                 part="snippet",
                 q=query,
                 type="video",
@@ -81,7 +101,7 @@ class YouTubeAPI:
     def get_video_details(self, video_id: str) -> Dict:
         """Get detailed video statistics."""
         try:
-            request = self.youtube.videos().list(
+            request = self.service.videos().list(
                 part="snippet,statistics,contentDetails",
                 id=video_id
             )
@@ -94,7 +114,7 @@ class YouTubeAPI:
     def get_channel_details(self, channel_id: str) -> Dict:
         """Get detailed channel statistics."""
         try:
-            request = self.youtube.channels().list(
+            request = self.service.channels().list(
                 part="snippet,statistics",
                 id=channel_id
             )
