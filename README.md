@@ -7,14 +7,18 @@ A Python tool for analyzing YouTube channels and videos, with a focus on finding
 - Search YouTube videos by keyword
 - Analyze channel and video statistics
 - Filter videos by:
-  - Minimum views
+  - Minimum and maximum views
+  - Minimum and maximum subscribers
   - Minimum views per hour
   - Minimum comments per hour
   - Minimum likes per hour
   - Maximum hours since published
   - Email presence in channel description
-- Save results in CSV or Excel format
+  - Transcript availability
+- Save results in CSV, Excel, or JSON format
 - Extract contact information from channel descriptions
+- Generate personalized emails for outreach
+- Detailed progress tracking and analysis summary
 
 ## Installation
 
@@ -47,45 +51,72 @@ Edit `config.yaml` to customize the analysis:
 ```yaml
 # Search Settings
 search:
-  keyword: "influencer marketing"  # The term to search for
-  max_results: 100  # Number of videos to analyze
+  keyword: "software engineer day in the life"  # The term to search for
+  max_results: 50  # Number of videos to analyze
 
 # Filter Settings
 filters:
-  min_views: 1000  # Minimum total views
-  min_views_per_hour: 100.0  # Minimum views per hour
-  min_comments_per_hour: 0.1  # Minimum comments per hour
-  min_likes_per_hour: 1.0  # Minimum likes per hour
-  max_hours_since_published: 8760  # Maximum hours since video was published (1 year)
+  min_views: 100  # Minimum total views
+  max_views: 1000000  # Maximum total views
+  min_subscribers: 100  # Minimum subscribers
+  max_subscribers: 100000  # Maximum subscribers
+  min_views_per_hour: 0.05  # Minimum views per hour
+  min_comments_per_hour: 0.001  # Minimum comments per hour
+  min_likes_per_hour: 0.001  # Minimum likes per hour
+  max_hours_since_published: 17520  # Maximum hours since video was published (2 years)
   require_email_found: true  # Only save channels with emails
+  require_transcript: false  # Whether to require transcripts
 
 # Output Settings
 output:
-  save_csv: false  # Whether to save results as CSV files
-  save_excel: true  # Whether to save results as Excel file
+  directory: "results"  # Directory to save output files
+  save_csv: true  # Whether to save results as CSV files
+  save_excel: false  # Whether to save results as Excel file
   save_json: false  # Whether to save results as JSON file
-  output_directory: "results"  # Directory to save output files
+
+# Analysis Settings
+analysis:
+  include_channel_stats: true  # Whether to include channel statistics
+  include_video_stats: true  # Whether to include video statistics
+  include_engagement_metrics: true  # Whether to calculate engagement metrics
+  include_sentiment_analysis: false  # Whether to perform sentiment analysis on comments
 ```
 
 ## Usage
 
 Run the analysis:
 ```bash
-python notebooks/run_analysis.py
+python executables/run_analysis.py
 ```
 
 The tool will:
 1. Search for videos matching your keyword
-2. Filter videos based on your criteria
-3. Extract channel information
-4. Find channels with contact information
-5. Save results to the specified output directory
+2. Process each video and its channel:
+   - Check subscriber count
+   - Verify view count
+   - Calculate engagement metrics
+   - Extract transcripts
+   - Find contact information
+3. Generate personalized emails for qualified channels
+4. Save results to the specified output directory
+5. Display a detailed progress report and analysis summary
 
 ## Output
 
-The tool generates two files:
-1. `youtube_videos_[timestamp].csv/xlsx` - Contains video statistics
-2. `youtube_channels_[timestamp].csv/xlsx` - Contains channel information and contact details
+The tool generates several files:
+1. `youtube_channels.csv` - Contains channel information and contact details
+2. `youtube_videos.csv` - Contains video statistics and engagement metrics
+3. `youtube_email_content.csv` - Contains generated email templates for outreach
+
+## Progress Tracking
+
+The tool provides detailed progress information:
+- Number of videos processed
+- Channel details and subscriber counts
+- Transcript availability
+- Engagement metrics
+- Email generation status
+- Final analysis summary
 
 ## Requirements
 
