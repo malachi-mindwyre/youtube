@@ -3,79 +3,51 @@
 
 import os
 import sys
-from pathlib import Path
-from typing import Optional, Tuple
-import pandas as pd
-from datetime import datetime
 import yaml
+import logging
+from typing import Dict, Any
 from dotenv import load_dotenv
-from youtube_api import YouTubeAPI, YouTubeAPIConfig
-import traceback
 
-# Add parent directory to Python path to allow importing youtube_api
-sys.path.append(str(Path(__file__).parent.parent))
+# Load environment variables from .env file
+load_dotenv()
+
+# Add the current directory to Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from executables.youtube_api import YouTubeAPI
+from executables.data_processing import process_video_data
+
+def load_config(config_path: str = 'config.yaml') -> Dict[str, Any]:
+    """Load configuration from YAML file."""
+    try:
+        with open(config_path, 'r') as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        logging.error(f"Error loading config file: {e}")
+        sys.exit(1)
 
 def main():
-    """Run the YouTube channel analysis."""
-    start_time = datetime.now()
-    print(f"Starting analysis at {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    # Set up logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
+    
+    # Load configuration
+    config = load_config()
     
     try:
-        # Initialize configuration
-        config = YouTubeAPIConfig()
-        config.validate()
-        
-        # Initialize API
+        # Initialize YouTube API
         api = YouTubeAPI(config)
         
-        # Print search query
-        print(f"\nUsing search query: {config.search_query}")
-        
         # Run analysis
-        videos_df, channels_df, transcripts_df, emails_df = api.analyze_channels()
+        api.analyze()
         
-        # Save results if we have data
-        if len(channels_df) > 0:
-            # Create output directory if it doesn't exist
-            os.makedirs(config.output_directory, exist_ok=True)
-            
-            # Save to CSV
-            if config.save_csv:
-                channels_df.to_csv(f"{config.output_directory}/youtube_channels.csv", index=False)
-                videos_df.to_csv(f"{config.output_directory}/youtube_videos.csv", index=False)
-                if len(emails_df) > 0:
-                    emails_df.to_csv(f"{config.output_directory}/youtube_email_content.csv", index=False)
-            
-            # Save to Excel
-            if config.save_excel:
-                excel_file = f"{config.output_directory}/youtube_analysis.xlsx"
-                with pd.ExcelWriter(excel_file, engine='openpyxl', mode='w') as writer:
-                    channels_df.to_excel(writer, sheet_name="Channels", index=False)
-                    videos_df.to_excel(writer, sheet_name="Videos", index=False)
-                    if len(emails_df) > 0:
-                        emails_df.to_excel(writer, sheet_name="Email Content", index=False)
-            
-            # Save to JSON
-            if config.save_json:
-                channels_df.to_json(f"{config.output_directory}/youtube_channels.json", orient="records")
-                videos_df.to_json(f"{config.output_directory}/youtube_videos.json", orient="records")
-                if len(emails_df) > 0:
-                    emails_df.to_json(f"{config.output_directory}/youtube_emails.json", orient="records")
-            
-            print(f"\nResults saved to {config.output_directory}/")
-        
-        # Print analysis summary
-        print("\nAnalysis Summary:")
-        print(f"Total videos found: {len(videos_df)}")
-        print(f"Total channels found: {len(channels_df)}")
-        print(f"Total emails generated: {len(emails_df)}")
+        logging.info("Analysis completed successfully!")
         
     except Exception as e:
-        print(f"Error analyzing channels: {str(e)}")
-        traceback.print_exc()
-    
-    end_time = datetime.now()
-    print(f"\nAnalysis completed at {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        logging.error(f"Error during analysis: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main() 

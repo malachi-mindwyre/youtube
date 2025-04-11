@@ -2,37 +2,27 @@
 google-api-python-client==2.108.0
 google-auth>=2.0.0
 google-auth-oauthlib>=1.0.0
-google-cloud-storage>=2.0.0
 python-dotenv==1.0.0
 PyYAML==6.0.1
-
-# Email handling
-beautifulsoup4>=4.12.0
 
 # Data processing
 pandas==2.1.4
 numpy>=1.24.0
+openpyxl==3.1.2  # For Excel support
 
-# Web scraping
+# Web scraping and text processing
 youtube-transcript-api>=0.6.0
 requests>=2.31.0
+beautifulsoup4>=4.12.0
 
-# Testing
+# Development dependencies
 pytest>=7.0.0
 pytest-cov>=4.0.0
-
-# Type checking
 mypy>=1.0.0
-
-# Code formatting
 black>=23.0.0
 isort>=5.0.0
+flake8>=6.0.0
 
-# Documentation
+# Documentation (optional)
 sphinx>=7.0.0
 sphinx-rtd-theme>=1.0.0
-
-# Additional dependencies
-pytz==2023.3
-python-dateutil==2.8.2
-openpyxl==3.1.2  # For Excel support

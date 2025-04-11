@@ -1,0 +1,22 @@
+Subject: Partnership Opportunity for {channel_title}
+
+Hi {channel_name},
+
+I recently watched your video "{video_title}" and was really impressed by your content. The way you explained {key_topic} was particularly engaging, and I noticed your video has received {views:,} views with {likes:,} likes, showing strong audience engagement.
+
+I'm reaching out because I believe we could create a valuable partnership. Our product, {product_name}, aligns perfectly with your content and could provide real value to your {subscriber_count:,} subscribers.
+
+Here's what we're offering:
+- A custom affiliate link with {commission_rate}% commission
+- Ready-to-use promotional content
+- Access to our exclusive partner resources
+- Regular performance reports and optimization tips
+
+The moment in your video where you discussed {key_moment} really stood out to me, and I think our product could help your audience achieve similar results.
+
+Would you be interested in discussing this opportunity further? You can reach me directly at {contact_email}.
+
+Best regards,
+{your_name}
+
+P.S. I noticed your channel has been growing steadily, with {total_videos} videos and an average of {views_per_video:,} views per video. This shows you really know how to create engaging content that resonates with your audience. 
