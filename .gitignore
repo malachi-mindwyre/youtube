@@ -49,6 +49,21 @@ htmlcov/
 .pytest_cache/
 .tox/
 
+# Credentials and sensitive data
+credentials/
+*.pem
+*.key
+*_secret*
+*_credentials*
+client_secrets.json
+google_oauth_client_secret.json
+
+# Output files
+results/
+*.csv
+*.xlsx
+*.json
+
 # Distribution
 *.tar.gz
 *.zip
