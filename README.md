@@ -15,7 +15,11 @@ A Python tool for analyzing YouTube channels and videos, with a focus on finding
   - Maximum hours since published
   - Email presence in channel description
   - Transcript availability
-- Save results in CSV, Excel, or JSON format
+- Save results in CSV and Excel format with multiple sheets
+- Intelligent duplicate handling:
+  - Updates existing channels/videos instead of creating duplicates
+  - Only updates channels when significant changes occur (10% threshold)
+  - Always updates video data with latest statistics
 - Extract contact information from channel descriptions
 - Generate personalized emails for outreach
 - Detailed progress tracking and analysis summary
@@ -71,7 +75,7 @@ filters:
 output:
   directory: "results"  # Directory to save output files
   save_csv: true  # Whether to save results as CSV files
-  save_excel: false  # Whether to save results as Excel file
+  save_excel: true  # Whether to save results as Excel file with multiple sheets
   save_json: false  # Whether to save results as JSON file
 
 # Analysis Settings
@@ -103,10 +107,25 @@ The tool will:
 
 ## Output
 
-The tool generates several files:
+The tool generates the following files:
+
+### CSV Files
 1. `youtube_channels.csv` - Contains channel information and contact details
 2. `youtube_videos.csv` - Contains video statistics and engagement metrics
 3. `youtube_email_content.csv` - Contains generated email templates for outreach
+
+### Excel File
+`youtube_analysis.xlsx` - Contains all data in separate sheets:
+1. "Channels" sheet - Channel information and contact details
+2. "Videos" sheet - Video statistics and engagement metrics
+3. "Email Content" sheet - Generated email templates for outreach
+
+### Duplicate Handling
+- When running multiple analyses, the tool will:
+  - Update existing channels/videos instead of creating duplicates
+  - Only update channels when significant changes occur (10% threshold)
+  - Always update video data with latest statistics
+  - Update email content if new information is found
 
 ## Progress Tracking
 
