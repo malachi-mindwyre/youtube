@@ -141,12 +141,20 @@ def generate_email_content(channel_data: Dict) -> Dict:
         total_videos = channel_data.get('total_videos', 0)
         total_views = channel_data.get('total_views', 0)
         
+        # Convert string values to integers if needed
+        if isinstance(subscribers, str) and subscribers.isdigit():
+            subscribers = int(subscribers)
+        if isinstance(total_videos, str) and total_videos.isdigit():
+            total_videos = int(total_videos)
+        if isinstance(total_views, str) and total_views.isdigit():
+            total_views = int(total_views)
+        
         # Generate personalized email content
         subject = f"Collaboration Opportunity with {channel_title}"
         
         body = f"""Hi {channel_title},
 
-I've been following your channel and really appreciate your content. Your {total_videos} videos have reached {total_views:,} views, and you've built an engaged community of {subscribers:,} subscribers.
+I've been following your channel and really appreciate your content. Your {total_videos} videos have reached {total_views} views, and you've built an engaged community of {subscribers} subscribers.
 
 I'd love to explore potential collaboration opportunities that could benefit both our audiences.
 

@@ -1,51 +1,20 @@
-channel_id,channel_title,subscribers,total_videos,total_views
-UCV0qA-eDDICsRR9rPcnG7tw,Joma Tech,2330000,88,189709223
-UCixD9UbKvDxzGNiPC_fgHyA,Paolo fromTOKYO,3580000,513,632073101
-UCfeMEuhdUtxtaUMNSvxq_Xg,Frying Pan,348000,41,29363870
-UCjHNoM9djdk-_xkAUOEowZA,PIRATE KING,299000,68,21708062
-UCLRy6c3qWNOmpmwY7AkVPRg,Komal Jagdale Thakur ,24700,268,11437291
-UCWIyJk6YVx_TMKz0oO7ssDA,Mazher Khan,24700,111,11497701
-UCQTmoQ_S26PlmDoXujZpbYQ,Tim Kim,220000,8,8205400
-UCEDkO7wshcDZ7UZo17rPkzQ,mayuko,544000,174,30173960
-UCJweVcyxf9dwu9K-_wVlyag,Brown T Daddy,52000,24,7257870
-UCgPDn6qm0HL_TghqrYrUdFA,Apurva Singh,52000,92,5852744
-UCixD9UbKvDxzGNiPC_fgHyA,Paolo fromTOKYO,3580000,513,632073101
-UCOFXB-VEIgdwNJG3ndubYXA,Albert Yang,45000,26,5885393
-UCTPWyIRUOLPX_VjMrwfrx4Q,Avinash Singh,5970,1,4423635
-UC0aEAHNiD-gYHP7s24YhSfg,Sinh “Sierra” Nguyen,14200,1,4346530
-UCHzWIPEh3In0jdBPp9hgGOg,Josh and Katie,74500,67,9412503
-UCOQDdjPiHB1X6MJSPNdr1ng,Tech Stories in 2 Minutes,66400,295,23150156
-UCs9oZnfxdfnqoC9zcw8rVEw,Pooja Choux,35200,11,4167476
-UCV0qA-eDDICsRR9rPcnG7tw,Joma Tech,2330000,88,189709223
-UChYs-_zjKRYhdMddjx-NPLw,Singh in USA,1180000,1294,279822304
-UCteRPiisgIoHtMgqHegpWAQ,Sundas Khalid,309000,257,35140138
-UC9jg1BmNtMHja2jmPKqal9Q,Coding Nomad,66600,132,15976195
-UCpDuDmqsRELwXUwN49vm9qw,Mahesh Nulu Talks,12700,54,5249715
-UCwCtMpmCyNVUS9BB0ROCEpA,Life of a SWE,17800,11,3042252
-UCTcROAyCC-ayZkLxzKYoFTA,Divyanshi Srivastava,45100,11,3540342
-UCVe8CMJF4caRzuckVYV8CaQ,Nishant Chahar,507000,705,71668240
-UC0gty8DC-QKxanKc2gXG0nw,Garima Rajput,33900,40,5380323
-UCc0vz-lVwacgLVJRBW4-4ZA,sarah pan,221000,173,16327625
-UC7IMq6lLHbptAnSucW1pClA,FilterCopy,10400000,1065,4538196916
-UCCIFp-Se_xjfYc94H04oK7Q,Brian Ruiz,91800,34,7614674
-UC2KfmYEM4KCuA1ZurravgYw,Amigoscode,1060000,446,41027347
-UCYQvAPEWa3ibT0_FcjqYa8g,Pooja Dutt,131000,85,7851043
-UCLVS5hPp_bwBX9dPa84LxkA,Joey Bronner,13600,22,1906021
-UCWr0mx597DnSGLFk1WfvSkQ,Hallden,689000,279,58409733
-UC2WHjPDvbE6O328n17ZGcfg,ForrestKnight,645000,377,40947408
-UCSCpimJvMFN_Ymr_2w3yXwA,Swati Jha,17200,224,2471798
-UCDlqbnftd2Z_Ysh8itMvhwg,Arman Khondker,29300,10,2786625
-UCWr0mx597DnSGLFk1WfvSkQ,Hallden,689000,279,58409733
-UC0F_hIbw9uf3nkK3c01obIA,Justin Hammond,9780,88,1716532
-UCk3u_P1wYZbbQkzj_OP0_wg,Indeed,933000,1711,277402032
-UCCUw_xsps3VgtqLYR8vBSXw,Edward Sa,29000,38,4284501
-UC9y-rnnZT0GX5t1Ehq-F9UQ,Tamer Shaheen,255000,119,85202435
-UCCUw_xsps3VgtqLYR8vBSXw,Edward Sa,29000,38,4284501
-UC-pNhOx02AClnNDjjTB1pgQ,Dan,16600,5,1634751
-UC0rpxsHBn1j3kBTtKJ_wQjQ,Hustle With Harman,622000,616,89494863
-UCuKVsDS3oVzTuNjnQ79pEEg,Edmund Yong,84800,16,2996395
-UCZ9GhI0KPqpnpOqjmMQzrRQ,Marcos Rico Peng,155000,77,11512798
-UChYs-_zjKRYhdMddjx-NPLw,Singh in USA,1180000,1294,279822304
-UCc0vz-lVwacgLVJRBW4-4ZA,sarah pan,221000,173,16327625
-UCCQ6SXMc7MoJ88jjpn6j-8Q,Marko,213000,93,10559624
-UCpFA-fGAWafeXGhfOvtkTIQ,Matt Yang - SWE in NYC,11400,5,1154561
+"channel_id","channel_title","subscribers","total_videos","total_views","email"
+"UCV0qA-eDDICsRR9rPcnG7tw","Joma Tech","2330000","88","189709223","business@joma.io"
+"UCixD9UbKvDxzGNiPC_fgHyA","Paolo fromTOKYO","3580000","513","632073101","business@tokyozebra.com"
+"UCEDkO7wshcDZ7UZo17rPkzQ","mayuko","544000","174","30173960","sponsor@hellomayuko.com"
+"UCOFXB-VEIgdwNJG3ndubYXA","Albert Yang","45000","26","5885393","alberthbyang@gmail.com"
+"UCOQDdjPiHB1X6MJSPNdr1ng","Tech Stories in 2 Minutes","66400","295","23150156","adityasharma@hicounselor.com"
+"UChYs-_zjKRYhdMddjx-NPLw","Singh in USA","1180000","1294","279822304","hello@singhinusa.com"
+"UC9jg1BmNtMHja2jmPKqal9Q","Coding Nomad","66600","132","15976195","codingnomadpr@gmail.com"
+"UCVe8CMJF4caRzuckVYV8CaQ","Nishant Chahar","507000","705","71668240","contact.nishant11@gmail.com"
+"UCc0vz-lVwacgLVJRBW4-4ZA","sarah pan","221000","173","16327625","hi.sarahpan@gmail.com"
+"UCCIFp-Se_xjfYc94H04oK7Q","Brian Ruiz","91800","34","7614674","partners@b-r.io"
+"UCYQvAPEWa3ibT0_FcjqYa8g","Pooja Dutt","131000","85","7851043","pooja@smoothmedia.co"
+"UCLVS5hPp_bwBX9dPa84LxkA","Joey Bronner","13600","22","1906021","joeybronner@gmail.com"
+"UCWr0mx597DnSGLFk1WfvSkQ","Hallden","689000","279","58409733","contact@kalletech.com"
+"UCCUw_xsps3VgtqLYR8vBSXw","Edward Sa","29000","38","4284501","edward.sa.baijie@gmail.com"
+"UC9y-rnnZT0GX5t1Ehq-F9UQ","Tamer Shaheen","255000","119","85202435","tamerhshaheen@gmail.com"
+"UC-pNhOx02AClnNDjjTB1pgQ","Dan","16600","5","1634751","contactbiz.dan@gmail.com"
+"UC0rpxsHBn1j3kBTtKJ_wQjQ","Hustle With Harman","622000","616","89494863","workwithharman@brandflowmedia.com"
+"UCZ9GhI0KPqpnpOqjmMQzrRQ","Marcos Rico Peng","155000","77","11512798","marcos@select.co"
+"UCCQ6SXMc7MoJ88jjpn6j-8Q","Marko","213000","93","10559624","business@withmarko.com"
