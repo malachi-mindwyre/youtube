@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import Dict, Any, Optional, List
 import os
+import yaml
 
 @dataclass
 class YouTubeAPIConfig:
@@ -59,4 +60,25 @@ class YouTubeAPIConfig:
             max_hours_since_published=max_hours_since_published,
             excluded_channels=excluded_channels,
             excluded_keywords=excluded_keywords
-        ) 
+        )
+
+@dataclass
+class Config:
+    """Main configuration class for the application."""
+    youtube_api: 'YouTubeAPIConfig'
+    
+    @classmethod
+    def from_yaml(cls, yaml_path: str) -> 'Config':
+        """Load configuration from YAML file.
+        
+        Args:
+            yaml_path: Path to YAML configuration file
+            
+        Returns:
+            Config instance
+        """
+        with open(yaml_path, 'r') as f:
+            config_dict = yaml.safe_load(f)
+        
+        youtube_api_config = YouTubeAPIConfig.from_dict(config_dict)
+        return cls(youtube_api=youtube_api_config) 

@@ -1,51 +1,1504 @@
-video_id,title,channel_id,published_at,views,likes,comments,engagement_rate,has_transcript,has_email
-Rgx8dpiPwpA,a day in the life of an engineer working from home,UCV0qA-eDDICsRR9rPcnG7tw,2021-05-23T06:15:41Z,21745322,498886,12677,0.02352519774138088,True,False
-e_TxH59MclA,Day in the Life of a Japanese Game Programmer,UCixD9UbKvDxzGNiPC_fgHyA,2019-11-30T00:00:06Z,16707762,425104,19896,0.026634327206719845,True,False
-YZ5tOe7y9x4,Software engineer interns on their first day be like...,UCfeMEuhdUtxtaUMNSvxq_Xg,2021-06-21T20:15:02Z,14513251,477147,16247,0.03399610466324878,True,False
-4_CBjbry2uM,A Day in my life of a Software Engineer👩‍💻 #corporatelife #gym #diet #softwareengineer,UCLRy6c3qWNOmpmwY7AkVPRg,2024-06-29T12:57:44Z,9397544,382775,3028,0.041053598684933,False,False
-Zjl2vmy02As,A Day in the Life of a Software Engineer... WFH,UCjHNoM9djdk-_xkAUOEowZA,2021-08-25T23:00:10Z,9410558,200555,5192,0.021863421913982148,True,False
-XkzPmtzdIEY,How much does a SOFTWARE ENGINEER make?,UCvknEk1Bjmep7Ebv6QrJGSg,2023-05-28T11:30:21Z,7618135,236737,1390,0.03125791286187499,True,False
-WR1ydijTx5E,"How I Learned to Code in 4 Months & Got a Job! (No CS Degree, No Bootcamp)",UCQTmoQ_S26PlmDoXujZpbYQ,2023-06-13T18:52:08Z,7366269,365290,7950,0.05066879854645547,True,False
-fgWV-EOzLGs,Software Engineer Expectation 👨🏻‍💻vs Reality 😂 #shorts #softwareengineer,UCB5jYf6goa67NOPQeEgE--w,2023-01-06T18:58:19Z,6990867,289747,2294,0.04177464683565,True,False
-rqX8PFcOpxA,a day in the life of a software engineer,UCEDkO7wshcDZ7UZo17rPkzQ,2017-07-17T21:52:10Z,5379533,96180,7712,0.01931245704785155,False,False
-Vw6utYElVFg,A Day in the Life of a Microsoft Software Engineer | Seattle,UCJweVcyxf9dwu9K-_wVlyag,2022-08-06T15:45:02Z,5319178,68933,2749,0.01347614236635811,True,False
-dhrqdTC6bQU,Day in the Life of an Engineer,UCPk2s5c4R_d-EUUNvFFODoA,2022-02-07T04:06:42Z,4589900,280707,1434,0.061469966665940436,True,False
-f9sH5SgCYbY,A Day in the Life of a Software Engineer at Meta (previously Facebook),UCgPDn6qm0HL_TghqrYrUdFA,2023-02-17T03:40:11Z,4583239,49632,2716,0.01142161689582411,True,False
-ZVrwwDbbmF4,A Day In The Life Of Software Engineer | 💻 🇮🇳,UCTPWyIRUOLPX_VjMrwfrx4Q,2022-09-22T10:39:15Z,4420640,142303,1845,0.032607948170400664,True,False
-deLf6eynC40,A Day In The Life Of An Amazon Software Engineer (Seattle Edition),UCOFXB-VEIgdwNJG3ndubYXA,2022-03-01T20:00:08Z,4416311,70409,2920,0.016604129555187575,True,False
-a0glBQXOcl4,A day in the life of a Google Software Engineer | Work-from-home Edition,UC0aEAHNiD-gYHP7s24YhSfg,2020-05-28T15:08:04Z,4345702,76144,4131,0.01847227444495734,True,False
-sS6O7Yp5xmg,Day in the Life of a Twitter Software Engineer,UCHzWIPEh3In0jdBPp9hgGOg,2020-02-22T01:59:52Z,3976303,79164,6433,0.02152678002657242,False,False
-lumimB_aa7M,"A DAY IN MY LIFE | Gym, Work, Eating",UCbm8FxO0gBbZ19iydL9g3ZQ,2023-02-17T00:03:48Z,3890455,111928,1111,0.029055470375573038,True,False
-a3KxdvosHko,A Day In The Life of An Indian Software Engineer Intern | Last Day Edition,UCs9oZnfxdfnqoC9zcw8rVEw,2019-07-14T17:44:37Z,3783143,84138,6635,0.023994070538702873,False,False
-sQyLvZ6FP-4,How much does a SOFTWARE ENGINEER make? #shorts #ytshorts #techjobsin2minutes,UCOQDdjPiHB1X6MJSPNdr1ng,2024-06-25T15:00:57Z,3769364,86283,1081,0.02317738483203002,True,False
-kng_XD8qbwo,Day in the Life of a Japanese Space Engineer,UCixD9UbKvDxzGNiPC_fgHyA,2020-08-21T23:59:06Z,3534910,102877,5288,0.03059908173051082,True,False
-TLysAkFM4cA,a day in the life of a startup engineer working from home,UCV0qA-eDDICsRR9rPcnG7tw,2021-12-15T15:48:55Z,3415541,121822,4195,0.03689518000223098,True,False
-yqqphr4S-i0,First Day at Microsoft! *Unboxing*,UChYs-_zjKRYhdMddjx-NPLw,2022-09-02T04:37:34Z,3396342,76260,2097,0.02307099815036295,False,False
-P4FYfHfo-1o,What a typical day of a programmer can look like 💻 #coder #softwareengineer,UC9jg1BmNtMHja2jmPKqal9Q,2022-11-10T00:47:29Z,3198469,79638,1147,0.02525739658567896,False,False
-jfOmPvZ7cSQ,How much money Software Engineers make? 💰 ft. Maddy,UCteRPiisgIoHtMgqHegpWAQ,2024-03-01T14:04:15Z,3210737,49465,2831,0.016287849176061447,True,False
-dpTbHIRreB8,A Day in the Life of a Software Engineer at Meta/Facebook,UCwCtMpmCyNVUS9BB0ROCEpA,2022-06-26T23:24:43Z,2957386,38946,2193,0.013910595370370997,True,False
-yfZ1krBKWmw,Day in the life of MICROSOFT Software Engineer 🚀 | Mini Office Vlog 💯,UCVe8CMJF4caRzuckVYV8CaQ,2023-10-13T06:32:00Z,2288058,77622,466,0.03412850548368966,False,False
-rAejJBmo55Y,Day in the Life of a Software Engineer at Google,UCTcROAyCC-ayZkLxzKYoFTA,2024-11-20T16:11:35Z,2260918,27855,1699,0.01307168150282319,True,False
-fqYvp0C3pX4,Real Day in Life of a 22 yr Old Software Engineer! 2020 Edition,UChYs-_zjKRYhdMddjx-NPLw,2020-12-23T02:28:11Z,2242018,65089,2605,0.030193334754671907,False,False
-O62kAvoO9lM,day in the life of a software engineer in NYC *an unglamorous 24 hours with meee*,UCc0vz-lVwacgLVJRBW4-4ZA,2022-01-30T16:06:22Z,2222431,54334,937,0.024869613499811694,False,False
-M6hf4Ll_WkE,Day in the Life of a Japanese Street Fighter 6 Game Planner,UCixD9UbKvDxzGNiPC_fgHyA,2023-06-02T23:59:06Z,2095486,73427,2569,0.03626652719225994,False,False
-5VHYbNli4EM,FilterCopy | Life Of A Software Engineer | Ft. @ThatsSoViraj,UC7IMq6lLHbptAnSucW1pClA,2022-10-20T06:00:01Z,2067604,47897,600,0.023455652049425325,False,False
-rsgIkYory8c,Day in the Life of a Mega-ship Marine Engineer,UCGpdSarF_FdCygiA1tOl6Cg,2020-12-15T03:32:16Z,2051503,36320,1680,0.01852300484084108,True,False
-ssX0B6sg_BQ,Office Tour | A Day in the Life of a Software Engineer,UCCIFp-Se_xjfYc94H04oK7Q,2023-01-19T18:00:09Z,2028749,42496,2219,0.022040676298546544,True,False
-JDtdY4vSmHY,Life at Google | Software Engineer | Connect with me over a call: https://topmate.io/garima_rajput,UC0gty8DC-QKxanKc2gXG0nw,2023-11-13T11:52:53Z,2058756,100675,518,0.04915249791621737,False,False
-K64hbcUbslE,Day in the Life of a Japanese Game Designer,UCixD9UbKvDxzGNiPC_fgHyA,2023-01-06T23:59:08Z,1778756,64133,2133,0.037254125917214054,True,False
-oS-m5-XikwA,A Day in the Life of a Software Engineer in London,UC2KfmYEM4KCuA1ZurravgYw,2020-01-08T22:50:17Z,1773160,48334,3347,0.029146269936159173,True,False
-GvBgPBVcjEM,I’m bad at coding…. (my software engineering journey),UCYQvAPEWa3ibT0_FcjqYa8g,2022-05-24T16:01:05Z,1749643,54215,2334,0.03232030762847049,True,False
-CxoGjX3JvHI,💻 One Day in Life of SAP Software Engineer,UCLVS5hPp_bwBX9dPa84LxkA,2018-04-17T05:16:09Z,1726234,23413,1606,0.014493400083650305,False,False
-Q0A35ZfgwHA,What Professional Software Engineers ACTUALLY Do,UC2WHjPDvbE6O328n17ZGcfg,2021-09-28T17:15:00Z,1638386,47907,1899,0.030399429682626683,True,False
-wdT_QBfWVuA,A day in my life as a Software Engineer at Microsoft,UCSCpimJvMFN_Ymr_2w3yXwA,2024-11-10T12:01:11Z,1625264,43486,456,0.027036838322881698,False,False
-DFW8MwstRwY,a day in the life of a software engineer,UCWr0mx597DnSGLFk1WfvSkQ,2019-01-08T16:00:03Z,1591662,29897,2181,0.020153776367093014,False,False
-UHyX9zBluMw,Day in the Life of a Software Engineer at TikTok (Seattle),UCDlqbnftd2Z_Ysh8itMvhwg,2023-05-08T13:00:24Z,1586585,24670,2010,0.01681599157939852,False,False
-j1fc0FlCjyI,A REAL Day in the Life of a Software Engineer,UC0F_hIbw9uf3nkK3c01obIA,2020-10-22T05:09:48Z,1532299,33408,2654,0.02353457125534899,False,False
-AzQ3Xso7sLA,A Day in the Life of a Project Manager | Indeed,UCk3u_P1wYZbbQkzj_OP0_wg,2022-07-12T20:00:02Z,1479173,24423,600,0.016916885313617812,True,False
-mZ6RB1oQaGs,A Day In the Life of a Software Engineer Intern,UCCUw_xsps3VgtqLYR8vBSXw,2018-08-10T23:38:10Z,1446187,21696,1856,0.016285584091130678,False,False
-8IoM_IjH6BQ,a day in life of software engineer in Finland / 1 year later… @senior（＾ν＾）,UCCCEbjGk8O5LtG6XgwW6XWg,2022-05-14T13:22:02Z,1406843,24432,1143,0.01817900078402494,True,False
-3GBNLCWw78o,A Day In the Life of a Software Engineer Intern In San Francisco,UCCUw_xsps3VgtqLYR8vBSXw,2019-08-14T22:58:39Z,1205389,21837,1236,0.019141538540670272,True,False
-sMOWEPMCWz0,A day in the life of a Computer Science Student ✅ | How many hours to code? | Placement preparation,UC0rpxsHBn1j3kBTtKJ_wQjQ,2021-07-08T13:16:16Z,1192774,41679,1066,0.03583662957106711,False,False
-aTHBJwVgu3I,"Day in the life of a Software Engineer | Sydney, Australia",UC-pNhOx02AClnNDjjTB1pgQ,2023-06-24T09:42:53Z,1177506,21410,1050,0.019074212785327633,False,False
-wUnEDnAYTpE,Day in the Life Training with Olympians (as a Software Engineer),UCZ9GhI0KPqpnpOqjmMQzrRQ,2024-01-28T12:00:56Z,1164822,26672,550,0.02337009431483952,True,False
+video_id,title,description,published_at,channel_id,views,likes,comments
+Rgx8dpiPwpA,a day in the life of an engineer working from home,"Check out my new vlog channel: https://www.youtube.com/channel/UCmMGlb7mGXYVthrXYSwlQhw
+Follow my newsletter: https://jomakaze.substack.com/
+
+Music by Joy Ngiaw:
+https://www.joyngiaw.com/
+https://www.instagram.com/joyngiaw/
+
+
+
+📱 SOCIAL MEDIA
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+https://www.instagram.com/jomakaze/
+https://twitter.com/jomakaze
+https://www.facebook.com/jomakaze",2021-05-23T06:15:41Z,UCV0qA-eDDICsRR9rPcnG7tw,21870408,500035,12688
+e_TxH59MclA,Day in the Life of a Japanese Game Programmer,"A Japanese Game Developer working in Tokyo Japan. This is the programmer life in Japan.  As a Japanese game programmer you'll see what it is like commuting to work in Tokyo and going to work at one of the largest Video Game Studios in Japan as well as working with other Japanese video game developers, software engineers, video game devs, game designers and even Japanese game directors for a major Japanese Video Game studio.  We follow Masa, a 23 year old, Japanese programmer, throughout his workday and witness what he does during his Japanese working hours as a Japanese game programmer at the Bandai Namco Studios office in Tokyo.  We'll even interact with directors from popular Japanese video game titles such as Tekken and CodeVein.  Plus we'll get to see what a Japanese programmer from one of the large Video Game companies in Japan does after work with friends.  This look inside a Japanese game dev's life is pretty unique and should provide some insight for those people who want to work in Japan as a game developer or game programmer.  Also, this day in the life of a Japanese programmer will show you what it takes to be a Japanese programmer.  As you would expect, most of the work day is spent programming and coding, but there are other unique aspects of the Japanese programmers life we are able to see in this video.  
+
+Watch more Japan Day in the Life Series (Playlist):
+- https://bit.ly/2FXYTwz
+
+Get my Tokyo & Japan Merch and show your support! 
+- https://tokyozebra.com/mrch
+
+___ Tokyo Zebra: My 2nd YouTube Channel ___
+See My Life in Japan behind the scenes
+- https://www.youtube.com/tokyozebra
+
+Questions about Japan or Japan Travel? Get answers and chat with my Discord Community
+- https://paolofrom.tokyo/discord
+
+___ BANDAI NAMCO Studios Links ___
+
+- BANDAI NAMCO Studios Official Web Site
+https://www.bandainamcostudios.com/en/
+ 
+- BANDAI NAMCO Studios Recruiting Page
+https://www.bandainamcostudios.com/en/careers/experienced/
+
+- LinkedIn
+https://www.linkedin.com/company/bandai-namco-studios-inc-/
+
+___ Channel Support ___
+Want to help SUPPORT my channel, buy me a BEER or Maiko and I DINNER?  Thank you in advance!
+
+- PayPal: https://www.paypal.me/paolofromtokyo
+
+- Venmo: PaolofromTokyo (venmo.com/paolofromtokyo)
+
+- Patreon: https://www.patreon.com/paolofromtokyo
+
+Join YouTube Channel Memberships 
+- https://www.youtube.com/paolofromtokyo/join
+
+- Merch Store: https://tokyozebra.com/mrch
+
+___ Help with Subtitles / Closed Captioning ___
+- https://paolofrom.tokyo/cc
+
+___ Business ___
+
+Want me to feature your business in my video?
+business@tokyozebra.com
+
+Want to send me stuff?
+For ADDRESS 
+- https://www.tokyozebra.com/address
+ 
+___ For more info about me ___
+
+I'm from TOKYO JAPAN, I've been living here for a long time.  I'll be your Tokyo Travel Guide, taking you to the spots I love as well as showing you what to do all around Japan and maybe sometimes overseas.  I'm also into Tech so you'll see a few videos about my drone and other cool toys I discover.  In short, the channel is all about what I Love, Japan, Food, Travel, Tech and most likely coming FROM-TOKYO, my home.
+
+- Website
+ https://www.tokyozebra.com/about
+- Instagram:  
+@paolofromtokyo - https://instagram.com/paolofromtokyo
+@tokyo.zebra - https://instagram.com/tokyo.zebra
+- Facebook: 
+https://www.facebook.com/paolofromtokyoofficial
+- TikTok
+https://www.tiktok.com/@paolo.fromtokyo
+___ My Film Gear ___ 
+(Affiliate Links Used - I may receive commission from products purchased)
+
+- Main Camera
+(USA Link) https://amzn.to/2GlSvyy
+(International) http://geni.us/pyBIG7S
+
+- Main Wide Lens
+(USA Link) https://amzn.to/2o5B00B
+(International) https://geni.us/DDbpW
+
+- Powered Mic
+(USA Link) https://amzn.to/2B7HnUM
+(International) http://geni.us/ZaFl4a
+
+- Mic
+(USA Link) https://amzn.to/30VtlPV
+(International) https://geni.us/lVurdzT
+
+- Portable TriPod
+(USA Link) https://amzn.to/2LKhM6e
+(International) http://geni.us/DfeI
+
+- Gimbal
+(USA Link) https://amzn.to/2PYmjYA
+(International) https://geni.us/amgYR3
+
+- Drone (Original)
+(USA Link) https://amzn.to/2K6qrAW
+(International) http://geni.us/UFAFl3c
+
+- For a complete list of my gear:
+https://www.tokyozebra.com/my-gear/
+
+Access to Music in video:
+http://share.epidemicsound.com/zsbS8",2019-11-30T00:00:06Z,UCixD9UbKvDxzGNiPC_fgHyA,16781285,425611,19893
+YZ5tOe7y9x4,Software engineer interns on their first day be like...,"it's either this or you're sitting around with nothing to do.
+
+update: got a job at facebook :D https://youtu.be/JLEVJ1BLqKk
+
+NEW: Merch is out!!! Get some sick swag here https://fryingpan.gg :)))))) + vlog channel where I give an apartment tour  @PansDay   !
+
+@2nd channel - @FryingPanLIVEE 
+@vlog channel - @PansDay 
+@twitch - https://www.twitch.tv/fryingpan
+@instagram - https://www.instagram.com/fryingpan.ig
+@discord - https://discord.gg/azX3Qqrzv2
+@twitter - https://twitter.com/CodeFryingPan
+
+0:00 - nice
+1:14 - not nice
+
+If you're looking for a cheaper phone plan, try Mint Mobile (it's what I use!): https://trymintmobile.com/fryingpan
+
+#softwareengineering #internships #faang",2021-06-21T20:15:02Z,UCfeMEuhdUtxtaUMNSvxq_Xg,14618488,479188,16294
+Zjl2vmy02As,A Day in the Life of a Software Engineer... WFH,"🎖️ $1500 OFF ANY Online Tech Bootcamps. See if you qualify for the JOB GUARANTEE! 👉 https://piratekingdom.com/SPRINGBOARD
+⬆️ 100% FREE until you're hired! 1-on-1 career mentorship from top-notch professionals at FAANG 👉 https://piratekingdom.com/deals/pathrise
+⚛️ Get promotions and pay raises faster! 👉 https://piratekingdom.com/deals/taro
+🤑 FREE Stuff + Great Deals 👉 https://piratekingdom.com/deals
+📖 FREE Software Development CURRICULUM 👉 https://piratekingdom.com/curriculum/software-development/
+📝 My ULTIMATE LeetCode Cheat Sheet 👉 https://piratekingdom.com/leetcode
+📄 Download PK's ULTIMATE FAANG Resume 👉 https://piratekingdom.com/resume
+⚙️ My YouTube & Couch Setups 👉 https://piratekingdom.com/tech
+🍗 Brunch and Dinner Recipes 👉 https://piratekingdom.com/blog/a-day-in-the-life-of-a-software-engineer-wfh
+
+🔆 Some of these are affiliate links, and I may earn commissions from qualifying purchases. Using these links is the best way to support me at no cost to you!
+
+📖 Recommended Courses 👉 https://piratekingdom.com/courses/coding
+🏅 LEARN CODING and EARN UNLIMITED certificates from renowned institutions like GOOGLE, META, and STANFORD with Coursera Plus! 👉 https://piratekingdom.com/deals/coursera
+
+💻 Coding
+- Crash Course on Python by Google: https://imp.i384100.net/MXPxzK
+- Front-End Developer by Meta: https://imp.i384100.net/156NGd
+- Back-End Developer by Meta: https://imp.i384100.net/QOBQKA
+- Introduction to Programming with Python & Java: https://imp.i384100.net/7m4Nby
+- Java Programming & Software Engineering by Duke: https://imp.i384100.net/rnVPgR
+- HTML, CSS & JavaScript for Web Developers: https://imp.i384100.net/LPJNDZ
+
+☁️ Cloud
+- Google Cloud Engineer: https://imp.i384100.net/AodrMx
+- Google Cloud Security Engineer: https://imp.i384100.net/Jr91yr
+- Google Cloud Machine Learning Engineer: https://imp.i384100.net/e43DZD
+- AWS Cloud Solutions Architect: https://imp.i384100.net/VyJn3a
+- Microsoft Azure Developer Associate: https://imp.i384100.net/BXNjox
+
+💾 Data
+- Google Data Analytics: https://imp.i384100.net/jWNP6v
+- Google Cloud Data Engineer: https://imp.i384100.net/kjy52n
+- Meta Database Engineer: https://imp.i384100.net/5bWR09
+- Microsoft Azure Data Scientist Associate: https://imp.i384100.net/9WmNd0
+
+🖥️ Others
+- Meta Android Developer: https://imp.i384100.net/P0eodX
+- Google IT Automation with Python: https://imp.i384100.net/x9eB6d
+- Google IT Support: https://imp.i384100.net/LPjJdL
+- Google Project Management: https://imp.i384100.net/QOaBdM
+- Google UX Design: https://imp.i384100.net/rn9VN5
+
+🤝 SkillShare (One subscription, UNLIMITED ACCESS) 👉 https://piratekingdom.com/deals/skillshare
+- Coding for Beginners: https://skillshare.eqcm.net/vnXRJv
+- JavaScript for Beginners: https://skillshare.eqcm.net/Zd297X
+- Website Development with Python & Flask: https://skillshare.eqcm.net/9WN575
+- Complete React Basics 101: https://skillshare.eqcm.net/DV5Xv2
+
+📚 Recommended Books 👉 https://piratekingdom.com/books/coding
+- Python Crash Course: https://amzn.to/3w9S8BL
+- Web Design with HTML, CSS, JavaScript: https://amzn.to/3XpNRph
+- Grokking Algorithms (Beginner): https://amzn.to/3Xq3zAQ
+- Cracking the Coding Interview: https://amzn.to/3Qz22WN
+- Automate boring stuff with Python: https://amzn.to/3k5yW50
+
+🚀 BE MY FRIEND 🚀
+🌐 Website - https://piratekingdom.com
+💼 LinkedIn - https://piratekingdom.com/linkedin
+🎮 Discord - https://piratekingdom.com/discord
+📷 Instagram - https://piratekingdom.com/instagram
+🐦 Twitter - https://piratekingdom.com/twitter
+👍 Facebook - https://piratekingdom.com/facebook
+
+🎥 Relevant Videos 🎥
+▶️ My Productivity Couch Setup: https://youtu.be/jld6BSQfDnk
+▶️ My Gaming Bed Setup: https://youtu.be/WpATJBl4oAk
+
+╔═.✵.════  𝕋ℝ𝔸ℕ𝕊𝕃𝔸𝕋𝕀𝕆ℕ𝕊  ════.✵.═╗
+║
+║ ★  Chinese Mandarin 【 ⟭⟬ (▰˘◡˘▰) ⟬⟭ 】
+║ ★  Dutch 【 Maiki 】
+║ ★  German 【 whymatter 】
+║ ★  Hindi 【 oumuamua 】
+║ ★  Indonesian 【 YogaJ 】
+║ ★  Italian 【 piera 】
+║ ★  Sinhala 【 Deshan Sandeepa 】
+║ ★  Spanish 【 Oscar1996 】 【 Joaquin 】
+║ ★  Thai 【 FranesS 】
+║ ★  Turkish 【 Gizem 】
+║
+╚═.✵.════  𝕊ℕ𝕆𝕀𝕋𝔸𝕃𝕊ℕ𝔸ℝ𝕋  ════.✵.═╝
+
+⏳ Timeline ⏳
+0:00 Intro
+0:15 7:00 AM
+1:06 7:30 AM
+1:36 8:00 AM
+1:58 10:00 AM
+2:45 10:30 AM - Daily Scrum
+3:35 11:00 AM - Brunch
+4:12 12:00 PM
+4:38 2:00 PM - Coding
+5:32 3:30 PM - Meeting
+6:16 4:30 PM - Sign Off
+6:42 5:30 PM - Exercise
+7:02 7:00 PM - Dinner
+7:42 8:30 PM - After Work
+8:05 10:30 PM
+8:24 11:00 PM
+8:56 2:00 AM
+
+#DayInTheLife #SoftwareEngineer #WFH
+#ExpectationVsReality #WorkFromHome #pirateking
+
+a day in the life of a software engineer
+what do software engineers do
+what do software engineers do on a daily basis
+what does a software developer do on a daily basis
+typical day for a software engineer
+
+❗️ All opinions are my own and not my employer's.",2021-08-25T23:00:10Z,UCjHNoM9djdk-_xkAUOEowZA,9469869,201139,5203
+4_CBjbry2uM,A Day in my life of a Software Engineer👩‍💻 #corporatelife #gym #diet #softwareengineer,,2024-06-29T12:57:44Z,UCLRy6c3qWNOmpmwY7AkVPRg,9404807,382540,3018
+MUbS5TYEP-Q,Office Work Life After IIT - Mini Office Vlog - Corporate ft 9 to 5 #shorts #iit,Office Work Life After IIT - Mini Office Vlog - Corporate ft 9 to 5 #shorts #bangalore #iit,2023-10-26T11:21:09Z,UCWIyJk6YVx_TMKz0oO7ssDA,9095427,436121,13
+WR1ydijTx5E,"How I Learned to Code in 4 Months & Got a Job! (No CS Degree, No Bootcamp)","I went from being a college dropout with zero technical skills to landing a software developer job in 4 months. This video is about how I became a self-taught software developer and how I learned how to code without a computer science degree or coding bootcamp. 
+
+Connect With Me: 
+⭐️ Main Site: https://www.timkim.me/ 
+🐦 Twitter: https://twitter.com/TimKimMe 
+📸 Instagram: https://www.instagram.com/timkim.me/ 
+
+Courses To Help Supplement Learning: 
+(COUPON CODE FOR 10% OFF ➡️ FRIENDS10) 
+📚 Learning How To Learn: https://bit.ly/TK_LHTL_ZTM 
+🛠️ Build JS Projects Step-by-Step: https://bit.ly/TK_JS_ZTM 
+🟣 React: https://bit.ly/TK_React_ZTM 
+🅱️ Node: https://bit.ly/TK_Node_ZTM 
+🧐 Coding Interview Prep (DSA): https://bit.ly/TK_DSA_ZTM 
+
+Ready To Build Your Own App?
+💻 Learn to Code in Weeks: https://bit.ly/CodeFast
+
+Learn How To Code Playlist: 
+https://www.youtube.com/playlist?list=PLt3w0xGh6M0hpR26CyGYwGMFcsuLl8i8w
+
+Mentioned Resources: 
+⭐️ https://www.coursera.org/learn/learning-how-to-learn 
+🏕️ https://www.freecodecamp.org/ 
+🔎 https://watchandcode.com/
+
+Find Remote Jobs: 
+💻 https://remoteok.com/ 
+💻 https://weworkremotely.com/
+
+Tools I Used For Learning How To Code: 
+· Laptop Stand - https://amzn.to/3PgoMvU 
+· Pomodoro Timer - https://amzn.to/3NqoxgC 
+· Bose Headphones - https://amzn.to/3CseP7f 
+· Vertical Mouse - https://amzn.to/3JaWtLA 
+· Apple Keyboard - https://amzn.to/43SSRFX 
+· Laptop Backpack - https://amzn.to/3qFCu1p 
+
+Behind The Scenes: 
+🎬 https://www.timkim.me/ep-3-the-coding-video/
+
+Music For Creators:
+🎵 https://share.epidemicsound.com/2xtucq
+
+Disclaimer: Some of the links are affiliate links so I can feed mi familia while I make these videos for you guys. 🙏🙏🙏",2023-06-13T18:52:08Z,UCQTmoQ_S26PlmDoXujZpbYQ,7533662,372145,8114
+rqX8PFcOpxA,a day in the life of a software engineer,"… hi youtube
+
+here’s my first video, giving you an inside look to a typical day in the life of me, a software engineer. hope you enjoy!
+
+x, mayuko
+
+all footage was shot on an iPhone 7.
+
+🎧m u s i c 🎧
+Music by Chillhop: http://chillhop.com/listen
+Joakim Karud - Canals: https://soundcloud.com/joakimkarud
+HIP DOZER - Foreign Exchange: https://soundcloud.com/hipdozer
+Listen on Spotify: http://bit.ly/ChillhopSpotify
+
+💖 m o r e  m a y u k o 💖
+Become a member and support my channel: https://youtube.com/hellomayuko/join
+Japanese Youtube Channel: https://www.youtube.com/channel/UClHbaIGALnVB0aoWO-BOpqQ
+Twitch (Coworking sessions M-F): https://www.twitch.tv/hellomayuko
+Monthly Newsletter (A mix of tech & non-tech stuff on my mind): https://news.hellomayuko.com
+Merch: https://store.hellomayuko.com
+Instagram: https://www.instagram.com/hellomayuko/
+Twitter: https://twitter.com/hellomayuko
+Muko's Corner Podcast: https://anchor.fm/mayuko-inoue
+
+🛠m y  g e a r 🛠 
+COMPUTER(similar): https://geni.us/zgTMbP3
+KEYBOARD: https://geni.us/ZPolJe2
+MOUSE: https://geni.us/QRIoB
+MONITOR: https://geni.us/5CsiA
+DESK PAD: https://bit.ly/2UvPQd1
+MY AMAZON STORE: https://www.amazon.com/shop/mayuko
+PRETTY DESK THINGS BY GROVEMADE: https://grovemade.com/?rfsn=4817337.ab5fb9
+STATIONARY & QUALITY GOODS BY TOPDRAWER: https://shrsl.com/2hxay
+Links above affiliate links, where I make a small commission from your purchase at no extra cost to you, helping me to fund this channel!
+
+
+🌸a b o u t 🌸
+Mayuko Inoue is a content creator and Software Engineer. After working in Silicon Valley tech companies like Intuit, Patreon, and Netflix for six years as an iOS Engineer, she became a full-time creator in 2020. Her work aims to help people find their way through the tech industry by sharing her own experiences navigating this world through technology, career advice, and lifestyle videos. She is passionate about discussions around mental health, cultural identity, and creating technology with empathy and compassion.
+
+✉️c o n t a c t ✉️
+If you'd like to sponsor a video: sponsor@hellomayuko.com
+Other business inquiries: business@helloMayuko.com
+https://www.hellomayuko.com/",2017-07-17T21:52:10Z,UCEDkO7wshcDZ7UZo17rPkzQ,5381334,96140,7707
+Vw6utYElVFg,A Day in the Life of a Microsoft Software Engineer | Seattle,"Watch a day in my life as a software engineer at Microsoft’s headquarters near Seattle. While I am based in Silicon Valley, I sometimes travel to the Redmond headquarters in person, and I hope you enjoy a sneak peak into all the cool stuff at the Redmond Campus. 
+
+To those wondering: No, I am not an intern. I am a full-time employee. I know I have a baby face. Don’t remind me. Also, I may or may not still be an engineer. #DayInTheLife #SoftwareEngineer #microsoft 
+
+Follow me @browntechdaddy on instagram and tiktok.
+
+MUSIC:
+I use Uppbeat to get quality copyright-free music for my videos. You can sign up for Uppbeat here: https://share.uppbeat.io/uxskbl7oigek
+
+DISCLAIMER:
+The views and opinions expressed in this content are my personal opinions and they do not reflect the views, opinions, or endorsements of the company that I work at.",2022-08-06T15:45:02Z,UCJweVcyxf9dwu9K-_wVlyag,5364790,69248,2755
+f9sH5SgCYbY,A Day in the Life of a Software Engineer at Meta (previously Facebook),"Hiii!
+Come along to see what it's like to work at Meta, Menlo park office (headquarters) situated at the heart of Silicon Valley. Hope you have fun watching this video!
+
+Don’t forget to subscribe to my channel to get more videos from me! 😉
+
+Connect with me on other platforms ❤️
+instagram ➭ https://www.instagram.com/apurvavrupa/
+linkedIn ➭ https://www.linkedin.com/in/apurvavrupa/",2023-02-17T03:40:11Z,UCgPDn6qm0HL_TghqrYrUdFA,4716694,50382,2744
+J33nDgS3uUY,Day in the Life of a Japanese Game Illustrator,"A day in the life of a Japanese Square Enix Game Illustrator.  Square Enix is one of the top video game developers in Japan, creating ultra popular titles known-worldwide such as Final Fantasy and Kingdom Hearts and making it all happen, 3700 hard working employees.  Today, we follow a Japanese Game Illustrator working in the Japanese game development company from morning until the evening.  We show what a typical work day in Japan would be including her typical work hours as a Japanese game illustrator working for Square Enix.  We also see her morning routine and after work hobbies. Also this is what it would be like working for a popular Japanese game company and the different staff you may come across during a typical work day.   The Japanese game industry has so many different jobs so it was great to be able to show another job outside of game development and game programming.  Rubi has been working as a video game illustrator in Japan for 6 years now.  Even as a little girl she loved to draw but growing up couldn’t envision a proper career where she could pursue her passion.  So she entered University majoring in a completely different field, but when her job hunting started, she discovered that there were prestigious Japanese companies were offering illustration jobs.   Recognizing the opportunity,  she convinced her parents to let her study Character Design at a Professional Training College, ultimately leading to her dream job at her current company, Square Enix and working with Art Directors like Toshiyuki Itahana.
+
+Produced by Paolo de Guzman with filming permission from SQUARE ENIX CO., LTD.
+- https://www.jp.square-enix.com/
+
+Watch more of my Japan Day in the Life videos:
+- https://tokyozebra.com/ditl
+
+Get my Tokyo & Japan Merch and show your support! 
+- https://www.tokyozebra.com/mrch
+
+___ Tokyo Zebra: My 2nd YouTube Channel ___
+See My Life in Japan behind the scenes
+- https://www.youtube.com/tokyozebra
+
+Questions about Japan or Japan Travel? Get answers and chat with my Discord Community
+- https://paolofrom.tokyo/discord
+
+___ Channel Support ___
+Want to help SUPPORT my channel, buy me a BEER or Maiko and I DINNER?  Thank you in advance!
+
+- PayPal: https://www.paypal.me/paolofromtokyo
+
+- Venmo: PaolofromTokyo (venmo.com/paolofromtokyo)
+
+- Patreon: https://www.patreon.com/paolofromtokyo
+
+Join YouTube Channel Memberships 
+- https://www.youtube.com/paolofromtokyo/join
+
+- Merch Store: https://tokyozebra.com/mrch
+
+___ Help with Subtitles / Closed Captioning ___
+- https://paolofrom.tokyo/cc
+
+___ Business ___
+
+Want me to feature your business in my video?
+business@tokyozebra.com
+
+Want to send me stuff?
+For ADDRESS 
+- https://www.tokyozebra.com/address
+ 
+___ For more info about me ___
+
+I'm from TOKYO JAPAN, I've been living here for a long time.  I'll be your Tokyo Travel Guide, taking you to the spots I love as well as showing you what to do all around Japan and maybe sometimes overseas.  I'm also into Tech so you'll see a few videos about my drone and other cool toys I discover.  In short, the channel is all about what I Love, Japan, Food, Travel, Tech and most likely coming FROM-TOKYO, my home.
+
+- Website
+ https://www.tokyozebra.com/about
+- Instagram:  
+@paolofromtokyo - https://instagram.com/paolofromtokyo
+@tokyo.zebra - https://instagram.com/tokyo.zebra
+- Facebook: 
+https://www.facebook.com/paolofromtokyoofficial
+- TikTok
+https://www.tiktok.com/@paolo.fromtokyo
+
+___ My Film Gear ___ 
+(Affiliate Links Used - I may receive commission from products purchased)
+
+- Main Camera
+(USA Link) https://amzn.to/2GlSvyy
+(International) http://geni.us/pyBIG7S
+
+- Main Wide Lens
+(USA Link) https://amzn.to/2o5B00B
+(International) https://geni.us/DDbpW
+
+- Powered Mic
+(USA Link) https://amzn.to/2B7HnUM
+(International) http://geni.us/ZaFl4a
+
+- Mic
+(USA Link) https://amzn.to/30VtlPV
+(International) https://geni.us/lVurdzT
+
+- Portable TriPod
+(USA Link) https://amzn.to/2LKhM6e
+(International) http://geni.us/DfeI
+
+- Gimbal
+(USA Link) https://amzn.to/2PYmjYA
+(International) https://geni.us/amgYR3
+
+- Drone (Original)
+(USA Link) https://amzn.to/2K6qrAW
+(International) http://geni.us/UFAFl3c
+
+- For a complete list of my gear:
+https://www.tokyozebra.com/my-gear/
+
+Access to Music in video:
+http://share.epidemicsound.com/zsbS8",2022-11-25T23:59:02Z,UCixD9UbKvDxzGNiPC_fgHyA,4623818,164732,5976
+deLf6eynC40,A Day In The Life Of An Amazon Software Engineer (Seattle Edition),"A day of my life (post pandemic, kinda, most people are still WTH) working from Amazon Seattle HQ. You'll get a campus and Spheres tour, plus you'll get to meet my cute golden retriever Nala :) Thank you so much for your support!
+
+This is not an official Amazon video. 
+
+Check out my photography:
+Instagram: @alberthbyang, https://instagram.com/alberthbyang
+Print shop: https://alberthbyang.darkroom.tech
+Twitter: @alberthbyang, https://twitter.com/alberthbyang
+
+Main video camera: https://amzn.to/3uT5wtG
+Main photography camera: https://amzn.to/3uW7k5c
+Main lens: https://amzn.to/3AXNtGE
+Second lens: https://amzn.to/3RHsIow
+Mic: https://amzn.to/3yGAkyO
+Vlogging Tripod: https://amzn.to/3zdBhjM
+
+Where do I find music:
+Epidemic Sound: https://share.epidemicsound.com/igq7wu
+
+#softwareengineer #amazon #seattle",2022-03-01T20:00:08Z,UCOFXB-VEIgdwNJG3ndubYXA,4427374,70500,2913
+ZVrwwDbbmF4,A Day In The Life Of Software Engineer | 💻 🇮🇳,@GeeksforGeeksVideos  @HarnoorSinghOfficial @LoveBabbar for being a constant platform to boosts other to push their limits,2022-09-22T10:39:15Z,UCTPWyIRUOLPX_VjMrwfrx4Q,4423691,142208,1842
+a0glBQXOcl4,A day in the life of a Google Software Engineer | Work-from-home Edition,"Helloooo!
+
+This is my first video on the topic of Career - Job Shadowing where I follow people at work to learn more about what they do. My hope is that this video and the future ones will offer you a useful glimpse into the different career fields if you are considering them.
+
+In this video, I am following Neil Fraser - a senior software engineer at Google - to see what his typical workday looks like during COVID-19 quarantine where a lot of people have been working from home. The video also includes some of Neil's tips for aspired software engineers out there! 
+Besides being a software engineer, Neil also does a lot of cool projects, and occasionally, he'd upload videos of what he does on his channel: https://www.youtube.com/user/Odo987. Check it out!
+
+-------------------
+Music: https://www.bensound.com",2020-05-28T15:08:04Z,UC0aEAHNiD-gYHP7s24YhSfg,4346545,76108,4124
+sS6O7Yp5xmg,Day in the Life of a Twitter Software Engineer,"Follow me through a typical day in the life as a Software Engineer in San Francisco. I've been working full time for the past 18 months and it's been an amazing experience. This video is my attempt to show you a day in my life. Morning workout, commuting to work, work environment, meals, it's all here!
+
+Song from this video: 
+(Spotify) https://open.spotify.com/track/6FzHn17kjw3PPROqVDY31F?si=gzFTNTl0TcSviep8Ru4pFw
+(Youtube) https://youtu.be/JhQpXwXUWok
+
+---- Follow Us On Social Media ----
+Instagram: https://instagram.com/joshandkatietech
+Josh's Twitter: https://twitter.com/joshuakcockrell
+Discord: https://discord.gg/HtT8Yc6
+TikTok: https://vm.tiktok.com/ZMJmd6UYV
+
+---- Shop Our Editing Equipment ----
+Editing/Coding Laptop (MacBook Pro 13 inch): https://amzn.to/2VDEQw5
+Everyday Editing Headphones (Sennheiser HD 559) https://amzn.to/38bcMms
+Final Master Editing Headphones (Sennheiser HD 660S): https://amzn.to/2Tfb3Iz
+
+---- Shop Our Camera Equipment ----
+Camera (iPhone 11 256GB) https://amzn.to/3aqVcw9
+Camera App (Filmic Pro) https://apps.apple.com/us/app/filmic-pro-video-camera/id436577167
+Camera Microphone (Rode VideoMicro): https://amzn.to/32Kju1v
+Camera Lenses (Moment iPhone Lenses): http://bit.ly/moment-lense-josh-and-katie
+
+---- Where We Get Our Music ----
+https://www.youtube.com/channel/UC8EUzNhl17gTJLupESjHmyA
+
+---- Other Social Media Links ----
+Josh's Spotify: https://open.spotify.com/artist/0T24zL5DjolHE3ssni0rdK
+Josh's Soundcloud: https://soundcloud.com/clubdeco",2020-02-22T01:59:52Z,UCHzWIPEh3In0jdBPp9hgGOg,3979060,79149,6428
+sQyLvZ6FP-4,How much does a SOFTWARE ENGINEER make? #shorts #ytshorts #techjobsin2minutes,"How much does a SOFTWARE ENGINEER make? #shorts #ytshorts #techjobsin2minutes #amazon  #softwareengineer #interview #street
+#salary #jobsearch #jobseekers #viral #viralshorts",2024-06-25T15:00:57Z,UCOQDdjPiHB1X6MJSPNdr1ng,4074871,91353,1155
+a3KxdvosHko,A Day In The Life of An Indian Software Engineer Intern | Last Day Edition,"Instagram link - https://www.instagram.com/poojachoux/
+
+Spend last day with an Indian Software Engineer Intern
+
+
+Thank You
+
+Shot on - OnePlus 6T
+
+Edited on - Adobe Premier Rush on Android Phone
+
+Music - 
+––––––––––––––––––––––––––––––
+Rollercoaster by Declan DP https://soundcloud.com/declandp 
+Licensing Agreement 2.0 (READ) http://www.declandp.info/music-licensing 
+Free Download / Stream: http://bit.ly/_rollercoaster
+Music promoted by Audio Library https://youtu.be/fgdrHffROpo
+––––––––––––––––––––––––––––––
+
+Instagram - https://www.instagram.com/marwadichhoripooja/
+
+#LifeStyle #Vlogger #MarwadiChhoriPooja",2019-07-14T17:44:37Z,UCs9oZnfxdfnqoC9zcw8rVEw,3784742,84101,6638
+TLysAkFM4cA,a day in the life of a startup engineer working from home,"Thanks to Logitech for sponsoring this video. Visit Logitech’s website to find the right webcams for you https://bit.ly/3rOgboS #WorkLifeUpgraded
+https://www.youtube.com/c/logitech
+
+
+
+📱 SOCIAL MEDIA
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+https://www.instagram.com/jomakaze/
+https://twitter.com/jomakaze
+https://www.facebook.com/jomakaze
+
+
+
+Watch the rest of the videos from the Joma Cinematic Universe:
+https://youtube.com/playlist?list=PL0BAwa0pBqg58QavlD1MZ4oOEMBuv9VQp
+
+Shadr Ad Credits:
+Cinematography: https://www.instagram.com/johnszeng/
+Music: https://www.instagram.com/joyngiaw/
+CGI: https://www.instagram.com/oleg.zvg/",2021-12-15T15:48:55Z,UCV0qA-eDDICsRR9rPcnG7tw,3436683,122118,4196
+yqqphr4S-i0,First Day at Microsoft! *Unboxing*,"Thank you all for being part of the journey :) 
+
+Our website: http://singhinusa.com/
+
+Edited by: Chaitanya Khachane
+
+📈 Get 2 FREE Stocks in US (valued up to $1400): https://a.webull.com/i/SinghinUSA
+I use WeBull & RobinHood for stock trading which are legal.
+
+My Study Abroad channel: https://www.youtube.com/channel/UCptc7b3jk_PtbpLLeZojRZA
+
+
+iPhone Vlogging Gear:-
+💻 My Gear Page: https://linktr.ee/singhinusa
+📱iPhone 14: https://geni.us/J9c6GoY
+📸Sony Camera: https://geni.us/zShMGT4
+⿍ Tripod: https://geni.us/iVsd
+🎙Vlogging & Podcast Mic https://geni.us/v915Z9H
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Follow me on - 
+Instagram - https://www.instagram.com/iHarnoor
+Facebook - https://www.facebook.com/SinghinUSA
+Twitter - https://twitter.com/iHarnoorSingh
+For Doubts Related to Undergrad: https://www.facebook.com/groups/1234179803434320
+
+E-mail for BUSINESS INQUIRY & HELP- hello@singhinusa.com
+
+MUSIC CREDITS:
+Music From (Free Trial): https://www.epidemicsound.com/referral/2jy2t1/",2022-09-02T04:37:34Z,UChYs-_zjKRYhdMddjx-NPLw,3436352,76754,2109
+jfOmPvZ7cSQ,How much money Software Engineers make? 💰 ft. Maddy,,2024-03-01T14:04:15Z,UCteRPiisgIoHtMgqHegpWAQ,3485364,52001,2961
+P4FYfHfo-1o,What a typical day of a programmer can look like 💻 #coder #softwareengineer,,2022-11-10T00:47:29Z,UC9jg1BmNtMHja2jmPKqal9Q,3375177,81544,1177
+GWJ56eQmlYM,A Day of a Software Engineer @Infosys -2 | సాఫ్ట్‌వేర్ కష్టాలు#youtubeshorts #viralshort #software,"A Day of a Software Engineer  @Infosys  -2 | సాఫ్ట్‌వేర్ కష్టాలు #youtubeshorts  #viralshort  #software 
+
+#youtubeshorts #youtubeshorts #software #softwareengineer #softwarelife #softwarevideo  #hyderabad #shorts #vlog #vlogging #vloggerlife #youtube #youtubechannel #youtubers #lifestyle #vloggerlifestyle #vlogginglife #telugu #video #subscribe #getmoresubscribers  #telugu 
+@NaaAnveshana @FilmyMoji @bayyasunnyyadav
+
+a day in the life a software engineer intern,day in the life of a software engineer,a day in the life of a software engineer,software engineer,software life in telugu,a day in the life of a software engineer at microsoft,a day in the life of software engineer,a day in the life of software engineers,a day in the life of an indian software engineer intern,how to become software engineer in telegu,infosys in telugu,a female software engineer in india",2024-04-11T12:30:19Z,UCpDuDmqsRELwXUwN49vm9qw,3086880,145024,723
+dpTbHIRreB8,A Day in the Life of a Software Engineer at Meta/Facebook,"Come see what a day is like working as a software engineer at Meta HQ (formerly known as Facebook)! These offices are based in Silicon Valley (Menlo Park, CA) Let me know what you think of it!
+
+Music Credits:
+
+Track: On & On feat. Daniel Levi
+Music provided by NoCopyrightSounds.
+
+Track: Different Heaven & EH!DE - My Heart [NCS Release]
+Music provided by NoCopyrightSounds.
+Watch: https://youtu.be/jK2aIUmmdP4
+Free Download / Stream: https://ncs.io/MyHeart",2022-06-26T23:24:43Z,UCwCtMpmCyNVUS9BB0ROCEpA,2988931,39290,2202
+rAejJBmo55Y,Day in the Life of a Software Engineer at Google,"Ever wondered what it's like to work at Google? Join me, a 21-year-old software engineer, as I take you through a typical day at one of the world's most innovative tech companies. From morning coffee ☕ to coding sessions 💻, and delicious ice creams 🎉—experience the true essence of Google life!
+
+♡ Let's Connect ♡ 
+- https://www.instagram.com/heydivyanshii
+
+👀 What's in this Vlog:
+- Morning routine and commute to Google
+- A tour of my workspace and the Google campus
+- My daily tasks and what projects I'm currently working on
+- Lunch at Google's amazing cafeteria
+- How I balance work and personal life
+- Insight into the daily responsibilities of a software engineer  
+- Behind-the-scenes look at Google's work culture and perks  
+
+✨ Subscribe for more tech and lifestyle content! Hit that like button if you enjoy the video, and don't forget to comment your favorite part of the day!
+
+📌 Tags:
+#GoogleLife #SoftwareEngineer #TechVlog #DayInTheLife #WomenInTech #SiliconValley #Coding #TechCareer #GoogleCampus #GoogleIndia #Intern #GoogleIntern #Noogler #Corporate #Corporatelife",2024-11-20T16:11:35Z,UCTcROAyCC-ayZkLxzKYoFTA,2498422,30218,1783
+yfZ1krBKWmw,Day in the life of MICROSOFT Software Engineer 🚀 | Mini Office Vlog 💯,,2023-10-13T06:32:00Z,UCVe8CMJF4caRzuckVYV8CaQ,2291178,77610,464
+JDtdY4vSmHY,Life at Google | Software Engineer | Connect with me over a call: https://topmate.io/garima_rajput,"A glimpse of my life as a Software Engineer at Google, London.
+
+It is quite challenging to crack FAANG interviews but it can become even harder without a plan. 
+
+1️⃣ Preparation resources: 
+I’ve designed 3 resources which contain everything I used for my own preparation at both Google & Meta.
+
+ ✅ DSA sheet: over 250 coding questions from all  the key topics asked in FAANG.
+ ✅ System design sheet: lists all the topics to prepare for high level system design, how to structure a design interview & all the important questions.
+ ✅ Resume Template that got me interview calls from all FAANG companies.
+📌: https://topmate.io/garima_rajput
+
+If you follow all the instructions, I can assure that you’ll be able crack any Software Engineering interview.👩‍💻🎉
+
+You can also find the link in my Instagram bio.
+📌: https://instagram.com/garima_rajput07",2023-11-13T11:52:53Z,UC0gty8DC-QKxanKc2gXG0nw,2606779,116285,610
+O62kAvoO9lM,day in the life of a software engineer in NYC *an unglamorous 24 hours with meee*,"❀ SEND ME ANONYMOUS FEEDBACK ❀
+https://forms.gle/RafJKhwRadmfEmSCA
+
+❀ RELATED VIDEOS ❀ 
+work / tech playlist 
+  ↳  https://youtube.com/playlist?list=PLBoB2yiti-Q7nI6oPhnyKs0vOqy1bK2CJ
+day in my life 
+  ↳  *office edition*  ➭  https://youtu.be/EQSNnARq-yI
+  ↳  *wfh edition*  ➭  https://youtu.be/O62kAvoO9lM
+career Q&A's
+  ↳  my career journey, experience, internships, salary  ➭  https://youtu.be/Y36dQUh3U8Q
+  ↳  salary, negotiating & startups  ➭  https://youtu.be/mAgxG4YUYSo
+  ↳  resume deep-dive, burnout & being a woman in tech  ➭  https://youtu.be/i3nydhSlZX4
+work diaries
+  ↳  WFH, productivity, desk setup & restaurant week  ➭  https://youtu.be/ymu4AYGJcPI
+  ↳  grwm, reflecting on hate comments, in-office days  ➭  https://youtu.be/30A9Zxcm2eE
+  ↳  week in my life, my first business trip  ➭  https://youtu.be/lGebwh_1WhA
+  ↳  living & working in NYC  ➭  https://youtu.be/Kr0De8QuNG0
+
+❀ LINKS ❀ 
+FlexiSpot Comhar All-in-One Standing Desk Bamboo Texture Top ➭ https://bit.ly/3GZiJVV 
+↳ referral link for $30 off: https://share.flexispot.com/x/ROv4a2
+#VivoHome-wooden sideboard ➭ https://www.amazon.com/dp/B095347ZC8
+↳ 12% off code: sarahpan
+TaoTronics Air Purifier ➭ https://www.taotronics.com/products/tt-ap005-hepa-air-purifier-for-home
+↳ 25% off code: GNAP5
+KooPower Outdoor Globe String Lights ➭ https://www.amazon.com/gp/product/B08MFLCCZ7?th=1 
+↳ 20% off code: sarahpan20
+Lattelier Drawstring Pants ➭ https://shop-links.co/cgwRbWM01h5
+↳ 30% off code: SarahP30 
+
+♡ CONNECT WITH ME ♡
+instagram  ➭ https://www.instagram.com/oksarahpan/
+subscribe  ➭ https://t.ly/2i7w
+
+✰ FILMING EQUIPMENT ✰
+ ➭  canon t6i (https://amzn.to/3nX0e9Y)
+ ➭  canon g7x mark ii (https://amzn.to/3uVtEsN)
+ ➭  manfrotto compact action tripod (https://amzn.to/3ivEyAP)
+
+♫ MUSIC ♫ 
+❀ Music by Remil - Sunsets - https://thmatc.co/?l=20EBC186
+❀ Music by Nair B - Partly Cloudy - https://thmatc.co/?l=511121B4
+❀ Music by Reggie San Miguel - Autumn Stroll - https://thmatc.co/?l=07803CD9
+❀ Music by Gil Wanders - Still Morning - https://thmatc.co/?l=5FE24A37
+❀ Music by Gil Wanders - Poco Pico - https://thmatc.co/?l=7CF4902F
+♪ Morning Rain (Prod. by Lukrembo)
+Link : https://youtu.be/mvwsy_Kauzk
+disclaimer: I do not own any of the music in this video
+
+✰ REFERRAL CODES ✰
+❀ YesStyle: https://ys.style/kCnmQQrT58 (code: SAPASAPA)
+❀ BeFrugal: https://befrugal.com/rs/CDRNLYK/ ($10 sign up bonus)
+❀ Rakuten: https://rakuten.com/r/SARAHP3847?eeid=28187 ($10 sign up bonus)
+❀ Firmoo code: https://www.firmoo.com/?invite_code=938093ccb4 (code A8T7T5 for 50% off)
+❀ EyeBuyDirect: https://www.eyebuydirect.com/5795978 (code IFKKDHGC3L for $10 off)
+
+chapters:
+0:00 morning
+starting work 
+lunch
+desk setup
+meetings
+break
+more work 
+after work 
+------
+current sub count: 61,400",2022-01-30T16:06:22Z,UCc0vz-lVwacgLVJRBW4-4ZA,2225756,54374,938
+5VHYbNli4EM,FilterCopy | Life Of A Software Engineer | Ft. @ThatsSoViraj,"Still waiting for my code to get compiled 🥲
+From chasing tech titles to building your own identity. Visit @SCALER - https://www.scaler.com/?utm_source=brandedcontent&utm_medium=filtercopy&utm_campaign=brand_scaler_academy_brandedcontent_filtercopy_branded-content-video-campaign-filtercopy-17October2022_india_all&utm_content=YT-description 
+#FilterCopy #SoftwareEngineer #Life #CreateImpact 
+
+Producer 
+Shreya Agarwal
+ 
+Writer 
+Shashwat Chaturvedi
+Shraddha Panday
+ 
+Director 
+Priyankar Biswas
+ 
+Cast  
+Chaitali Soparkar 
+Freya Kothari
+Karthik Mohan
+Sanchay Goswami
+Shashwat Chaturvedi
+Viraj Ghelani
+ 
+Featured Cast  
+Abhijeet Tandulkar
+Mallika Mansuri
+Manpreet Singh
+Rijul Rajpal
+Ravinder Suri & Co 
+  
+DOP
+Vaibhav Lonkar
+ 
+Editor 
+Priyanka Dey
+ 
+Assistant Directors 
+Priyal Jain
+Shashwat Chaturvedi
+ 
+Production Operations 
+Anant Kaushik
+ 
+Executive Producer 
+Abhijeet Tandulkar
+ 
+Operations Manager 
+Kaiarsh Saher 
+ 
+Design & Animation 
+Ryan Peter D'souza
+ 
+Colour Grading 
+Sachin Kokitkar
+ 
+Sound Design 
+Rahul Telang
+ 
+Post Production Operations 
+Omkar Mane 
+ 
+Casting Associate  
+Manpreet Singh
+ 
+Brand Solutions 
+Sheveeta Hegde
+Shaunak Patel
+ 
+Priyanka Padode Sheth
+Paras Goswami
+ 
+Growth Marketing 
+Prakhar Jha
+ 
+Video Operations 
+Kaiarsh Saher
+ 
+Costume Styling & Design 
+Winnie Malhotra 
+ 
+Costume Assistant 
+Priya Nandoskar
+  
+Hair & Make Up 
+Sanjay Patni
+ 
+Art Director 
+Dheeraj Yadav
+ 
+Sound Recordist 
+Yasin Mujawar
+ 
+DIT
+Ravi Kumar Singh
+ 
+Dressman 
+Mahendra Prasad
+ 
+Camera Attendant 
+Suraj Chawdhary
+ 
+Light Attendant 
+Sanjit Majumdar And Team
+ 
+Spot 
+Pritam Kumar And Team
+ 
+Subtitling 
+Digital Nirvana 
+ 
+Copyright © 2022 
+Pocket Aces Pictures Pvt. Ltd.",2022-10-20T06:00:01Z,UC7IMq6lLHbptAnSucW1pClA,2078451,48033,602
+ssX0B6sg_BQ,Office Tour | A Day in the Life of a Software Engineer,"In this video, you get to see my day as a Software Engineer based in Texas. From my e-bike ride to my desk setup, coding, and other developer duties.  But because it was such a light day I decide to show you guys around our new office!
+
+Don't forget to leave a like, if you liked the video :]
+
+My website: https://b-r.io/
+My gear: https://b-r.io/gear/
+Twitter: https://twitter.com/brianruizy
+GitHub: https://github.com/BrianRuizy
+IG: https://www.instagram.com/brianruizy/
+LinkedIn: https://www.linkedin.com/in/brianruizy/
+
+----
+
+Thank you, BenQ for the cool e-Reading desk lamp.  
+BenQ Website: https://pse.is/4kdhcr 
+Amazon:  https://amzn.to/3i5s8Ue
+
+Thank you, Grovemade for the phone dock and other awesome desk accessories!
+Check out Grovemade: https://grovemade.com/?rfsn=7091674.cdb3c56
+Use code ""BRUIZ10"" for 10% off!
+
+Workout tracker: https://bit.ly/3zhOTdt
+Interested in Hevy Pro? use promo code ""BRIANRUIZ"" for 20% off!
+
+---
+
+Chapters
+0:00 - Intro
+0:18 - Morning Routine
+1:34 - E-Bike Commute
+2:26 - Arriving to Office
+3:28 - Desk Area Tour
+5:12 - Coding Time
+6:48 - Lunch Time
+7:36 - Office Tour
+10:44 - Packing Up
+12:06 - Side Business
+12:33 - Evening Workout
+13:51 - Outro",2023-01-19T18:00:09Z,UCCIFp-Se_xjfYc94H04oK7Q,2048978,42743,2220
+oS-m5-XikwA,A Day in the Life of a Software Engineer in London,"Hi everyone, Nelson here
+
+Watch me working as a software engineer in London. I really enjoy what I do and I want to share my working day with you.
+
+► Recommended Books
+
+Clean Code
+- https://amzn.to/2UGDPlX
+
+HTTP: The Definitive Guide 
+- https://amzn.to/2JDVi8s
+
+Clean Architecture
+- https://amzn.to/2xOBNXW
+
+► Computer and Monitor
+
+New Apple MacBook Pro 
+- https://amzn.to/3464Mmn
+
+Dell 27 INCH Ultrasharp U2719D Monitor
+- https://amzn.to/2xM3nW1
+
+USB C Hub Multiport Adapter
+- https://amzn.to/2Jz7NlL
+
+► Camera Gear
+
+Sony ILCE7M3B Full Frame Mirrorless Camera
+- https://amzn.to/346QIJn
+
+Sigma 16 mm F1.4 DC DN 
+- https://amzn.to/2wbic3Q
+
+Sigma 33B965 30 mm F1.4 DC DC 
+- https://amzn.to/39G37Fd
+
+DJI Ronin-SC 
+- https://amzn.to/34cO6d0
+P.S
+▶️ Don't forget to subscribe | http://bit.ly/2HpF5V8
+▶️ Join Closed Facebook Group for discussion and early access videos and courses | http://bit.ly/2FbuIkx
+▶️ Follow me on Instagram | http://bit.ly/2TSkA9w
+
+Free Copyright Instrumentals used 
+
+Agdal - Soyb [Vlog No Copyright Music]
+https://www.youtube.com/watch?v=ODRd_PrJfJU
+
+[No Copyright Music] Chill LoFi Hip Hop FREE (Copyright Free) Music - Monroe By: LAKEY INSPIRED
+https://www.youtube.com/watch?v=puFdqFrQOmI
+
+[No Copyright Music] Chill Lofi Hip Hop Instrumental (Copyright Free) Music - Days Like These
+https://www.youtube.com/watch?v=DMyudUrFlQQ
+
+#dayinthelife #softwareengineering #amigoscode",2020-01-08T22:50:17Z,UC2KfmYEM4KCuA1ZurravgYw,1776750,48344,3337
+GvBgPBVcjEM,I’m bad at coding…. (my software engineering journey),"🤓[BECOME A SOFTWARE ENGINEER]🤓 - NO coding experience needed!
+https://coursecareers.com/a/poojadutt
+
+🦄 Pre-Order Kotlin Course here: 🦄 https://www.coderatlas.com
+
+🌎[LEARN TO CODE] 🌎 
+🎙️Java for Beginners: https://rb.gy/psyn3
+🎙️Python For Beginners: https://rb.gy/4b5k6 
+🎙️JavaScript for Beginners: https://rb.gy/pna2q
+🎙️Software Development Life Cycle: https://rb.gy/bg67h
+🎙️Software Engineering 101: https://rb.gy/weu5l
+
+📒  [ZERO TO MASTERY] 📒 -- this is great to level up your skills!
+🎙️Courses: https://links.zerotomastery.io/courses_pooja
+🎙️Choose a CAREER Path: https://links.zerotomastery.io/careerpaths_pooja
+🎙️Become a PYTHON Developer: https://links.zerotomastery.io/python_pooja
+🎙️Become an AI Engineer: https://links.zerotomastery.io/aiengineer_pooja
+🎙️ Become a REACT Developer: https://links.zerotomastery.io/react_pooja
+🎙️Become a BLOCKCHAIN Developer: https://links.zerotomastery.io/blockchain_pooja
+
+📚[DATA STRUCTURES & ALGOS]📚
+🎙️ https://neetcode.io/?utm_source=pooja
+
+📧[CONTACT]📧
+🎙️1:1 Career Coaching!!! https://calendly.com/d/yp4-qgs-sfh/60min
+📒 Brand Collaborations: poojadutt.smallscreen@gmail.com
+🦄 Contact/Questions: poojadutt.tech@gmail.com
+📚 Instagram: https://www.instagram.com/fivefootraveler/
+👾 Discord: https://discord.com/invite/UuSX7qSfra
+📒 Email List [JOIN NOW]: https://form.jotform.com/223336781369161
+
+**some links may be affiliate links**",2022-05-24T16:01:05Z,UCYQvAPEWa3ibT0_FcjqYa8g,1751121,54206,2335
+CxoGjX3JvHI,💻 One Day in Life of SAP Software Engineer,"👋 I'm Joey Bronner, passionate coder and maker.
+This is a video of one day of my life at SAP as a software engineer.
+
+EPISODE 2: https://www.youtube.com/watch?v=aJGnJ2QvMI8
+
+📝You are looking for a job at SAP? Let me know, I would love to co-opt your application.
+
+🤞PS: I'm also looking to do more videos in the coming weeks, if you are good at writing video scripts, contact me!
+
+#️⃣#onedayinlife #engineer #coding #programming #learning #sap #sapfrance #company #job #vlog
+
+🔗To stay in touch:
+
+Blog: https://joeybronner.fr
+Twitter: https://twitter.com/joeybronner
+Instagram: https://instagram.com/joey.bronner
+LinkedIn: https://linkedin.com/in/joeybronner
+GitHub: https://github.com/joeybronner
+Email: joeybronner@gmail.com",2018-04-17T05:16:09Z,UCLVS5hPp_bwBX9dPa84LxkA,1727342,23413,1607
+QjMJsQx_O7o,What A Day In A Programmers Life Is Actually Like,"What A Day In A Programmers Life Is Actually Like
+
+Get access to my programming courses: https://patreon.com/hallden
+
+Follow me on instagram: https://www.instagram.com/kallehallden/
+
+LiveCoder channel: https://www.youtube.com/channel/UCxv8jMd-ABJboKo1a_LtuNA
+
+""Clean Code Friday""
+If you want to receive one short email from me every week, where I go through a few of the most useful things I have explored and discovered this week. Things like; favourite apps, articles, podcasts, books, coding tips and tricks. Then feel free to join https://kalletech.com/cleancode/
+
+CONTACT: contact@kalletech.com
+
+Follow me on:
+
+TWITCH: https://www.twitch.tv/kallehallden
+INSTAGRAM: https://www.instagram.com/kallehallden/
+TWITTER: https://twitter.com/kallehallden
+GITHUB: https://github.com/kallehallden
+DISCORD: https://discord.gg/BvXYMdVdCz
+PATREON:  https://patreon.com/hallden 
+
+VIDEO EDITOR: https://editingmachine.com (use coupon code KALLE to get 50% off your first month)
+
+
+--------------------------------------------------------------------------------------------------------
+GEAR:
+https://kalletech.com/tech/",2021-03-12T11:00:24Z,UCWr0mx597DnSGLFk1WfvSkQ,1699298,56496,1701
+Q0A35ZfgwHA,What Professional Software Engineers ACTUALLY Do,"Most software engineers will show you the highlights of being a software engineer, but rarely will they show you the reality of being a software engineer. So today, I want you to know what professional software engineers actually do - not just the highlight reel.
+
+------------------------
+
+🐱‍🚀 GitHub: https://github.com/forrestknight
+🎥 Twitch: https://www.twitch.tv/forrestknight
+🐦 Twitter: https://www.twitter.com/forrestpknight
+📸 Instagram: https://www.instagram.com/forrestpknight
+ 
+📓 Learning Resources: 
+My Favorite Machine Learning Course:  https://imp.i384100.net/YgYEBJ
+Open Source Computer Science Degree:  https://bit.ly/open-source-forrest
+Python Open Source Computer Science Degree:  https://bit.ly/python-open-source
+Udacity to Learn Any Coding Skill: http://bit.ly/udacity-forrest
+
+👨‍💻 My Coding Gear:
+My NAS Server: https://amzn.to/3brqO7b
+My Hard Drives: https://amzn.to/3aKetMi
+My Main Monitor: https://amzn.to/3siQfPa
+My Second Monitor: https://amzn.to/3keHT84
+My Standing Desk: https://amzn.to/3boAcbC
+My PC Build:  https://bit.ly/my-coding-gear
+My AI GPU: https://amzn.to/3uvmUmz",2021-09-28T17:15:00Z,UC2WHjPDvbE6O328n17ZGcfg,1643380,47983,1897
+wdT_QBfWVuA,A day in my life as a Software Engineer at Microsoft,,2024-11-10T12:01:11Z,UCSCpimJvMFN_Ymr_2w3yXwA,1646029,43888,458
+UHyX9zBluMw,Day in the Life of a Software Engineer at TikTok (Seattle),"A Day in the Life of a Software Engineer at TikTok in Seattle.
+
+disclaimer: this is not an official video of the employer, all experiences, thoughts, and views/opinions are of the subject and not of the employer.
+
+0:00 wake up 
+0:12 morning routine
+0:34 check dms + calendar 
+1:19 house chores
+1:40 coding block #1 
+2:06 commute to office 
+2:39 arrive at office
+3:24 check into desk
+3:53 free food :) (lunch) 
+4:34 coding block #2 
+4:43 coding interview
+4:57 design meeting 
+5:26 dinner time 
+5:39 post-dinner work
+5:56 soccer game! 
+6:30 arrive home
+
+✈️ day in the life series:
+https://www.youtube.com/watch?v=IPPByLBrU58&ab_channel=ArmanKhondker (seattle)
+https://www.youtube.com/watch?v=7fvCEALG1Qs&t=36s&ab_channel=ArmanKhondker (austin)
+https://www.youtube.com/watch?v=zR4DX3BU8-I&t=9s&ab_channel=ArmanKhondker (new york city)
+https://www.youtube.com/watch?v=M_rQamgfgos&ab_channel=ArmanKhondker (san francisco)
+https://www.youtube.com/watch?v=IPPByLBrU58&t=10s&ab_channel=ArmanKhondker (seattle)
+https://www.youtube.com/watch?v=ah8VjK_jjtk&t=26s&ab_channel=ArmanKhondker (new york) 
+
+♫ music ♫ 
+♪ Iso Indies - Back in my bag
+Link: https://www.youtube.com/watch?v=dLbbo_vSSH4&ab_channel=EpidemicHip-Hop
+♪ Fluorescence - Cushy
+Link: https://www.youtube.com/watch?v=z2BI83-eElE&ab_channel=EpidemicTrapBeats
+♪ Jay (Prod. by Lukrembo)
+Link: https://www.youtube.com/watch?v=1zmJ_4kGYUU&ab_channel=LuKremBo
+♪ Branch (Prod. by Lukrembo)
+Link: https://www.youtube.com/watch?v=xPOy2pkImiU&ab_channel=LuKremBo",2023-05-08T13:00:24Z,UCDlqbnftd2Z_Ysh8itMvhwg,1620089,25161,2017
+DFW8MwstRwY,a day in the life of a software engineer,"A day in the life of a software engineer
+
+Get access to my programming courses: https://patreon.com/hallden
+
+Follow me on instagram: https://www.instagram.com/kallehallden/
+
+LiveCoder channel: https://www.youtube.com/channel/UCxv8jMd-ABJboKo1a_LtuNA
+
+""Clean Code Friday""
+If you want to receive one short email from me every week, where I go through a few of the most useful things I have explored and discovered this week. Things like; favourite apps, articles, podcasts, books, coding tips and tricks. Then feel free to join https://kalletech.com/cleancode/
+
+CONTACT: contact@kalletech.com
+
+Follow me on:
+
+TWITCH: https://www.twitch.tv/kallehallden
+INSTAGRAM: https://www.instagram.com/kallehallden/
+TWITTER: https://twitter.com/kallehallden
+GITHUB: https://github.com/kallehallden
+DISCORD: https://discord.gg/BvXYMdVdCz
+PATREON:  https://patreon.com/hallden 
+
+VIDEO EDITOR: https://editingmachine.com (use coupon code KALLE to get 50% off your first month)
+
+
+--------------------------------------------------------------------------------------------------------
+GEAR:
+https://kalletech.com/tech/",2019-01-08T16:00:03Z,UCWr0mx597DnSGLFk1WfvSkQ,1591900,29892,2176
+j1fc0FlCjyI,A REAL Day in the Life of a Software Engineer,"Here is a REAL look at a day in the life of a Software Engineer. Many other videos like this don't begin to scratch the surface of what it's really like - they'll show you their catered food or ping pong tournaments but not what work is all about.
+
+Follow me on GitHub and check out my open source projects: https://github.com/justintime50
+
+Due to COVID-19, I'm working from home. I work in Silicon Slopes normally right in the middle of busy Lehi, Utah. The majority of my team is located in San Fransisco so I'm an hour ahead. I’ve loved the opportunity working in tech during this time.
+
+Play my iOS game, Crazy Color Clash: https://apps.apple.com/us/app/crazy-color-clash/id1641436535
+
+MY SETUP:
+- MacBook Pro (Work Issued): MBP 13"", 2019, 16gb ram, 256gb SSD
+- Dock: https://www.amazon.com/Kensington-SD5200T-Thunderbolt-Docking-Station/dp/B0785DQLZ7/ref=sr_1_13?dchild=1&keywords=kensington+dock&qid=1605513171&sr=8-13
+- Monitors: x2 Dell P2414HB
+- Mouse: https://www.apple.com/shop/product/MLA02LL/A/magic-mouse-2-silver
+- Keyboard: https://www.apple.com/shop/product/MRMH2LL/A/magic-keyboard-with-numeric-keypad-us-english-space-gray
+- Laptop Stand - Bestand Aluminum... https://www.amazon.com/dp/B074DTL449?ref=ppx_pop_mob_ap_share
+Standing Desk: https://www.autonomous.ai/standing-desks/smartdesk-2-home
+
+MUSIC:
+- All Night (Ikson) https://soundcloud.com/ikson/all-night-free-download",2020-10-22T05:09:48Z,UC0F_hIbw9uf3nkK3c01obIA,1532985,33394,2652
+AzQ3Xso7sLA,A Day in the Life of a Project Manager | Indeed,"Get better job matches when you complete your Indeed profile: https://go.indeed.com/4ER6C8
+What does a project manager really do? Learning about the daily life of a project manager—like coordinating tasks between departments, maintaining the organization of a project and ensuring deadlines are met—could help you decide if this is the right career for you.
+
+In this video, we follow Gillian, a project manager for an agency in New York, as she shows you what a day in the life of a project manager is actually like, including work hours, work environment and job duties. She even shares the skills and education needed to be a successful project manager. 
+
+00:00 Introduction
+00:16 What is a project manager?
+00:45 Hybrid work life
+01:11 Start of the workday 
+01:28 Project management software - Monday.com
+02:07 “Hamilton” account status meeting
+03:03 Work from home tip
+03:24 Routing projects to stakeholders
+03:43 Who does a project manager work with?
+04:01 What education is required for a project manager?
+04:32 Favorite parts about the job
+04:48 Routing “Hamilton” design projects
+05:31 Training new project manager
+05:50 Email automation system training
+06:43 Wrapping up work
+07:01 Updating project management software status
+07:41 Project site visit 
+08:00 Project manager career advice
+
+To watch all our career development videos, check out this playlist: https://www.youtube.com/watch?v=Ft8R1LuC1Xg&list=PL6qIzGkkiXFEr6ClYs9yZHPUD6iwc_EDF
+
+To explore more careers, check out this playlist: https://www.youtube.com/playlist?list=PL6qIzGkkiXFFb5ck2zmUDnI7nhN7rFZX9  
+
+Follow Indeed!
+https://www.facebook.com/Indeed 
+https://twitter.com/indeed 
+https://www.instagram.com/indeedworks/ 
+https://www.linkedin.com/company/indeed-com/ 
+https://www.tiktok.com/@indeed
+
+https://youtu.be/AzQ3Xso7sLA
+
+More people find jobs on Indeed than anywhere else. Indeed is the #1 job site in the world* with 580M job seeker profiles.** Indeed allows job seekers to search millions of jobs, post resumes, research companies and more in over 60 countries and 28 languages. And over 3.5M employers use Indeed to find and hire new employees. For more information, visit https://www.indeed.com.
+
+On our YouTube channel, you’ll find tips and personal stories to help you take the next step in your job search.
+
+The information in this video is provided as a courtesy. Indeed is not a legal advisor and does not guarantee job interviews or offers.
+
+*ComScore, Total Visits, March 2024
+**Indeed data (worldwide), job seeker accounts that have a unique, verified email address
+
+
+Create a free Indeed account: https://go.indeed.com/7NA37Z
+Find your next job: https://go.indeed.com/findjobs 
+More career advice and resources from Indeed: https://go.indeed.com/RFW437
+
+#ProjectManager #Indeed #DayInTheLifeVideo",2022-07-12T20:00:02Z,UCk3u_P1wYZbbQkzj_OP0_wg,1494080,24662,605
+mZ6RB1oQaGs,A Day In the Life of a Software Engineer Intern,"Check out the new version!  https://youtu.be/3GBNLCWw78o
+
+Hey everyone! 
+   
+This was basically my entire summer and I wanted to film an example of what it's like working as an intern as there aren't too many videos about that on YouTube. 
+Shout-outs to Mayuko/Joma/Jarvis and all the other software engineers who made day in the life of videos, I definitely was inspired by them!
+Thank you so much for watching and let me know what other videos you'd like me to make in the comments below!
+
+You can contact me here:
+https://www.instagram.com/edwardbsa/
+edward.sa.baijie@gmail.com  
+
+Music I use:
+http://share.epidemicsound.com/edwardsa",2018-08-10T23:38:10Z,UCCUw_xsps3VgtqLYR8vBSXw,1446668,21689,1856
+9Z4wUKBkD94,Everything You Need to Know Before Starting Engineering,"Sharing everything you need to know before starting engineering here. This video is ambitious and there’s a lot to cover about this topic. The first 4 things will be related to your engineering career and the last 5 things will be more focused on engineering school. Timestamps are as follows: 
+
+00:00 Intro
+00:33 Not Every Engineering Job is the Same
+02:09 It’s Normal to have Doubts
+03:02 Engineering Won’t Make you Rich
+04:16 Project Expectations vs Reality
+05:48 The 3 Types of Engineering Students
+06:56 Problem Solving Skills in Engineering
+07:14 Network & Talk to People
+07:52 Review Stuff Before Class
+08:49 Internships
+
+Internship Videos Mentioned:
+How to Get Eng Internships: https://www.youtube.com/watch?v=z5LuiOiq9G4&t=87s
+How to Get a Job as a Tesla Eng: https://www.youtube.com/watch?v=Dp5I-gtE2Lo&t=30s
+How to Use LinkedIn to Land an Eng Job: https://www.youtube.com/watch?v=H8UUc9MU2EQ
+
+MY SOCIAL MEDIA: 
+Instagram: https://www.instagram.com/tamerxi (feel free to DM me!) 
+LinkedIn: https://ca.linkedin.com/in/tamershaheen (feel free to connect!)
+Twitter: https://twitter.com/tamerxi (new account, feel free to tweet @ me!) 
+Email: tamerhshaheen@gmail.com 
+Discord: https://discord.gg/u8FB2Xe6ec (let's chat there!)
+
+ABOUT ME: 
+My name is Tamer Shaheen and I am a recent mechanical engineering graduate from the University of Waterloo, currently working as a Mechanical Design Engineer. I like to make videos about university/college, engineering, and personal development. Thank you so much for watching!!",2022-04-16T00:48:05Z,UC9y-rnnZT0GX5t1Ehq-F9UQ,1388390,42689,835
+3GBNLCWw78o,A Day In the Life of a Software Engineer Intern In San Francisco,"Quarantine version: https://www.youtube.com/watch?v=cd-LF1Bw_jQ
+
+Hey everyone! 
+   
+Thank you so much for the support on my last year's Day In The Life video, it was highly requested for me to film another one so here you go!
+
+You can contact me here:
+https://www.instagram.com/edwardbsa/
+edward.sa.baijie@gmail.com  
+
+Music I use:
+http://share.epidemicsound.com/edwardsa",2019-08-14T22:58:39Z,UCCUw_xsps3VgtqLYR8vBSXw,1206240,21847,1234
+aTHBJwVgu3I,"Day in the life of a Software Engineer | Sydney, Australia","This is a typical day of a senior software engineer based in Sydney. See details of my daily activities from a first person view.
+
+https://instagram.com/outbackdaan
+
+FPV camera: 
+https://amzn.to/43Nhof9
+
+Keyboard:
+https://amzn.to/475YQKh
+
+Business inquiries: 
+contactbiz.dan@gmail.com
+
+Affiliate Disclaimer:
+I can get a few bucks at no cost for you if you click on the product links I included above.",2023-06-24T09:42:53Z,UC-pNhOx02AClnNDjjTB1pgQ,1204847,21818,1061
+sMOWEPMCWz0,A day in the life of a Computer Science Student ✅ | How many hours to code? | Placement preparation,"✅  Coding Ninjas (15% Off Link)  - 
+https://aff.codingninjas.com/click?a=149&o=6&link_id=30
+
+A day in the life of a Computer Science Student ✅ | How many hours to code? | Placement preparation 
+
+Watch my singing reels on Instagram ► https://www.instagram.com/harman.sings/
+Learning and Earning Playlist - https://www.youtube.com/playlist?list=PLLpdWI--piJPNoMfSIKJSbEBZqAqkYQM7
+Stories playlist - https://www.youtube.com/playlist?list=PLLpdWI--piJPcrXWwT6rKY0HB-KTcIdZl
+
+______________________________________
+
+Subscribe to our NEW channel ProMentors ❤️ - https://www.youtube.com/channel/UC3Qa_6Ef8XMkjQ3-g9rPjsQ
+
+Join ProMentor's community through :
+⭐Discord ► https://discord.gg/p4xxTGXyMn
+⭐Telegram ► https://t.me/promentors
+⭐Instagram ► https://www.instagram.com/promentors_/
+
+Welcome to this Community !!
+Yes, this youtube channel is more than just this. We are here to help, support, guide, mentor and help you be the best version of yourself. Become a part of this if you are preparing for JEE and want to connect with your seniors as your mentors who are now in IITs, NITs, IIITs and what not.
+Apart from this we also focus on developing various skills, learn various fields like coding, graphic designing, editing, learning software. There is a lot more to come yet. 
+This is a community of students who are preparing for JEE, mentors who are college students helping their juniors, students learning so many different skills.
+Of course, all of this is completely FREE 
+So join us on our other platforms via the links given and join this community where you can connect, interact and learn a lot !!
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+
+Video Recommendations - 
+10k Subs Earnings - https://www.youtube.com/watch?v=8qtpeQjuvzo&t=280s
+YouTube v/s Internships - https://youtu.be/C8fXH5ObAU0
+
+Follow me on Instagram: https://www.instagram.com/harman.sings/
+
+If you guys have any questions you'd want my guidance on here's the link for the
+Instagram ► https://www.instagram.com/harman.sings/
+Quora profile ► http://Quora.com/Team-Harman-Singh
+My Twitter► https://twitter.com/beingiiitian
+LinkedIn ► https://www.linkedin.com/in/harman-singh-67ab06195/
+And here's my email ►
+beingiiitianteam@gmail.com
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+If this is the first ever video you're watching allow me to introduce myself, Hey I'm Harman and I'm a student at IIIT Delhi and on this channel I like to guide and help my juniors regarding JEE and other fun college stuff! 🤩
+If you like this video I highly suggest you to check out some other fun videos I've made in the past 🤗:-
+⭐https://youtu.be/LxU-3SMy5uQ How to but phone from your first youtube earning 💵
+⭐https://youtu.be/zH47w7-MXM8
+Inside the laptop of a computer science student 👨‍🎓
+⭐https://youtu.be/xUYuR6fJD14
+My IIIT-Delhi decision🧐
+⭐https://youtu.be/MXdbq1zKcHk
+Detailed video for laptops 💯
+⭐https://youtu.be/moEgZm0XAP4
+IIIT-Delhi hostel food review 😂
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+Family ❤
+Our Family - 58,200
+Like Aim – 2,000
+Subscribers Aim- 100,000
+
+Subscribe to stay tuned to more fun and informative content, consider liking the video in order to vouch for quality 🤗!! 
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+Credits:-
+Intro/outro music by:
+
+Gears used:-
+Camera - https://amzn.to/3aQ8UJ6
+Boya Mic - https://amzn.to/2IMNTTK
+Gorilla Pod - https://amzn.to/2w4njCM
+Editing Laptop - https://amzn.to/3cYcTFt
+Hard Disk - https://amzn.to/2W8976y
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+If you made it till the end... I hope you have an amazing day 🥳! Much love,here's a 🍪for you lol!
+➖➖➖➖➖➖➖➖➖➖➖➖➖",2021-07-08T13:16:16Z,UC0rpxsHBn1j3kBTtKJ_wQjQ,1195530,41709,1066
+CNsvts6pVzo,How I Code Profitable Apps SOLO (no wasted time / beginner friendly / with AI),"Check out Scrimba – my preferred platform for learning to code (get an extra 20% off Pro with my links):
+AI Engineer Path:
+https://scrimba.com/the-ai-engineer-path-c02v?via=edmundyong  
+Frontend Developer Career Path:
+https://scrimba.com/the-frontend-developer-career-path-c0j?via=edmundyong
+All Courses:
+https://scrimba.com/courses?via=edmundyong
+
+=====
+
+Join Startup Club - A community for solo makers:
+https://discord.gg/YFPJQRBTrA
+
+Mobbin - A library of design inspiration for your apps:
+https://mobbin.com/?via=edmund
+
+Try my Startup:
+https://www.youtubetranscripts.io?utm_source=youtube
+
+Try my other Startup (Easy Folders):
+https://chromewebstore.google.com/detail/chatgpt-folders-search-pr/gdocioajfidpnaejbgmbnkflgmppibfe?utm_source=youtube
+
+Socials:
+https://www.instagram.com/e.yongg/
+https://www.twitter.com/edmund_io/
+
+=====
+
+Wishing all you happy holidays 🎄🎅 
+
+Sharing a general roadmap on how I approach coding apps that earn money.
+
+Resources used in this video (let me know if I am missing any):
+- https://roadmap.sh/
+- https://dev.to/rowsanali/do-you-have-shiny-object-syndrome-as-a-dev-4ld7
+- https://longform.asmartbear.com/slc/
+- https://www.getbeamer.com/blog/customer-feedback-management-startups
+- https://x.com/namyakhann/status/1863525098529194293
+- https://x.com/namyakhann/status/1861816326496399830
+
+=====
+
+00:00 - Intro
+00:46 - The mindset you need to adopt
+01:23 - Setting clear goals (seriously)
+02:51 - The building phase
+05:34 - The marketing phase
+06:25 - The iterating phase
+
+=====
+
+#SeoulVlog #dayinthelife #korean #koreanvlog #startups #SeoulLife #indiehackers #DigitalNomad #softwareengineer #softwaredeveloper #codingvlog #solotravel #solopreneur #startupvlog",2024-12-27T11:09:06Z,UCuKVsDS3oVzTuNjnQ79pEEg,1196936,58729,867
+wUnEDnAYTpE,Day in the Life Training with Olympians (as a Software Engineer),"Come with me through a day of training to make the Olympics, with Olympians, at the USA Olympic Center! Watch in 4k!
+
+If you're reading this comment ""I miss Loki"".
+
+LIKE AND SUBSCRIBE :D
+
+📷 Follow me on IG!! https://www.instagram.com/marcosricopeng
+🤖 Join our new discord server!! https://discord.gg/akxHQUamjm
+
+📱 All my equipment!! https://www.amazon.com/shop/marcosricopeng
+📓 Papier Notebooks get $10 off!: https://mention-me.com/m/ol/gv2yx-marcos-rico-peng or code 'Marcos Rico Peng' at checkout!
+💰Let's both get 5.5% APY on your High Yield Savings Account! (I use this) https://www.wealthfront.com/c/affiliates/invited/AFFD-ROGI-FUWY-KJAI
+
+~~Music~~
+Music by Jimmy Koproto - Thanks - https://thmatc.co/?l=10E03DAB
+Music by DJ Gonz - Bounce - https://thmatc.co/?l=1DCEADD5
+Music by Lohfi - Chasing Horizon - https://thmatc.co/?l=B371449F
+Music by Lohfi - Life Lately - https://thmatc.co/?l=89A2AE23
+Music by ystr - daydream - https://thmatc.co/?l=7F97B17A
+
+Current Subscriber Count: 101,811
+
+About me: Managing life as a software engineer training for the Paris Olympics~
+
+For business inquiries contact me: marcos@select.co
+
+Some links are affiliate links which I may get a kickback from. They are at no extra cost to you.",2024-01-28T12:00:56Z,UCZ9GhI0KPqpnpOqjmMQzrRQ,1192554,27113,556
+-SLgCQKE1zg,A Day in Life of a California Software Engineer! (Silicon Valley),"The dream of last year finally came true!!
+Last year California Trip: https://youtu.be/eog0wcqSq6k
+
+
+📈 Get 2 FREE Stocks in US (valued up to $1400): https://a.webull.com/i/SinghinUSA
+I use WeBull & RobinHood for stock trading which are legal.
+
+My Study Abroad channel: https://www.youtube.com/channel/UCptc7b3jk_PtbpLLeZojRZA
+
+iPhone Vlogging Gear:-
+💻 My Gear Page: https://linktr.ee/singhinusa
+📱iPhone 14: https://geni.us/J9c6GoY
+📸Sony Camera: https://geni.us/zShMGT4
+⿍ Tripod: https://geni.us/iVsd
+🎙Vlogging & Podcast Mic https://geni.us/v915Z9H
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Follow me on - 
+Instagram - https://www.instagram.com/iHarnoor
+Facebook - https://www.facebook.com/SinghinUSA
+Twitter - https://twitter.com/iHarnoorSingh
+For Doubts Related to Undergrad: https://www.facebook.com/groups/1234179803434320
+
+E-mail for BUSINESS INQUIRY & HELP- hello@singhinusa.com
+
+MUSIC CREDITS:
+Music From (Free Trial): https://www.epidemicsound.com/referral/2jy2t1/",2022-10-11T06:18:22Z,UChYs-_zjKRYhdMddjx-NPLw,1129986,19176,549
+EQSNnARq-yI,day in my life as a software engineer in NYC * in-office edition *,"hi friends! we're back again today to do another day in my life video :) it's taken a while for me to muster up the courage and actually film in the office so apologies if this is long overdue ~ regardless, i hope you enjoy!
+
+♡ CONNECT WITH ME ♡
+instagram  ➭ https://www.instagram.com/oksarahpan/
+subscribe  ➭ https://t.ly/2i7w
+send me anonymous feedback!  ➭ https://forms.gle/RafJKhwRadmfEmSCA
+
+❀ RELATED VIDEOS ❀ 
+work / tech playlist 
+  ↳  https://youtube.com/playlist?list=PLBoB2yiti-Q7nI6oPhnyKs0vOqy1bK2CJ
+day in my life 
+  ↳  *office edition*  ➭  https://youtu.be/EQSNnARq-yI
+  ↳  *wfh edition*  ➭  https://youtu.be/O62kAvoO9lM
+career Q&A's
+  ↳  my career journey, experience, internships, salary  ➭  https://youtu.be/Y36dQUh3U8Q
+  ↳  salary, negotiating & startups  ➭  https://youtu.be/mAgxG4YUYSo
+  ↳  resume deep-dive, burnout & being a woman in tech  ➭  https://youtu.be/i3nydhSlZX4
+work diaries
+  ↳  WFH, productivity, desk setup & restaurant week  ➭  https://youtu.be/ymu4AYGJcPI
+  ↳  grwm, reflecting on hate comments, in-office days  ➭  https://youtu.be/30A9Zxcm2eE
+  ↳  week in my life, my first business trip  ➭  https://youtu.be/lGebwh_1WhA
+  ↳  living & working in NYC  ➭  https://youtu.be/Kr0De8QuNG0
+
+✰ MY WORK SETUP ✰ 
+Evoluent Vertical Mouse
+↳ wired version: https://amzn.to/3JzjaIw
+↳ wireless version: https://amzn.to/3p34qbe
+Goldtouch Ergonomic Keyboard
+↳ https://amzn.to/3BP1SVU
+FlexiSpot Comhar All-in-One Standing Desk Bamboo Texture Top ➭ https://bit.ly/3GZiJVV 
+↳ referral link for $30 off: https://share.flexispot.com/x/ROv4a2
+
+*** Please note, this video and all opinions stemming from it are not affiliated with my company ***
+
+✰ FILMING EQUIPMENT ✰
+ ➭  canon t6i (https://amzn.to/3nX0e9Y)
+ ➭  canon g7x mark ii (https://amzn.to/3uVtEsN)
+ ➭  manfrotto compact action tripod (https://amzn.to/3ivEyAP)
+
+♫ MUSIC ♫ 
+❀ epidemic sound
+Music by Gil Wanders - Ako - https://thmatc.co/?l=CC7921AC
+Music by Citrus Avenue - Elsewhere Palms - https://thmatc.co/?l=1EBE88FF
+Music by ninjoi. - Outro - https://thmatc.co/?l=8BC35D42
+
+♪ Morning Rain (Prod. by Lukrembo)
+Link : https://youtu.be/mvwsy_Kauzk
+
+disclaimer: I do not own any of the music in this video
+
+✰ REFERRAL CODES ✰
+❀ YesStyle: https://ys.style/kCnmQQrT58 (code: SAPASAPA)
+❀ BeFrugal: https://befrugal.com/rs/CDRNLYK/ ($10 sign up bonus)
+❀ Rakuten: https://rakuten.com/r/SARAHP3847?eeid=28187 ($10 sign up bonus)
+❀ Firmoo code: https://www.firmoo.com/?invite_code=938093ccb4 (code A8T7T5 for 50% off)
+❀ EyeBuyDirect: https://www.eyebuydirect.com/5795978 (code IFKKDHGC3L for $10 off)
+❀ Zinff Optical: https://www.zinff.com/?utm_source=YT&utm_medium=417
+(code *pan* for 50% off frames & 10% off lenses)
+
+------
+current sub count: 127,146",2022-08-01T14:38:32Z,UCc0vz-lVwacgLVJRBW4-4ZA,1078807,24409,501
+EDj-Xo8AlSU,Why I Love Being a Software Engineer,"Follow me on instagram: @withmarko
+Hey, I made a discord server: https://discord.gg/4UmRbQh7VA
+
+=== Links ===
+
+☕️ My Software Engineering Book:
+https://learn.withmarko.com/sw101
+
+☕️ My Notion Template:
+https://links.withmarko.com/notion-template
+
+=== Business Inquiries ===
+
+Email: business@withmarko.com
+Instagram: @withmarko
+Edited by: zalomirpaul@snyportfolio.com
+
+=== Affiliate Disclaimer ===
+
+I might earn a small commission at no cost to you, if you click on the product links above.",2023-10-15T10:01:33Z,UCCQ6SXMc7MoJ88jjpn6j-8Q,1060486,27846,814
+ko5lL2MQKCU,An *eventful* Day in the Life of a Google Software Engineer (NYC Edition),"22 year old does coding, gym, dogs, ping pong, nightlife and more. Follow me through my day (and night) as a software engineer in New York City!
+
+DISCLAIMER: While everything in this video did happen on the same day, I had to use alternate footage for a few things like ping pong, because I wasn't able to get permission from everyone that was in the original footage. Something cool though is that the fireworks were from the same night, and it wasn't even July 4th!
+
+Also, this definitely wasn't a typical day, since on most weekdays I just go home after the gym.
+
+EQUIPMENT:
+Monitor: https://amzn.to/3J2MOpa
+
+CREDITS:
+First song: BoyWithUke - Two Moons
+Second song: Joji - Sanctuary
+
+TIMESTAMPS:
+0:00 Introduction
+0:51 WFH
+1:51 Going to Work
+2:28 DOGS
+2:50 Free Food
+2:57 MEETING / PING PONG
+3:23 Gym
+4:32 Party Time
+5:13 Ending the night
+
+#softwareengineer #dayinthelife #google",2022-07-09T20:56:15Z,UCpFA-fGAWafeXGhfOvtkTIQ,1047723,20881,876

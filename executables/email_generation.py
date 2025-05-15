@@ -4,6 +4,7 @@ from typing import Dict, List, Optional
 from datetime import datetime
 import pytz
 import logging
+import os
 
 def generate_email(video_data: Dict, channel_data: Dict, transcript_status: str) -> Dict:
     """Generate personalized email using template.
@@ -17,7 +18,8 @@ def generate_email(video_data: Dict, channel_data: Dict, transcript_status: str)
         Dictionary containing email content and metadata
     """
     # Load email template
-    with open('email_templates/affiliate_marketing_template.txt', 'r') as f:
+    template_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'email_templates', 'affiliate_marketing_template.txt')
+    with open(template_path, 'r') as f:
         template = f.read()
     
     # Calculate average views per video

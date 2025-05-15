@@ -32,6 +32,9 @@ from executables.config import YouTubeAPIConfig, Config
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
 
+# Load environment variables
+load_dotenv()
+
 def has_email(text: str) -> bool:
     """Check if text contains an email address.
     
@@ -53,34 +56,16 @@ class YouTubeAPI:
     def __init__(self, config: Config):
         """Initialize YouTube API client with configuration."""
         self.config = config
-        self.service = self._get_authenticated_service()
+        self.service = self._get_service()
         self.logger = logging.getLogger(__name__)
         
-    def _get_authenticated_service(self):
-        """Get authenticated YouTube API service."""
-        creds = None
-        # The file token.pickle stores the user's access and refresh tokens
-        if os.path.exists('token.pickle'):
-            with open('token.pickle', 'rb') as token:
-                creds = pickle.load(token)
+    def _get_service(self):
+        """Get YouTube API service using API key."""
+        api_key = os.getenv('YOUTUBE_API_KEY')
+        if not api_key:
+            raise ValueError("YOUTUBE_API_KEY not found in environment variables")
         
-        # If there are no (valid) credentials available, let the user log in.
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                if not os.path.exists('credentials.json'):
-                    raise FileNotFoundError(
-                        "credentials.json not found. Please create this file with your OAuth 2.0 credentials."
-                    )
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    'credentials.json', SCOPES)
-                creds = flow.run_local_server(port=0)
-            # Save the credentials for the next run
-            with open('token.pickle', 'wb') as token:
-                pickle.dump(creds, token)
-        
-        return build('youtube', 'v3', credentials=creds)
+        return build('youtube', 'v3', developerKey=api_key)
         
     def search_videos(self, query: str, max_results: int = 50) -> List[Dict]:
         """Search for videos matching query."""

@@ -23,7 +23,7 @@ filters:
 output:
   directory: "results"
   save_csv: true
-  save_excel: true
+  save_excel: false
   save_json: false
 
 # Analysis Settings
