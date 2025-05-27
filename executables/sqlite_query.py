@@ -4,7 +4,7 @@ db_path = "./results/affiliate_program.db"
 
 with sqlite3.connect(db_path) as conn:
     cursor = conn.cursor()
-    cursor.execute(f"SELECT * FROM affiliates;")
+    cursor.execute(f"SELECT * FROM youtube_channels;")
     rows = cursor.fetchall()
     
     # Print column headers
