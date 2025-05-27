@@ -253,70 +253,135 @@ class YouTubeAPI:
                     'videos': videos,
                     'email_content': email_content
                 }, f, indent=2)
-                
+
     def save_to_db(self, videos_df: pd.DataFrame, channels_df: pd.DataFrame, 
-                  transcripts_df: pd.DataFrame, emails_df: pd.DataFrame) -> None:
-        """Save YouTube data to the database.
-        
-        Args:
-            videos_df: DataFrame containing video data
-            channels_df: DataFrame containing channel data
-            transcripts_df: DataFrame containing transcript data
-            emails_df: DataFrame containing email data
-        """
-        conn = self.db.connect()
-        
-        try:
-            # Save videos - replace if exists since video_id is unique
-            videos_df.to_sql('youtube_videos', conn, if_exists='replace', index=False)
-            self.logger.info(f"Saved {len(videos_df)} videos to database")
+                        transcripts_df: pd.DataFrame, emails_df: pd.DataFrame) -> None:
+            """Save YouTube data to the database with upsert logic.
             
-            # Save channels - replace if exists since channel_id is unique
-            channels_df.to_sql('youtube_channels', conn, if_exists='replace', index=False)
-            self.logger.info(f"Saved {len(channels_df)} channels to database")
+            Args:
+                videos_df: DataFrame containing video data
+                channels_df: DataFrame containing channel data
+                transcripts_df: DataFrame containing transcript data
+                emails_df: DataFrame containing email data
+            """
+            conn = self.db.connect()
             
-            # Save transcripts - replace if exists
-            if transcripts_df is not None and not transcripts_df.empty:
-                transcripts_df.to_sql('youtube_transcripts', conn, if_exists='replace', index=False)
-                self.logger.info(f"Saved {len(transcripts_df)} transcripts to database")
-            
-            # Save email content - replace if exists
-            if emails_df is not None and not emails_df.empty:
-                emails_df.to_sql('youtube_email_content', conn, if_exists='replace', index=False)
-                self.logger.info(f"Saved {len(emails_df)} email records to database")
-                
-                for _, row in emails_df.iterrows():
-                    if pd.notna(row.get('email')):
-                        cursor = conn.cursor()
-                        
-                        # Check if this email already exists
+            try:
+                # Handle youtube_videos: Check video_id, replace if exists, append if not
+                if not videos_df.empty:
+                    cursor = conn.cursor()
+                    for _, row in videos_df.iterrows():
                         cursor.execute('''
-                            SELECT id FROM affiliates 
-                            WHERE email = ?
-                        ''', (row['email'],))
+                            INSERT OR REPLACE INTO youtube_videos (
+                                video_id, title, description, channel_id, published_at, 
+                                views, likes, comments, engagement_rate, has_transcript, has_email
+                            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        ''', (
+                            row['video_id'], 
+                            row.get('title', ''), 
+                            row.get('description', ''),
+                            row['channel_id'], 
+                            row.get('published_at', ''), 
+                            row.get('views', 0),
+                            row.get('likes', 0), 
+                            row.get('comments', 0), 
+                            row.get('engagement_rate', 0.0),
+                            row.get('has_transcript', False), 
+                            row.get('has_email', False)
+                        ))
+                    self.logger.info(f"Processed {len(videos_df)} videos (upserted)")
+                
+                # Handle youtube_channels: Check channel_id, replace if exists, append if not
+                if not channels_df.empty:
+                    cursor = conn.cursor()
+                    for _, row in channels_df.iterrows():
+                        cursor.execute('''
+                            INSERT OR REPLACE INTO youtube_channels (
+                                channel_id, channel_title, subscribers, total_videos, total_views, email
+                            ) VALUES (?, ?, ?, ?, ?, ?)
+                        ''', (
+                            row['channel_id'], 
+                            row.get('channel_title', ''), 
+                            row.get('subscribers', 0),
+                            row.get('total_videos', 0), 
+                            row.get('total_views', 0), 
+                            row.get('email', '')
+                        ))
+                    self.logger.info(f"Processed {len(channels_df)} channels (upserted)")
+                
+                # Handle youtube_transcripts: Check video_id, replace if exists, append if not
+                if transcripts_df is not None and not transcripts_df.empty:
+                    cursor = conn.cursor()
+                    for _, row in transcripts_df.iterrows():
+                        cursor.execute('''
+                            INSERT OR REPLACE INTO youtube_transcripts (
+                                video_id, transcript_text
+                            ) VALUES (?, ?)
+                        ''', (
+                            row['video_id'], 
+                            row.get('transcript', '')
+                        ))
+                    self.logger.info(f"Processed {len(transcripts_df)} transcripts (upserted)")
+                
+                # Handle youtube_email_content: Check channel_id, skip if exists, append if not
+                if emails_df is not None and not emails_df.empty:
+                    cursor = conn.cursor()
+                    new_emails_count = 0
+                    
+                    for _, row in emails_df.iterrows():
+                        # Check if channel_id already exists
+                        cursor.execute('SELECT id FROM youtube_email_content WHERE channel_id = ?', (row['channel_id'],))
+                        existing = cursor.fetchone()
                         
-                        # If not found, insert new affiliate
-                        if not cursor.fetchone():
+                        if not existing:
+                            # Only insert if channel_id doesn't exist
                             cursor.execute('''
-                                INSERT INTO affiliates (
-                                    name, email, referral_id
-                                ) VALUES (?, ?, ?)
+                                INSERT INTO youtube_email_content (
+                                    channel_id, channel_title, email, email_subject, email_body
+                                ) VALUES (?, ?, ?, ?, ?)
                             ''', (
-                                row['channel_title'],
-                                row['email'],
-                                self.db.generate_referral_id(row['channel_title'])
+                                row['channel_id'], 
+                                row.get('channel_title', ''), 
+                                row.get('email', ''),
+                                row.get('email_subject', ''), 
+                                row.get('email_body', '')
                             ))
-                            self.logger.info(f"Created new affiliate for channel: {row['channel_title']}")
-            
-            conn.commit()
-            self.logger.info("Successfully saved all YouTube data to database")
-            
-        except Exception as e:
-            self.logger.error(f"Error saving to database: {e}")
-            conn.rollback()
-            raise
-        finally:
-            conn.close()
+                            new_emails_count += 1
+                    
+                    self.logger.info(f"Added {new_emails_count} new email records (skipped {len(emails_df) - new_emails_count} existing)")
+                    
+                    # Handle affiliates: Check email, create only if not exists
+                    for _, row in emails_df.iterrows():
+                        if pd.notna(row.get('email')):
+                            # Check if this email already exists in affiliates
+                            cursor.execute('SELECT id FROM affiliates WHERE email = ?', (row['email'],))
+                            
+                            # If not found, insert new affiliate
+                            if not cursor.fetchone():
+                                referral_id = self.db.generate_referral_id(row['channel_title'])
+                                affiliate_link = self.db.generate_affiliate_link(referral_id)
+                                
+                                cursor.execute('''
+                                    INSERT INTO affiliates (
+                                        name, email, referral_id, affiliate_link
+                                    ) VALUES (?, ?, ?, ?)
+                                ''', (
+                                    row['channel_title'],
+                                    row['email'],
+                                    referral_id,
+                                    affiliate_link
+                                ))
+                                self.logger.info(f"Created new affiliate for channel: {row['channel_title']} with link: {affiliate_link}")
+                
+                conn.commit()
+                self.logger.info("Successfully saved all YouTube data to database")
+                
+            except Exception as e:
+                self.logger.error(f"Error saving to database: {e}")
+                conn.rollback()
+                raise
+            finally:
+                conn.close()
 
     def analyze(self) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         """Run complete YouTube analysis."""

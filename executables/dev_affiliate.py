@@ -19,12 +19,13 @@ class AffiliateDatabase:
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
+        #Affiliate Table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS affiliates (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
                 email TEXT UNIQUE NOT NULL,
-                referral_id TEXT UNIQUE NOT NULL
+                referral_id TEXT UNIQUE NOT NULL,
                 affiliate_link TEXT UNIQUE NOT NULL
             )
         ''')
@@ -111,6 +112,9 @@ class AffiliateDatabase:
         
         conn.close()
         return referral_id
+    
+    def generate_affiliate_link(self, referral_id: str) -> str:
+            return f"https://mindwyre.org/?ref={referral_id}"
 
 if __name__ == '__main__':
     db = AffiliateDatabase()

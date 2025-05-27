@@ -3,7 +3,7 @@
 
 # Search Settings
 search:
-  keyword: "software engineer day in the life"
+  keyword: "Software Engineering Jobs"
   max_results: 50
 
 # Filter Settings
@@ -17,7 +17,7 @@ filters:
   min_likes_per_hour: 0.001
   max_hours_since_published: 17520
   require_email_found: true
-  require_transcript: false
+  require_transcript: true
 
 # Output Settings
 output:
