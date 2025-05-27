@@ -181,6 +181,9 @@ def main():
         channels_df.to_csv(channels_csv_path, index=False, quoting=1)
         emails_df.to_csv(emails_csv_path, index=False, quoting=1, escapechar='\\')
         
+        # Save to database
+        api.save_to_db(videos_df, channels_df, None, emails_df)
+        
         logging.info(f"Saved {len(videos_df)} videos to {videos_csv_path}")
         logging.info(f"Saved {len(channels_df)} channels to {channels_csv_path}")
         logging.info(f"Saved {len(emails_df)} emails to {emails_csv_path}")

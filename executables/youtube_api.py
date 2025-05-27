@@ -22,12 +22,14 @@ from dotenv import load_dotenv
 from dateutil import parser
 import traceback
 import json
+import sqlite3
 
 from executables.utils import has_email, extract_email, calculate_hours_since_published, should_update_channel
 from executables.data_processing import merge_dataframes
 from executables.email_generation import generate_email_content
 from executables.transcript_processing import get_video_transcript, extract_key_moments
 from executables.config import YouTubeAPIConfig, Config
+from executables.dev_affiliate import AffiliateDatabase
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/youtube.readonly']
@@ -58,6 +60,7 @@ class YouTubeAPI:
         self.config = config
         self.service = self._get_service()
         self.logger = logging.getLogger(__name__)
+        self.db = AffiliateDatabase()
         
     def _get_service(self):
         """Get YouTube API service using API key."""
@@ -251,6 +254,70 @@ class YouTubeAPI:
                     'email_content': email_content
                 }, f, indent=2)
                 
+    def save_to_db(self, videos_df: pd.DataFrame, channels_df: pd.DataFrame, 
+                  transcripts_df: pd.DataFrame, emails_df: pd.DataFrame) -> None:
+        """Save YouTube data to the database.
+        
+        Args:
+            videos_df: DataFrame containing video data
+            channels_df: DataFrame containing channel data
+            transcripts_df: DataFrame containing transcript data
+            emails_df: DataFrame containing email data
+        """
+        conn = self.db.connect()
+        
+        try:
+            # Save videos - replace if exists since video_id is unique
+            videos_df.to_sql('youtube_videos', conn, if_exists='replace', index=False)
+            self.logger.info(f"Saved {len(videos_df)} videos to database")
+            
+            # Save channels - replace if exists since channel_id is unique
+            channels_df.to_sql('youtube_channels', conn, if_exists='replace', index=False)
+            self.logger.info(f"Saved {len(channels_df)} channels to database")
+            
+            # Save transcripts - replace if exists
+            if transcripts_df is not None and not transcripts_df.empty:
+                transcripts_df.to_sql('youtube_transcripts', conn, if_exists='replace', index=False)
+                self.logger.info(f"Saved {len(transcripts_df)} transcripts to database")
+            
+            # Save email content - replace if exists
+            if emails_df is not None and not emails_df.empty:
+                emails_df.to_sql('youtube_email_content', conn, if_exists='replace', index=False)
+                self.logger.info(f"Saved {len(emails_df)} email records to database")
+                
+                for _, row in emails_df.iterrows():
+                    if pd.notna(row.get('email')):
+                        cursor = conn.cursor()
+                        
+                        # Check if this email already exists
+                        cursor.execute('''
+                            SELECT id FROM affiliates 
+                            WHERE email = ?
+                        ''', (row['email'],))
+                        
+                        # If not found, insert new affiliate
+                        if not cursor.fetchone():
+                            cursor.execute('''
+                                INSERT INTO affiliates (
+                                    name, email, referral_id
+                                ) VALUES (?, ?, ?)
+                            ''', (
+                                row['channel_title'],
+                                row['email'],
+                                self.db.generate_referral_id(row['channel_title'])
+                            ))
+                            self.logger.info(f"Created new affiliate for channel: {row['channel_title']}")
+            
+            conn.commit()
+            self.logger.info("Successfully saved all YouTube data to database")
+            
+        except Exception as e:
+            self.logger.error(f"Error saving to database: {e}")
+            conn.rollback()
+            raise
+        finally:
+            conn.close()
+
     def analyze(self) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         """Run complete YouTube analysis."""
         # Search for videos
@@ -261,13 +328,16 @@ class YouTubeAPI:
         # Process video data and extract key details
         videos_df, channels_df, transcripts_df, emails_df = self.process_video_data(video_data)
         
-        # Save results
+        # Save results to files
         if videos_df.shape[0] > 0 or channels_df.shape[0] > 0 or emails_df.shape[0] > 0:
             self.save_results(
                 channels=channels_df.to_dict('records'),
                 videos=videos_df.to_dict('records'),
                 email_content=emails_df.to_dict('records')
             )
+            
+            # Save to database
+            self.save_to_db(videos_df, channels_df, transcripts_df, emails_df)
             
         return videos_df, channels_df, emails_df
 
